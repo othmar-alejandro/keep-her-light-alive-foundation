@@ -1,0 +1,11 @@
+[build]
+  # Publish the website directory (where the static files are)
+  publish = "website"
+  # No build command needed for static site - skip Python installation
+  command = "echo 'Static site deployment - skipping Python dependencies'"
+
+# Tell Netlify this is a static site (no build needed)
+[build.environment]
+  NODE_VERSION = "18"
+  # Don't install Python dependencies
+  SKIP_PYTHON_INSTALL = "true"

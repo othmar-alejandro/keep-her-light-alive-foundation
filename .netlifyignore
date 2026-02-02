@@ -1,0 +1,15 @@
+# Ignore Python analysis tools and dependencies
+requirements.txt
+*.py
+__pycache__/
+*.pyc
+config.yaml
+content_agents.py
+content_extractor.py
+run_analysis.py
+reports/
+research/
+docs/
+
+# Keep only the website files
+!website/
