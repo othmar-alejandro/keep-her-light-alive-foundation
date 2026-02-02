@@ -284,27 +284,27 @@
 
     <main>
         <!-- Hero: Immersive & Emotive -->
-        <header class="relative w-full h-screen overflow-hidden bg-white">
+        <header class="relative w-full h-screen overflow-hidden bg-gray-900">
             <!-- Parallax Background -->
             <div class="absolute inset-0 z-0">
                 <img src="resources/stepahnie-enhanced.png"
                     alt="Stephanie Marie Rodriguez - Inspiration behind Keep Her Light Alive Foundation for boating safety awareness"
                     class="w-full h-full object-cover object-top opacity-100 scale-110" id="hero-image"
                     style="mask-image: linear-gradient(to right, transparent 0%, black 50%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);">
-                <!-- Lighter gradient overlay for better image visibility -->
-                <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/20 to-transparent"></div>
+                <!-- Darker gradient overlay for better text contrast/readability -->
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/40 to-transparent"></div>
             </div>
 
             <!-- Content -->
             <div class="relative z-10 h-full flex flex-col justify-end pb-24 px-6 lg:px-12 max-w-[1400px] mx-auto">
                 <div class="hero-content max-w-4xl">
                     <div class="mb-6"></div>
-                    <!-- Headline Updated: Readable Dark Text -->
-                    <h1 class="font-serif text-6xl md:text-8xl text-gray-900 leading-[1] mb-8">
+                    <!-- Headline Updated: Readable Light Text -->
+                    <h1 class="font-serif text-6xl md:text-8xl text-white leading-[1] mb-8">
                         Keep Her <br>
                         Light <span class="italic font-semibold text-brand-gold">Alive.</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-800 max-w-xl font-light leading-relaxed mb-10 text-balance"
+                    <p class="text-lg md:text-xl text-gray-200 max-w-xl font-light leading-relaxed mb-10 text-balance"
                         data-i18n="hero.description">
                         Promoting boating safety awareness across Florida to prevent tragedies on the water. Our
                         foundation provides water safety education, resources, and community support - in loving memory
@@ -319,7 +319,7 @@
                             The Coin Initiative
                         </a>
                         <a href="#mission"
-                            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white hover:scale-105 transition-all duration-300">
+                            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-gray-900 hover:scale-105 transition-all duration-300">
                             <span data-i18n="hero.cta.mission">Our Mission</span>
                             <i data-lucide="arrow-right"
                                 class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
@@ -333,7 +333,7 @@
         <section id="mission" class="py-32 bg-white px-6 lg:px-12">
             <div class="max-w-[1400px] mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-                    <div class="lg:col-span-4 sticky top-32">
+                    <div class="lg:col-span-4 lg:sticky lg:top-32">
                         <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
                             data-i18n="mission.label">The
                             Mission</span>
