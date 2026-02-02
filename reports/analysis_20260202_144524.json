@@ -1,0 +1,2170 @@
+{
+  "en": {
+    "language": "en",
+    "grammar_issues": [
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "hero",
+        "sentence": "The Coin Initiative",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The Coin Initiative."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Our foundation was born from a desire to prevent boating accidents and ensure no other family endures the pain of a preventable loss on Florida\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Our foundation was born from a desire to prevent boating accidents and ensure no other family endures the pain of a preventable loss on Florida\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Boating Accident Prevention",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Boating Accident Prevention."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Through advocacy for stricter boating regulations and free safety courses in Miami-Dade, we\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Through advocacy for stricter boating regulations and free safety courses in Miami-Dade, we\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Support for Affected Families",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Support for Affected Families."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "In Loving Memory",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "In Loving Memory."
+      },
+      {
+        "type": "passive_voice",
+        "severity": "info",
+        "section": "legacy",
+        "sentence": "She loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by the people she cherished.",
+        "message": "Possible passive voice - consider active voice for clarity"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Through boating safety advocacy, education, and community support, we\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Through boating safety advocacy, education, and community support, we\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "leadership",
+        "sentence": "Meet the Founders",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Meet the Founders."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "founders",
+        "sentence": "United by Love, Driven by Purpose",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "United by Love, Driven by Purpose."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Pillars of Action",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Pillars of Action."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Free Boating Safety Courses",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Free Boating Safety Courses."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Join the Movement",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Join the Movement."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Learn more about the Coin →",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Learn more about the Coin →."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Water Safety Events in Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Water Safety Events in Florida."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Florida Boating Safety Advocacy",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Florida Boating Safety Advocacy."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Events & Gatherings",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Events & Gatherings."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Light the Night Gala",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Light the Night Gala."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Safe Waters Workshop",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Safe Waters Workshop."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Annual Memorial Walk & Safety Fair",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Annual Memorial Walk & Safety Fair."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Inaugural Memorial Walk",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Inaugural Memorial Walk."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "View Photo Gallery",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "View Photo Gallery."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Inspired by Stephanie\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Inspired by Stephanie\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Inspired by Stephanie\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Inspired by Stephanie\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Request a Coin",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Request a Coin."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Water Safety Resources",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Water Safety Resources."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "View all documents",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "View all documents."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Boating Safety Pre-Departure Checklist",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Boating Safety Pre-Departure Checklist."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Coast Guard Life Jacket Guidelines",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Coast Guard Life Jacket Guidelines."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Florida Boating Regulations",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Florida Boating Regulations."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Join Our Water Safety Mission",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Join Our Water Safety Mission."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Press / Media",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Press / Media."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Frequently Asked Questions",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Frequently Asked Questions."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "The QR code on the back lets you track the coin\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The QR code on the back lets you track the coin\\."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "However, our educational resources are available to anyone, and we\\",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "However, our educational resources are available to anyone, and we\\."
+      },
+      {
+        "type": "passive_voice",
+        "severity": "info",
+        "section": "faq",
+        "sentence": "If you or your family have been affected by a boating accident, please reach out through our contact form or call us directly.",
+        "message": "Possible passive voice - consider active voice for clarity"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "cta",
+        "sentence": "Get Your Coin",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Get Your Coin."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "footer",
+        "sentence": "Terms of Service",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Terms of Service."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "unknown",
+        "sentence": "Our\n                        foundation provides water safety education, resources, and community support - in loving memory\n                        of\n                        Stephanie M.",
+        "message": "Double spaces detected",
+        "suggestion": "Our foundation provides water safety education, resources, and community support - in loving memory of Stephanie M."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "unknown",
+        "sentence": "The Coin Initiative Our Mission",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The Coin Initiative Our Mission."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "Spread\n                            Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness.",
+        "message": "Double spaces detected",
+        "suggestion": "Spread Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "One\n                            side bears our promise: \"Keep Her Light Alive,\" while\n                            the\n                            other connects you to a community of good deeds.",
+        "message": "Double spaces detected",
+        "suggestion": "One side bears our promise: \"Keep Her Light Alive,\" while the other connects you to a community of good deeds."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act\n                            of\n                            kindness.",
+        "message": "Double spaces detected",
+        "suggestion": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "Request a Coin",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Request a Coin."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "contact-form",
+        "sentence": "Get\n                            Involved Join Our Water\n                            Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your\n                            story, we're here to connect and help prevent future tragedies.",
+        "message": "Double spaces detected",
+        "suggestion": "Get Involved Join Our Water Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we're here to connect and help prevent future tragedies."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact-form",
+        "sentence": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message."
+      }
+    ],
+    "repetition_issues": [
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "hero",
+        "sentence": "Promoting boating safety awareness across Florida to prevent tragedies on the water.",
+        "repeated_phrase": "Promoting boating safety awareness across",
+        "also_in": "unknown",
+        "message": "Repeated phrase: \"Promoting boating safety awareness across\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "hero",
+        "sentence": "Our foundation provides water safety education, resources, and community support - in loving memory of Stephanie M.",
+        "repeated_phrase": "Our foundation provides water safety",
+        "also_in": "unknown",
+        "message": "Repeated phrase: \"Our foundation provides water safety\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Our water safety initiatives create real change through education, advocacy, and community connection across South Florida.",
+        "repeated_phrase": "through education, advocacy, and community",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"through education, advocacy, and community\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness.",
+        "repeated_phrase": "When you receive this coin,",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"When you receive this coin,\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness.",
+        "repeated_phrase": "When you receive this coin,",
+        "also_in": "about-coin",
+        "message": "Repeated phrase: \"When you receive this coin,\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Let the ripple effect begin.",
+        "repeated_phrase": "Let the ripple effect begin.",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"Let the ripple effect begin.\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Let the ripple effect begin.",
+        "repeated_phrase": "Let the ripple effect begin.",
+        "also_in": "about-coin",
+        "message": "Repeated phrase: \"Let the ripple effect begin.\""
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Inspired by Stephanie\\",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 51
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 52
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness.",
+        "repeated_phrase": "When you receive this coin,",
+        "also_in": "about-coin",
+        "message": "Repeated phrase: \"When you receive this coin,\""
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Let the ripple effect begin.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 53
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Let the ripple effect begin.",
+        "repeated_phrase": "Let the ripple effect begin.",
+        "also_in": "about-coin",
+        "message": "Repeated phrase: \"Let the ripple effect begin.\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Join Our Water Safety Mission",
+        "repeated_phrase": "Join Our Water Safety Mission",
+        "also_in": "contact-form",
+        "message": "Repeated phrase: \"Join Our Water Safety Mission\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we\\",
+        "repeated_phrase": "Whether you want to volunteer",
+        "also_in": "contact-form",
+        "message": "Repeated phrase: \"Whether you want to volunteer\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "You can request a coin through our contact form or at any of our events.",
+        "repeated_phrase": "through our contact form or",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"through our contact form or\""
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "unknown",
+        "sentence": "Promoting boating safety awareness across Florida to prevent tragedies on the water.",
+        "first_occurrence": {
+          "section": "hero",
+          "index": 0
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "about-coin",
+        "sentence": "Let the ripple effect begin.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 53
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "about-coin",
+        "sentence": "Request a Coin",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 57
+        },
+        "message": "Exact sentence repetition detected"
+      }
+    ],
+    "coherence_issues": [
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "mission",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "legacy",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "initiatives",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "events",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "coin",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "resources",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "contact",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "short_content",
+        "severity": "info",
+        "section": "cta",
+        "word_count": 3,
+        "message": "Section has only 3 words - consider expanding"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "footer",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "short_content",
+        "severity": "info",
+        "section": "meta",
+        "word_count": 17,
+        "message": "Section has only 17 words - consider expanding"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "unknown",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "about-coin",
+        "message": "Consider adding transition words for better flow"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Inspired by Stephanie\\",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Let the ripple effect begin.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in unknown",
+        "section": "unknown",
+        "sentence": "Promoting boating safety awareness across Florida to prevent tragedies on the water.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in about-coin",
+        "section": "about-coin",
+        "sentence": "Let the ripple effect begin.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in about-coin",
+        "section": "about-coin",
+        "sentence": "Request a Coin",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "hero",
+        "auto_fixable": true,
+        "suggestion": "The Coin Initiative."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Our foundation was born from a desire to prevent boating accidents and ensure no other family endures the pain of a preventable loss on Florida\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Boating Accident Prevention."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Through advocacy for stricter boating regulations and free safety courses in Miami-Dade, we\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Support for Affected Families."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "In Loving Memory."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Through boating safety advocacy, education, and community support, we\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "leadership",
+        "auto_fixable": true,
+        "suggestion": "Meet the Founders."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "founders",
+        "auto_fixable": true,
+        "suggestion": "United by Love, Driven by Purpose."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Pillars of Action."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Free Boating Safety Courses."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Join the Movement."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Learn more about the Coin →."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Water Safety Events in Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Florida Boating Safety Advocacy."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Events & Gatherings."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Light the Night Gala."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Safe Waters Workshop."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Annual Memorial Walk & Safety Fair."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Inaugural Memorial Walk."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "View Photo Gallery."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Inspired by Stephanie\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Inspired by Stephanie\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Request a Coin."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Water Safety Resources."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "View all documents."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Boating Safety Pre-Departure Checklist."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Coast Guard Life Jacket Guidelines."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Florida Boating Regulations."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Join Our Water Safety Mission."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Press / Media."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Frequently Asked Questions."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "The QR code on the back lets you track the coin\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "However, our educational resources are available to anyone, and we\\."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "cta",
+        "auto_fixable": true,
+        "suggestion": "Get Your Coin."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "footer",
+        "auto_fixable": true,
+        "suggestion": "Terms of Service."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "unknown",
+        "auto_fixable": true,
+        "suggestion": "The Coin Initiative Our Mission."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "Request a Coin."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact-form",
+        "auto_fixable": true,
+        "suggestion": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message."
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Promoting boating safety awareness across'",
+        "section": "hero",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Our foundation provides water safety'",
+        "section": "hero",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'through education, advocacy, and community'",
+        "section": "initiatives",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'When you receive this coin,'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'When you receive this coin,'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Let the ripple effect begin.'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Let the ripple effect begin.'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'When you receive this coin,'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Let the ripple effect begin.'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Join Our Water Safety Mission'",
+        "section": "contact",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Whether you want to volunteer'",
+        "section": "contact",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'through our contact form or'",
+        "section": "faq",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "mission",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "legacy",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "initiatives",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "events",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "coin",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "resources",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "contact",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Section has only 3 words - consider expanding",
+        "section": "cta",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "footer",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Section has only 17 words - consider expanding",
+        "section": "meta",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "unknown",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "about-coin",
+        "auto_fixable": false
+      }
+    ]
+  },
+  "es": {
+    "language": "es",
+    "grammar_issues": [
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "nav",
+        "sentence": "Historia de Stephanie",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Historia de Stephanie."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "hero",
+        "sentence": "La Iniciativa de la Moneda",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "La Iniciativa de la Moneda."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Prevención de Accidentes Náuticos",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Prevención de Accidentes Náuticos."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Apoyo para Familias Afectadas",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Apoyo para Familias Afectadas."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "En Memoria Amorosa",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "En Memoria Amorosa."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "La Luz de Stephanie",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "La Luz de Stephanie."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "leadership",
+        "sentence": "Conoce a las Fundadoras",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Conoce a las Fundadoras."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "founders",
+        "sentence": "Unidas por el Amor, Impulsadas por un Propósito",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Unidas por el Amor, Impulsadas por un Propósito."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Pilares de Acción",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Pilares de Acción."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Cursos Gratuitos de Seguridad Náutica",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Cursos Gratuitos de Seguridad Náutica."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Únete al Movimiento",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Únete al Movimiento."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Aprende más sobre la Moneda →",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Aprende más sobre la Moneda →."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Eventos de Seguridad Acuática en Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Eventos de Seguridad Acuática en Florida."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Defensa de Seguridad Náutica en Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Defensa de Seguridad Náutica en Florida."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Eventos y Reuniones",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Eventos y Reuniones."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Recaudación de Fondos",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Recaudación de Fondos."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Gala Ilumina la Noche",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Gala Ilumina la Noche."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Taller de Aguas Seguras",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Taller de Aguas Seguras."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Caminata Conmemorativa Anual y Feria de Seguridad",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Caminata Conmemorativa Anual y Feria de Seguridad."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Caminata Conmemorativa Inaugural",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Caminata Conmemorativa Inaugural."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Ver Galería de Fotos",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Ver Galería de Fotos."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Difunde la Bondad",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Difunde la Bondad."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "de la Moneda",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "de la Moneda."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Un lado lleva nuestra promesa:",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Un lado lleva nuestra promesa:."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Un lado lleva nuestra promesa:",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Un lado lleva nuestra promesa:."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Solicitar una Moneda",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Solicitar una Moneda."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Recursos de Seguridad Acuática",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Recursos de Seguridad Acuática."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Ver todos los documentos",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Ver todos los documentos."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Lista de Verificación Previa a la Salida para Seguridad Náutica",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Lista de Verificación Previa a la Salida para Seguridad Náutica."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Pautas de Chalecos Salvavidas de la Guardia Costera",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Pautas de Chalecos Salvavidas de la Guardia Costera."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Regulaciones Náuticas de Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Regulaciones Náuticas de Florida."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Únete a Nuestra Misión de Seguridad Acuática",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Únete a Nuestra Misión de Seguridad Acuática."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Apoyo de Donación",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Apoyo de Donación."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact",
+        "sentence": "Prensa / Medios",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Prensa / Medios."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "cta",
+        "sentence": "Obtén Tu Moneda",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Obtén Tu Moneda."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "footer",
+        "sentence": "Política de Privacidad",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Política de Privacidad."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "footer",
+        "sentence": "Términos de Servicio",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Términos de Servicio."
+      }
+    ],
+    "repetition_issues": [
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Nuestra fundación nació del deseo de prevenir accidentes náuticos y asegurar que ninguna otra familia sufra el dolor de una pérdida prevenible en las aguas de Florida.",
+        "repeated_phrase": "asegurar que ninguna otra familia",
+        "also_in": "legacy",
+        "message": "Repeated phrase: \"asegurar que ninguna otra familia\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "A través de la defensa de regulaciones náuticas más estrictas y cursos gratuitos de seguridad en Miami-Dade, estamos trabajando para cambiar la cultura de recreación acuática en el sur de Florida y prevenir accidentes náuticos prevenibles.",
+        "repeated_phrase": "A través de la defensa",
+        "also_in": "legacy",
+        "message": "Repeated phrase: \"A través de la defensa\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Nuestras iniciativas de seguridad acuática crean un cambio real a través de la educación, la defensa y la conexión comunitaria en el sur de Florida.",
+        "repeated_phrase": "a través de la educación,",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"a través de la educación,\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Asociándonos con autoridades locales en Miami-Dade y los Cayos de Florida para proporcionar recursos gratuitos de seguridad acuática, listas de verificación previas a la salida y talleres de seguridad náutica para familias.",
+        "repeated_phrase": "listas de verificación previas a",
+        "also_in": "resources",
+        "message": "Repeated phrase: \"listas de verificación previas a\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Inspirada en la generosidad ilimitada de Stephanie, esta moneda es un símbolo de bondad desinteresada.",
+        "repeated_phrase": "Inspirada en la generosidad ilimitada",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"Inspirada en la generosidad ilimitada\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Un lado lleva nuestra promesa:",
+        "repeated_phrase": "Un lado lleva nuestra promesa:",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"Un lado lleva nuestra promesa:\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Cuando recibas esta moneda, sostenla, escanéala y luego pásala realizando un acto aleatorio de bondad.",
+        "repeated_phrase": "Cuando recibas esta moneda, sostenla,",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"Cuando recibas esta moneda, sostenla,\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "coin",
+        "sentence": "Deja que comience el efecto dominó.",
+        "repeated_phrase": "Deja que comience el efecto",
+        "also_in": "coin",
+        "message": "Repeated phrase: \"Deja que comience el efecto\""
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Inspirada en la generosidad ilimitada de Stephanie, esta moneda es un símbolo de bondad desinteresada.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 59
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Un lado lleva nuestra promesa:",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 60
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Cuando recibas esta moneda, sostenla, escanéala y luego pásala realizando un acto aleatorio de bondad.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 61
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "exact_repetition",
+        "severity": "high",
+        "section": "coin",
+        "sentence": "Deja que comience el efecto dominó.",
+        "first_occurrence": {
+          "section": "coin",
+          "index": 62
+        },
+        "message": "Exact sentence repetition detected"
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Puedes solicitar una moneda a través de nuestro formulario de contacto o en cualquiera de nuestros eventos.",
+        "repeated_phrase": "a través de nuestro formulario",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"a través de nuestro formulario\""
+      }
+    ],
+    "coherence_issues": [
+      {
+        "type": "short_content",
+        "severity": "info",
+        "section": "nav",
+        "word_count": 3,
+        "message": "Section has only 3 words - consider expanding"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "mission",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "legacy",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "initiatives",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "events",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "coin",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "resources",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "contact",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "faq",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "short_content",
+        "severity": "info",
+        "section": "cta",
+        "word_count": 3,
+        "message": "Section has only 3 words - consider expanding"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "footer",
+        "message": "Consider adding transition words for better flow"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Inspirada en la generosidad ilimitada de Stephanie, esta moneda es un símbolo de bondad desinteresada.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Un lado lleva nuestra promesa:",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Cuando recibas esta moneda, sostenla, escanéala y luego pásala realizando un acto aleatorio de bondad.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "high",
+        "category": "repetition",
+        "issue": "Sentence repeated in coin",
+        "section": "coin",
+        "sentence": "Deja que comience el efecto dominó.",
+        "action": "Remove duplicate or rephrase",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "nav",
+        "auto_fixable": true,
+        "suggestion": "Historia de Stephanie."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "hero",
+        "auto_fixable": true,
+        "suggestion": "La Iniciativa de la Moneda."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Prevención de Accidentes Náuticos."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Apoyo para Familias Afectadas."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "En Memoria Amorosa."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "La Luz de Stephanie."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "leadership",
+        "auto_fixable": true,
+        "suggestion": "Conoce a las Fundadoras."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "founders",
+        "auto_fixable": true,
+        "suggestion": "Unidas por el Amor, Impulsadas por un Propósito."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Pilares de Acción."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Cursos Gratuitos de Seguridad Náutica."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Únete al Movimiento."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Aprende más sobre la Moneda →."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Eventos de Seguridad Acuática en Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Defensa de Seguridad Náutica en Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Eventos y Reuniones."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Recaudación de Fondos."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Gala Ilumina la Noche."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Taller de Aguas Seguras."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Caminata Conmemorativa Anual y Feria de Seguridad."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Caminata Conmemorativa Inaugural."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Ver Galería de Fotos."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Difunde la Bondad."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "de la Moneda."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Un lado lleva nuestra promesa:."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Un lado lleva nuestra promesa:."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "coin",
+        "auto_fixable": true,
+        "suggestion": "Solicitar una Moneda."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Recursos de Seguridad Acuática."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Ver todos los documentos."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Lista de Verificación Previa a la Salida para Seguridad Náutica."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Pautas de Chalecos Salvavidas de la Guardia Costera."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Regulaciones Náuticas de Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Únete a Nuestra Misión de Seguridad Acuática."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Apoyo de Donación."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact",
+        "auto_fixable": true,
+        "suggestion": "Prensa / Medios."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "cta",
+        "auto_fixable": true,
+        "suggestion": "Obtén Tu Moneda."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "footer",
+        "auto_fixable": true,
+        "suggestion": "Política de Privacidad."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "footer",
+        "auto_fixable": true,
+        "suggestion": "Términos de Servicio."
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'asegurar que ninguna otra familia'",
+        "section": "mission",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'A través de la defensa'",
+        "section": "mission",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'a través de la educación,'",
+        "section": "initiatives",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'listas de verificación previas a'",
+        "section": "initiatives",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Inspirada en la generosidad ilimitada'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Un lado lleva nuestra promesa:'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Cuando recibas esta moneda, sostenla,'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'Deja que comience el efecto'",
+        "section": "coin",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'a través de nuestro formulario'",
+        "section": "faq",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Section has only 3 words - consider expanding",
+        "section": "nav",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "mission",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "legacy",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "initiatives",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "events",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "coin",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "resources",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "contact",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "faq",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Section has only 3 words - consider expanding",
+        "section": "cta",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "footer",
+        "auto_fixable": false
+      }
+    ]
+  }
+}

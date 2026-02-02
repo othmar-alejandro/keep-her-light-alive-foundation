@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://keepherlightalive.org/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Mission Section -->
+    <url>
+        <loc>https://keepherlightalive.org/#mission</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Legacy / Stephanie's Story -->
+    <url>
+        <loc>https://keepherlightalive.org/#legacy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Initiatives / Pillars of Action -->
+    <url>
+        <loc>https://keepherlightalive.org/#initiatives</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Events Section -->
+    <url>
+        <loc>https://keepherlightalive.org/#events</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Coin Initiative -->
+    <url>
+        <loc>https://keepherlightalive.org/#about-coin</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Water Safety Resources -->
+    <url>
+        <loc>https://keepherlightalive.org/#resources</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Form -->
+    <url>
+        <loc>https://keepherlightalive.org/#contact-form</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>

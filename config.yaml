@@ -1,0 +1,60 @@
+# Content Analysis Agent System Configuration
+# Keep Her Light Alive Foundation
+
+# Content Sources
+content_sources:
+  html_file: "website/index.html"
+  translations_file: "website/translations.js"
+
+# Analysis Settings
+analysis:
+  # Grammar checking
+  grammar:
+    enabled: true
+    languages: ["en", "es"]
+    severity_threshold: "warning"  # info, warning, error
+  
+  # Repetition detection
+  repetition:
+    enabled: true
+    exact_match_threshold: 0.95  # 95% similarity for exact matches
+    semantic_threshold: 0.85     # 85% similarity for semantic matches
+    min_sentence_length: 5       # Minimum words to check
+  
+  # Coherence analysis
+  coherence:
+    enabled: true
+    check_flow: true
+    check_transitions: true
+    paragraph_min_length: 20  # Minimum words per paragraph
+
+# Content Sections to Analyze
+sections:
+  - hero
+  - mission
+  - legacy
+  - leadership
+  - initiatives
+  - events
+  - coin
+  - resources
+  - contact
+  - faq
+  - footer
+
+# Report Settings
+reporting:
+  output_dir: "reports"
+  formats: ["markdown", "json"]
+  include_suggestions: true
+  max_suggestions_per_issue: 3
+  
+# Agent Settings
+agents:
+  writer:
+    name: "ContentWriterAgent"
+    role: "Content extraction and organization"
+  
+  editor:
+    name: "ContentEditorAgent"
+    role: "Grammar, repetition, and coherence checking"

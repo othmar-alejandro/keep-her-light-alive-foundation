@@ -1,0 +1,1656 @@
+{
+  "en": {
+    "language": "en",
+    "grammar_issues": [
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "meta",
+        "sentence": "Dedicated to preventing boating tragedies through education, awareness, and honoring the radiant spirit of Stephanie Marie Rodriguez",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Dedicated to preventing boating tragedies through education, awareness, and honoring the radiant spirit of Stephanie Marie Rodriguez."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "unknown",
+        "sentence": "Keep Her Light Alive",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Keep Her Light Alive."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "unknown",
+        "sentence": "Promoting boating safety awareness across Florida to prevent tragedies on the water",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Promoting boating safety awareness across Florida to prevent tragedies on the water."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "unknown",
+        "sentence": "Our\n                        foundation provides water safety education, resources, and community support - in loving memory\n                        of\n                        Stephanie M",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Our\n                        foundation provides water safety education, resources, and community support - in loving memory\n                        of\n                        Stephanie M."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "unknown",
+        "sentence": "Our\n                        foundation provides water safety education, resources, and community support - in loving memory\n                        of\n                        Stephanie M",
+        "message": "Double spaces detected",
+        "suggestion": "Our foundation provides water safety education, resources, and community support - in loving memory of Stephanie M"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "unknown",
+        "sentence": "The Coin Initiative Our Mission",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The Coin Initiative Our Mission."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "The\n                            Mission Awareness",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The\n                            Mission Awareness."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "mission",
+        "sentence": "The\n                            Mission Awareness",
+        "message": "Double spaces detected",
+        "suggestion": "The Mission Awareness"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "\"We believe that water safety education saves lives",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "\"We believe that water safety education saves lives."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Our foundation was born from a desire\n                            to prevent boating accidents and ensure no other family endures the pain of a preventable\n                            loss on Florida's waters",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Our foundation was born from a desire\n                            to prevent boating accidents and ensure no other family endures the pain of a preventable\n                            loss on Florida's waters."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "mission",
+        "sentence": "Our foundation was born from a desire\n                            to prevent boating accidents and ensure no other family endures the pain of a preventable\n                            loss on Florida's waters",
+        "message": "Double spaces detected",
+        "suggestion": "Our foundation was born from a desire to prevent boating accidents and ensure no other family endures the pain of a preventable loss on Florida's waters"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "\" Boating Accident Prevention Through advocacy for stricter boating regulations and free safety courses in\n                                    Miami-Dade, we're working to change the culture of water recreation in South Florida\n                                    and prevent preventable boating accidents",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "\" Boating Accident Prevention Through advocacy for stricter boating regulations and free safety courses in\n                                    Miami-Dade, we're working to change the culture of water recreation in South Florida\n                                    and prevent preventable boating accidents."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "mission",
+        "sentence": "\" Boating Accident Prevention Through advocacy for stricter boating regulations and free safety courses in\n                                    Miami-Dade, we're working to change the culture of water recreation in South Florida\n                                    and prevent preventable boating accidents",
+        "message": "Double spaces detected",
+        "suggestion": "\" Boating Accident Prevention Through advocacy for stricter boating regulations and free safety courses in Miami-Dade, we're working to change the culture of water recreation in South Florida and prevent preventable boating accidents"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for\n                                    families affected by boating accidents in Florida, offering hope and healing during\n                                    difficult times",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for\n                                    families affected by boating accidents in Florida, offering hope and healing during\n                                    difficult times."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "mission",
+        "sentence": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for\n                                    families affected by boating accidents in Florida, offering hope and healing during\n                                    difficult times",
+        "message": "Double spaces detected",
+        "suggestion": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for families affected by boating accidents in Florida, offering hope and healing during difficult times"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "In\n                        Loving Memory Stephanie's Light On November 7, 2024 , a preventable boating\n                            accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman\n                            whose light touched everyone she met",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "In\n                        Loving Memory Stephanie's Light On November 7, 2024 , a preventable boating\n                            accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman\n                            whose light touched everyone she met."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "In\n                        Loving Memory Stephanie's Light On November 7, 2024 , a preventable boating\n                            accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman\n                            whose light touched everyone she met",
+        "message": "Double spaces detected",
+        "suggestion": "In Loving Memory Stephanie's Light On November 7, 2024 , a preventable boating accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman whose light touched everyone she met"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "She wasn't just a daughter, sister, and friend; she\n                            was the person who remembered your birthday, who showed up when you needed her most, who\n                            made strangers feel like family",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "She wasn't just a daughter, sister, and friend; she\n                            was the person who remembered your birthday, who showed up when you needed her most, who\n                            made strangers feel like family."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "She wasn't just a daughter, sister, and friend; she\n                            was the person who remembered your birthday, who showed up when you needed her most, who\n                            made strangers feel like family",
+        "message": "Double spaces detected",
+        "suggestion": "She wasn't just a daughter, sister, and friend; she was the person who remembered your birthday, who showed up when you needed her most, who made strangers feel like family"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Stephanie had dreams of becoming a nurse, driven by her deep desire to care for others",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Stephanie had dreams of becoming a nurse, driven by her deep desire to care for others."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "She\n                            loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by\n                            the people she cherished",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "She\n                            loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by\n                            the people she cherished."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "She\n                            loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by\n                            the people she cherished",
+        "message": "Double spaces detected",
+        "suggestion": "She loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by the people she cherished"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Her laughter was contagious, her kindness boundless, and her\n                            presence made every room brighter",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Her laughter was contagious, her kindness boundless, and her\n                            presence made every room brighter."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "Her laughter was contagious, her kindness boundless, and her\n                            presence made every room brighter",
+        "message": "Double spaces detected",
+        "suggestion": "Her laughter was contagious, her kindness boundless, and her presence made every room brighter"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "That November evening was supposed to be another beautiful memory - a day on the water with\n                            friends, celebrating life",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "That November evening was supposed to be another beautiful memory - a day on the water with\n                            friends, celebrating life."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "That November evening was supposed to be another beautiful memory - a day on the water with\n                            friends, celebrating life",
+        "message": "Double spaces detected",
+        "suggestion": "That November evening was supposed to be another beautiful memory - a day on the water with friends, celebrating life"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Instead, it became a tragedy that shattered four families and an\n                            entire community",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Instead, it became a tragedy that shattered four families and an\n                            entire community."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "Instead, it became a tragedy that shattered four families and an\n                            entire community",
+        "message": "Double spaces detected",
+        "suggestion": "Instead, it became a tragedy that shattered four families and an entire community"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "The accident was preventable",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The accident was preventable."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "The safety measures were absent",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The safety measures were absent."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "And in an\n                            instant, the world lost someone irreplaceable",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "And in an\n                            instant, the world lost someone irreplaceable."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "And in an\n                            instant, the world lost someone irreplaceable",
+        "message": "Double spaces detected",
+        "suggestion": "And in an instant, the world lost someone irreplaceable"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Her passing ignited a spark in those who loved her most",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Her passing ignited a spark in those who loved her most."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Her mother, Magaly, along with\n                            close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Her mother, Magaly, along with\n                            close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "Her mother, Magaly, along with\n                            close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence",
+        "message": "Double spaces detected",
+        "suggestion": "Her mother, Magaly, along with close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no\n                            other family experiences this preventable heartbreak",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no\n                            other family experiences this preventable heartbreak."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no\n                            other family experiences this preventable heartbreak",
+        "message": "Double spaces detected",
+        "suggestion": "They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no other family experiences this preventable heartbreak"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Through boating safety advocacy,\n                            education, and community support, we're working to protect lives across Florida and honor\n                            the spirit of a young woman who gave so much love to the world",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Through boating safety advocacy,\n                            education, and community support, we're working to protect lives across Florida and honor\n                            the spirit of a young woman who gave so much love to the world."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "Through boating safety advocacy,\n                            education, and community support, we're working to protect lives across Florida and honor\n                            the spirit of a young woman who gave so much love to the world",
+        "message": "Double spaces detected",
+        "suggestion": "Through boating safety advocacy, education, and community support, we're working to protect lives across Florida and honor the spirit of a young woman who gave so much love to the world"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "\"Stephanie's light didn't dim when she left us - it multiplied",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "\"Stephanie's light didn't dim when she left us - it multiplied."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "legacy",
+        "sentence": "Every life we save,\n                                every\n                                family we educate, every act of kindness we inspire carries her spirit forward",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Every life we save,\n                                every\n                                family we educate, every act of kindness we inspire carries her spirit forward."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "legacy",
+        "sentence": "Every life we save,\n                                every\n                                family we educate, every act of kindness we inspire carries her spirit forward",
+        "message": "Double spaces detected",
+        "suggestion": "Every life we save, every family we educate, every act of kindness we inspire carries her spirit forward"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Our\n                            Impact Pillars\n                            of Action Our water safety initiatives create real change through education, advocacy, and community\n                        connection across South Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Our\n                            Impact Pillars\n                            of Action Our water safety initiatives create real change through education, advocacy, and community\n                        connection across South Florida."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "initiatives",
+        "sentence": "Our\n                            Impact Pillars\n                            of Action Our water safety initiatives create real change through education, advocacy, and community\n                        connection across South Florida",
+        "message": "Double spaces detected",
+        "suggestion": "Our Impact Pillars of Action Our water safety initiatives create real change through education, advocacy, and community connection across South Florida"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Free Boating Safety\n                                Courses Partnering with local authorities in Miami-Dade and the Florida Keys to provide free\n                                water safety resources, pre-departure checklists, and boating safety workshops for\n                                families",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Free Boating Safety\n                                Courses Partnering with local authorities in Miami-Dade and the Florida Keys to provide free\n                                water safety resources, pre-departure checklists, and boating safety workshops for\n                                families."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "initiatives",
+        "sentence": "Free Boating Safety\n                                Courses Partnering with local authorities in Miami-Dade and the Florida Keys to provide free\n                                water safety resources, pre-departure checklists, and boating safety workshops for\n                                families",
+        "message": "Double spaces detected",
+        "suggestion": "Free Boating Safety Courses Partnering with local authorities in Miami-Dade and the Florida Keys to provide free water safety resources, pre-departure checklists, and boating safety workshops for families"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Join the\n                                Movement Learn\n                                more about the Coin → Water Safety Events\n                                in Florida From memorial walks to boating safety seminars in Hialeah and Miami, we bring the\n                                community together for healing and education",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Join the\n                                Movement Learn\n                                more about the Coin → Water Safety Events\n                                in Florida From memorial walks to boating safety seminars in Hialeah and Miami, we bring the\n                                community together for healing and education."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "initiatives",
+        "sentence": "Join the\n                                Movement Learn\n                                more about the Coin → Water Safety Events\n                                in Florida From memorial walks to boating safety seminars in Hialeah and Miami, we bring the\n                                community together for healing and education",
+        "message": "Double spaces detected",
+        "suggestion": "Join the Movement Learn more about the Coin → Water Safety Events in Florida From memorial walks to boating safety seminars in Hialeah and Miami, we bring the community together for healing and education"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Florida Boating\n                                Safety Advocacy Advocating for\n                                stricter boating safety laws and\n                                regulations in Florida to help prevent accidents and ensure every boat trip ends safely",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Florida Boating\n                                Safety Advocacy Advocating for\n                                stricter boating safety laws and\n                                regulations in Florida to help prevent accidents and ensure every boat trip ends safely."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "initiatives",
+        "sentence": "Florida Boating\n                                Safety Advocacy Advocating for\n                                stricter boating safety laws and\n                                regulations in Florida to help prevent accidents and ensure every boat trip ends safely",
+        "message": "Double spaces detected",
+        "suggestion": "Florida Boating Safety Advocacy Advocating for stricter boating safety laws and regulations in Florida to help prevent accidents and ensure every boat trip ends safely"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Community Events &\n                        Gatherings Join us in our mission to celebrate life and promote safety",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Community Events &\n                        Gatherings Join us in our mission to celebrate life and promote safety."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "events",
+        "sentence": "Community Events &\n                        Gatherings Join us in our mission to celebrate life and promote safety",
+        "message": "Double spaces detected",
+        "suggestion": "Community Events & Gatherings Join us in our mission to celebrate life and promote safety"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Upcoming Events Feb 14 Fundraiser Light the Night Gala An elegant evening of remembrance and hope",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Upcoming Events Feb 14 Fundraiser Light the Night Gala An elegant evening of remembrance and hope."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Join us for a charity dinner to support\n                                    our\n                                    educational programs and victim assistance fund",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Join us for a charity dinner to support\n                                    our\n                                    educational programs and victim assistance fund."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "events",
+        "sentence": "Join us for a charity dinner to support\n                                    our\n                                    educational programs and victim assistance fund",
+        "message": "Double spaces detected",
+        "suggestion": "Join us for a charity dinner to support our educational programs and victim assistance fund"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Reserve Tickets Mar 05 Education Safe Waters Workshop A hands-on boating safety course for all ages",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Reserve Tickets Mar 05 Education Safe Waters Workshop A hands-on boating safety course for all ages."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Learn proper life jacket use,\n                                    navigation\n                                    rules, and emergency protocols",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Learn proper life jacket use,\n                                    navigation\n                                    rules, and emergency protocols."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "events",
+        "sentence": "Learn proper life jacket use,\n                                    navigation\n                                    rules, and emergency protocols",
+        "message": "Double spaces detected",
+        "suggestion": "Learn proper life jacket use, navigation rules, and emergency protocols"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "Register Free Past Highlights November 2025 Community Event Inaugural Memorial Walk Over 500 community members gathered at sunset to walk 5k in memory of lost loved ones",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Register Free Past Highlights November 2025 Community Event Inaugural Memorial Walk Over 500 community members gathered at sunset to walk 5k in memory of lost loved ones."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "The\n                                event raised funds for 300 life jackets donated to local youth centers",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The\n                                event raised funds for 300 life jackets donated to local youth centers."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "events",
+        "sentence": "The\n                                event raised funds for 300 life jackets donated to local youth centers",
+        "message": "Double spaces detected",
+        "suggestion": "The event raised funds for 300 life jackets donated to local youth centers"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "events",
+        "sentence": "View\n                                Photo Gallery",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "View\n                                Photo Gallery."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "events",
+        "sentence": "View\n                                Photo Gallery",
+        "message": "Double spaces detected",
+        "suggestion": "View Photo Gallery"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "Spread\n                            Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Spread\n                            Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "Spread\n                            Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness",
+        "message": "Double spaces detected",
+        "suggestion": "Spread Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "One\n                            side bears our promise: \"Keep Her Light Alive,\" while\n                            the\n                            other connects you to a community of good deeds",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "One\n                            side bears our promise: \"Keep Her Light Alive,\" while\n                            the\n                            other connects you to a community of good deeds."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "One\n                            side bears our promise: \"Keep Her Light Alive,\" while\n                            the\n                            other connects you to a community of good deeds",
+        "message": "Double spaces detected",
+        "suggestion": "One side bears our promise: \"Keep Her Light Alive,\" while the other connects you to a community of good deeds"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act\n                            of\n                            kindness",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act\n                            of\n                            kindness."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "about-coin",
+        "sentence": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act\n                            of\n                            kindness",
+        "message": "Double spaces detected",
+        "suggestion": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "Let the ripple effect begin",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Let the ripple effect begin."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "about-coin",
+        "sentence": "Request a Coin",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Request a Coin."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Education Water Safety\n                            Resources Essential boating safety guides, pre-departure checklists, and life jacket guidelines to\n                            help Florida families prepare for a safe day on the water",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Education Water Safety\n                            Resources Essential boating safety guides, pre-departure checklists, and life jacket guidelines to\n                            help Florida families prepare for a safe day on the water."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "resources",
+        "sentence": "Education Water Safety\n                            Resources Essential boating safety guides, pre-departure checklists, and life jacket guidelines to\n                            help Florida families prepare for a safe day on the water",
+        "message": "Double spaces detected",
+        "suggestion": "Education Water Safety Resources Essential boating safety guides, pre-departure checklists, and life jacket guidelines to help Florida families prepare for a safe day on the water"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "Download, print, and share",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Download, print, and share."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "View all documents Boating Safety Pre-Departure Checklist Free PDF Download • 1",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "View all documents Boating Safety Pre-Departure Checklist Free PDF Download • 1."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "2\n                                        MB Coast Guard Life Jacket Guidelines Free PDF Download • 0",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "2\n                                        MB Coast Guard Life Jacket Guidelines Free PDF Download • 0."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "resources",
+        "sentence": "2\n                                        MB Coast Guard Life Jacket Guidelines Free PDF Download • 0",
+        "message": "Double spaces detected",
+        "suggestion": "2 MB Coast Guard Life Jacket Guidelines Free PDF Download • 0"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "resources",
+        "sentence": "8\n                                        MB Florida Boating Regulations External Link",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "8\n                                        MB Florida Boating Regulations External Link."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "resources",
+        "sentence": "8\n                                        MB Florida Boating Regulations External Link",
+        "message": "Double spaces detected",
+        "suggestion": "8 MB Florida Boating Regulations External Link"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact-form",
+        "sentence": "Get\n                            Involved Join Our Water\n                            Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your\n                            story, we're here to connect and help prevent future tragedies",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Get\n                            Involved Join Our Water\n                            Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your\n                            story, we're here to connect and help prevent future tragedies."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "contact-form",
+        "sentence": "Get\n                            Involved Join Our Water\n                            Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your\n                            story, we're here to connect and help prevent future tragedies",
+        "message": "Double spaces detected",
+        "suggestion": "Get Involved Join Our Water Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your story, we're here to connect and help prevent future tragedies"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact-form",
+        "sentence": "Location Florida, United States Email Keepherlightalivesmr@gmail",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Location Florida, United States Email Keepherlightalivesmr@gmail."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "contact-form",
+        "sentence": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Questions Frequently Asked Questions Everything you need to know about our foundation and how you can help",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Questions Frequently Asked Questions Everything you need to know about our foundation and how you can help."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "What is Keep Her Light Alive Foundation",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "What is Keep Her Light Alive Foundation."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "We are a nonprofit organization dedicated to preventing boating accidents through\n                                education, advocacy, and community support",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "We are a nonprofit organization dedicated to preventing boating accidents through\n                                education, advocacy, and community support."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "We are a nonprofit organization dedicated to preventing boating accidents through\n                                education, advocacy, and community support",
+        "message": "Double spaces detected",
+        "suggestion": "We are a nonprofit organization dedicated to preventing boating accidents through education, advocacy, and community support"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Founded in memory of Stephanie Marie\n                                Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a\n                                loved one on the water",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Founded in memory of Stephanie Marie\n                                Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a\n                                loved one on the water."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "Founded in memory of Stephanie Marie\n                                Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a\n                                loved one on the water",
+        "message": "Double spaces detected",
+        "suggestion": "Founded in memory of Stephanie Marie Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a loved one on the water"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "How can I get a Coin of Kindness",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "How can I get a Coin of Kindness."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "You can request a coin through our contact form or at any of our events",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "You can request a coin through our contact form or at any of our events."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Each coin is\n                                free and comes with a simple mission: perform an act of kindness, then pass it on",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Each coin is\n                                free and comes with a simple mission: perform an act of kindness, then pass it on."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "Each coin is\n                                free and comes with a simple mission: perform an act of kindness, then pass it on",
+        "message": "Double spaces detected",
+        "suggestion": "Each coin is free and comes with a simple mission: perform an act of kindness, then pass it on"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "The\n                                QR code on the back lets you track the coin's journey and see the ripple effect of good\n                                deeds",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "The\n                                QR code on the back lets you track the coin's journey and see the ripple effect of good\n                                deeds."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "The\n                                QR code on the back lets you track the coin's journey and see the ripple effect of good\n                                deeds",
+        "message": "Double spaces detected",
+        "suggestion": "The QR code on the back lets you track the coin's journey and see the ripple effect of good deeds"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "How can I support the foundation",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "How can I support the foundation."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "There are many ways to help: volunteer at our events, sponsor a safety workshop, share\n                                our resources with boaters in your community, or make a donation",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "There are many ways to help: volunteer at our events, sponsor a safety workshop, share\n                                our resources with boaters in your community, or make a donation."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "There are many ways to help: volunteer at our events, sponsor a safety workshop, share\n                                our resources with boaters in your community, or make a donation",
+        "message": "Double spaces detected",
+        "suggestion": "There are many ways to help: volunteer at our events, sponsor a safety workshop, share our resources with boaters in your community, or make a donation"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Every contribution\n                                helps us provide free safety education and support families affected by boating\n                                accidents",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Every contribution\n                                helps us provide free safety education and support families affected by boating\n                                accidents."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "Every contribution\n                                helps us provide free safety education and support families affected by boating\n                                accidents",
+        "message": "Double spaces detected",
+        "suggestion": "Every contribution helps us provide free safety education and support families affected by boating accidents"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Are your boating safety courses really free",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Are your boating safety courses really free."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "All our safety courses, workshops, and educational resources are completely free",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "All our safety courses, workshops, and educational resources are completely free."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "We believe that financial barriers should never prevent anyone from learning life-saving\n                                water safety skills",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "We believe that financial barriers should never prevent anyone from learning life-saving\n                                water safety skills."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "We believe that financial barriers should never prevent anyone from learning life-saving\n                                water safety skills",
+        "message": "Double spaces detected",
+        "suggestion": "We believe that financial barriers should never prevent anyone from learning life-saving water safety skills"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "Where do you operate",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "Where do you operate."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida\n                                Keys",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida\n                                Keys."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida\n                                Keys",
+        "message": "Double spaces detected",
+        "suggestion": "We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida Keys"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "However, our educational resources are available to anyone, and we're working to\n                                expand our reach throughout Florida",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "However, our educational resources are available to anyone, and we're working to\n                                expand our reach throughout Florida."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "However, our educational resources are available to anyone, and we're working to\n                                expand our reach throughout Florida",
+        "message": "Double spaces detected",
+        "suggestion": "However, our educational resources are available to anyone, and we're working to expand our reach throughout Florida"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "How can I share my story or get support",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "How can I share my story or get support."
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "If you or your family have been affected by a boating accident, please reach out through\n                                our contact form or call us directly",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "If you or your family have been affected by a boating accident, please reach out through\n                                our contact form or call us directly."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "If you or your family have been affected by a boating accident, please reach out through\n                                our contact form or call us directly",
+        "message": "Double spaces detected",
+        "suggestion": "If you or your family have been affected by a boating accident, please reach out through our contact form or call us directly"
+      },
+      {
+        "type": "passive_voice",
+        "severity": "info",
+        "section": "faq",
+        "sentence": "If you or your family have been affected by a boating accident, please reach out through\n                                our contact form or call us directly",
+        "message": "Possible passive voice - consider active voice for clarity"
+      },
+      {
+        "type": "missing_punctuation",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "We provide emotional support, connect families\n                                with resources, and offer a compassionate community of people who understand your\n                                experience",
+        "message": "Sentence missing ending punctuation",
+        "suggestion": "We provide emotional support, connect families\n                                with resources, and offer a compassionate community of people who understand your\n                                experience."
+      },
+      {
+        "type": "double_space",
+        "severity": "low",
+        "section": "faq",
+        "sentence": "We provide emotional support, connect families\n                                with resources, and offer a compassionate community of people who understand your\n                                experience",
+        "message": "Double spaces detected",
+        "suggestion": "We provide emotional support, connect families with resources, and offer a compassionate community of people who understand your experience"
+      }
+    ],
+    "repetition_issues": [
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "mission",
+        "sentence": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for\n                                    families affected by boating accidents in Florida, offering hope and healing during\n                                    difficult times",
+        "repeated_phrase": "families affected by boating accidents",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"families affected by boating accidents\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "initiatives",
+        "sentence": "Our\n                            Impact Pillars\n                            of Action Our water safety initiatives create real change through education, advocacy, and community\n                        connection across South Florida",
+        "repeated_phrase": "through education, advocacy, and community",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"through education, advocacy, and community\""
+      },
+      {
+        "type": "phrase_repetition",
+        "severity": "medium",
+        "section": "faq",
+        "sentence": "You can request a coin through our contact form or at any of our events",
+        "repeated_phrase": "through our contact form or",
+        "also_in": "faq",
+        "message": "Repeated phrase: \"through our contact form or\""
+      }
+    ],
+    "coherence_issues": [
+      {
+        "type": "short_content",
+        "severity": "info",
+        "section": "meta",
+        "word_count": 17,
+        "message": "Section has only 17 words - consider expanding"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "unknown",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "mission",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "legacy",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "initiatives",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "events",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "about-coin",
+        "message": "Consider adding transition words for better flow"
+      },
+      {
+        "type": "missing_transitions",
+        "severity": "info",
+        "section": "resources",
+        "message": "Consider adding transition words for better flow"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "meta",
+        "auto_fixable": true,
+        "suggestion": "Dedicated to preventing boating tragedies through education, awareness, and honoring the radiant spirit of Stephanie Marie Rodriguez."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "unknown",
+        "auto_fixable": true,
+        "suggestion": "Keep Her Light Alive."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "unknown",
+        "auto_fixable": true,
+        "suggestion": "Promoting boating safety awareness across Florida to prevent tragedies on the water."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "unknown",
+        "auto_fixable": true,
+        "suggestion": "Our\n                        foundation provides water safety education, resources, and community support - in loving memory\n                        of\n                        Stephanie M."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "unknown",
+        "auto_fixable": true,
+        "suggestion": "The Coin Initiative Our Mission."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "The\n                            Mission Awareness."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "\"We believe that water safety education saves lives."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Our foundation was born from a desire\n                            to prevent boating accidents and ensure no other family endures the pain of a preventable\n                            loss on Florida's waters."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "\" Boating Accident Prevention Through advocacy for stricter boating regulations and free safety courses in\n                                    Miami-Dade, we're working to change the culture of water recreation in South Florida\n                                    and prevent preventable boating accidents."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "mission",
+        "auto_fixable": true,
+        "suggestion": "Support for Affected Families Beyond safety resources, we provide emotional support and community connection for\n                                    families affected by boating accidents in Florida, offering hope and healing during\n                                    difficult times."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "In\n                        Loving Memory Stephanie's Light On November 7, 2024 , a preventable boating\n                            accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman\n                            whose light touched everyone she met."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "She wasn't just a daughter, sister, and friend; she\n                            was the person who remembered your birthday, who showed up when you needed her most, who\n                            made strangers feel like family."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Stephanie had dreams of becoming a nurse, driven by her deep desire to care for others."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "She\n                            loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by\n                            the people she cherished."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Her laughter was contagious, her kindness boundless, and her\n                            presence made every room brighter."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "That November evening was supposed to be another beautiful memory - a day on the water with\n                            friends, celebrating life."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Instead, it became a tragedy that shattered four families and an\n                            entire community."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "The accident was preventable."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "The safety measures were absent."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "And in an\n                            instant, the world lost someone irreplaceable."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Her passing ignited a spark in those who loved her most."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Her mother, Magaly, along with\n                            close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no\n                            other family experiences this preventable heartbreak."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Through boating safety advocacy,\n                            education, and community support, we're working to protect lives across Florida and honor\n                            the spirit of a young woman who gave so much love to the world."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "\"Stephanie's light didn't dim when she left us - it multiplied."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "legacy",
+        "auto_fixable": true,
+        "suggestion": "Every life we save,\n                                every\n                                family we educate, every act of kindness we inspire carries her spirit forward."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Our\n                            Impact Pillars\n                            of Action Our water safety initiatives create real change through education, advocacy, and community\n                        connection across South Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Free Boating Safety\n                                Courses Partnering with local authorities in Miami-Dade and the Florida Keys to provide free\n                                water safety resources, pre-departure checklists, and boating safety workshops for\n                                families."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Join the\n                                Movement Learn\n                                more about the Coin → Water Safety Events\n                                in Florida From memorial walks to boating safety seminars in Hialeah and Miami, we bring the\n                                community together for healing and education."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "initiatives",
+        "auto_fixable": true,
+        "suggestion": "Florida Boating\n                                Safety Advocacy Advocating for\n                                stricter boating safety laws and\n                                regulations in Florida to help prevent accidents and ensure every boat trip ends safely."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Community Events &\n                        Gatherings Join us in our mission to celebrate life and promote safety."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Upcoming Events Feb 14 Fundraiser Light the Night Gala An elegant evening of remembrance and hope."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Join us for a charity dinner to support\n                                    our\n                                    educational programs and victim assistance fund."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Reserve Tickets Mar 05 Education Safe Waters Workshop A hands-on boating safety course for all ages."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Learn proper life jacket use,\n                                    navigation\n                                    rules, and emergency protocols."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "Register Free Past Highlights November 2025 Community Event Inaugural Memorial Walk Over 500 community members gathered at sunset to walk 5k in memory of lost loved ones."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "The\n                                event raised funds for 300 life jackets donated to local youth centers."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "events",
+        "auto_fixable": true,
+        "suggestion": "View\n                                Photo Gallery."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "Spread\n                            Kindness The Coin Initiative Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "One\n                            side bears our promise: \"Keep Her Light Alive,\" while\n                            the\n                            other connects you to a community of good deeds."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "When you receive this coin, hold it, scan it, and then pass it on by performing a random act\n                            of\n                            kindness."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "Let the ripple effect begin."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "about-coin",
+        "auto_fixable": true,
+        "suggestion": "Request a Coin."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Education Water Safety\n                            Resources Essential boating safety guides, pre-departure checklists, and life jacket guidelines to\n                            help Florida families prepare for a safe day on the water."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "Download, print, and share."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "View all documents Boating Safety Pre-Departure Checklist Free PDF Download • 1."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "2\n                                        MB Coast Guard Life Jacket Guidelines Free PDF Download • 0."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "resources",
+        "auto_fixable": true,
+        "suggestion": "8\n                                        MB Florida Boating Regulations External Link."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact-form",
+        "auto_fixable": true,
+        "suggestion": "Get\n                            Involved Join Our Water\n                            Safety Mission Whether you want to volunteer at boating safety events, sponsor an initiative, or share your\n                            story, we're here to connect and help prevent future tragedies."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact-form",
+        "auto_fixable": true,
+        "suggestion": "Location Florida, United States Email Keepherlightalivesmr@gmail."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "contact-form",
+        "auto_fixable": true,
+        "suggestion": "com Phone 786-486-8120 Name Email Subject General Inquiry Volunteering Donation Support Press / Media Message Send Message."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Questions Frequently Asked Questions Everything you need to know about our foundation and how you can help."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "What is Keep Her Light Alive Foundation."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "We are a nonprofit organization dedicated to preventing boating accidents through\n                                education, advocacy, and community support."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Founded in memory of Stephanie Marie\n                                Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a\n                                loved one on the water."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "How can I get a Coin of Kindness."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "You can request a coin through our contact form or at any of our events."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Each coin is\n                                free and comes with a simple mission: perform an act of kindness, then pass it on."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "The\n                                QR code on the back lets you track the coin's journey and see the ripple effect of good\n                                deeds."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "How can I support the foundation."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "There are many ways to help: volunteer at our events, sponsor a safety workshop, share\n                                our resources with boaters in your community, or make a donation."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Every contribution\n                                helps us provide free safety education and support families affected by boating\n                                accidents."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Are your boating safety courses really free."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "All our safety courses, workshops, and educational resources are completely free."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "We believe that financial barriers should never prevent anyone from learning life-saving\n                                water safety skills."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "Where do you operate."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida\n                                Keys."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "However, our educational resources are available to anyone, and we're working to\n                                expand our reach throughout Florida."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "How can I share my story or get support."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "If you or your family have been affected by a boating accident, please reach out through\n                                our contact form or call us directly."
+      },
+      {
+        "priority": "medium",
+        "category": "grammar",
+        "issue": "Sentence missing ending punctuation",
+        "section": "faq",
+        "auto_fixable": true,
+        "suggestion": "We provide emotional support, connect families\n                                with resources, and offer a compassionate community of people who understand your\n                                experience."
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'families affected by boating accidents'",
+        "section": "mission",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'through education, advocacy, and community'",
+        "section": "initiatives",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "medium",
+        "category": "repetition",
+        "issue": "Phrase repeated: 'through our contact form or'",
+        "section": "faq",
+        "action": "Consider using synonyms or restructuring",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Section has only 17 words - consider expanding",
+        "section": "meta",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "unknown",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "mission",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "legacy",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "initiatives",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "events",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "about-coin",
+        "auto_fixable": false
+      },
+      {
+        "priority": "low",
+        "category": "coherence",
+        "issue": "Consider adding transition words for better flow",
+        "section": "resources",
+        "auto_fixable": false
+      }
+    ]
+  }
+}
