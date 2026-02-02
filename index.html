@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Her Light Alive Foundation | Honor. Educate. Prevent.</title>
+    <meta name="description"
+        content="Dedicated to preventing boating tragedies through education, awareness, and honoring the radiant spirit of Stephanie Marie Rodriguez.">
+
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="author" content="Keep Her Light Alive Foundation, Inc.">
+    <meta name="keywords"
+        content="boating safety Florida, water safety awareness, Stephanie Marie Rodriguez memorial, Keep Her Light Alive, boating accident prevention, Florida Keys safety, Hialeah foundation, South Florida water safety, preventable boating accidents">
+    <link rel="canonical" href="https://keepherlightalive.org/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://keepherlightalive.org/">
+    <meta property="og:title" content="Keep Her Light Alive Foundation | Honor. Educate. Prevent.">
+    <meta property="og:description"
+        content="Dedicated to preventing boating tragedies through education and awareness in loving memory of Stephanie Marie Rodriguez.">
+    <meta property="og:image" content="https://keepherlightalive.org/resources/logo-final.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Keep Her Light Alive Foundation">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@keepherlightalive">
+    <meta name="twitter:title" content="Keep Her Light Alive Foundation | Honor. Educate. Prevent.">
+    <meta name="twitter:description" content="Boating and water safety awareness in memory of Stephanie M. Rodriguez.">
+    <meta name="twitter:image" content="https://keepherlightalive.org/resources/logo-final.png">
+
+    <!-- Hreflang Tags for Bilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://keepherlightalive.org/" />
+    <link rel="alternate" hreflang="es" href="https://keepherlightalive.org/" />
+    <link rel="alternate" hreflang="x-default" href="https://keepherlightalive.org/" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NonprofitOrganization",
+        "name": "Keep Her Light Alive Foundation, Inc.",
+        "alternateName": "KHLA Foundation",
+        "url": "https://keepherlightalive.org",
+        "logo": "https://keepherlightalive.org/resources/logo-final.png",
+        "description": "Nonprofit foundation dedicated to boating and water safety awareness in memory of Stephanie Marie Rodriguez. Through education, events, and community outreach, we seek to prevent future tragedies.",
+        "foundingDate": "2026",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Florida, United States"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-786-486-8120",
+            "email": "Keepherlightalivesmr@gmail.com",
+            "contactType": "General Inquiries"
+        },
+        "sameAs": [
+            "https://instagram.com/keepherlightalive"
+        ],
+        "knowsAbout": ["Boating Safety", "Water Safety Education", "Community Outreach", "Boating Accident Prevention"],
+        "founder": [
+            {"@type": "Person", "name": "Magaly Bea"},
+            {"@type": "Person", "name": "Midalys Armas"},
+            {"@type": "Person", "name": "Vivian Martinez"},
+            {"@type": "Person", "name": "Natalie Fitoria"}
+        ]
+    }
+    </script>
+
+    <!-- Fonts: Inter for UI, Playfair Display for Emotion -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37', // A richer, metallic gold
+                            sand: '#F5F5F0', // Very subtle warm grey/sand
+                            dark: '#111111', // Softer than pure black
+                            slate: '#F8FAFC',
+                            navy: '#0D2E47', // Keeping our deep navy for connections
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    fontSize: {
+                        'huge': '10rem',
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP for Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* Modern Reset & Utilities */
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            background-color: #ffffff;
+        }
+
+        /* Hide scrollbar for cleaner look but allow scroll */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e5e5e5;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4d4d4;
+        }
+
+        /* Utility specific for the "Apple" look */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Smooth Accordion Transition */
+        .accordion-content {
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+            /* Adjust based on content */
+            opacity: 1;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Input Styles */
+        .form-input {
+            width: 100%;
+            background: transparent;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            outline: none;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+        }
+
+        .form-input:focus {
+            border-color: #D4AF37;
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .img-placeholder {
+            background: #f0f0f0;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body class="text-brand-dark selection:bg-brand-gold selection:text-white overflow-x-hidden">
+
+    <!-- Navbar: Minimal & Sticky -->
+    <nav class="fixed w-full z-50 glass-panel transition-all duration-500" id="navbar">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Only (Text Removed) -->
+                <a href="#" class="flex items-center group">
+                    <img src="resources/logo-final.png" alt="Logo"
+                        class="h-20 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#mission" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.mission">Mission</a>
+                    <a href="#legacy" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.legacy">Stephanie's Story</a>
+                    <a href="#initiatives" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.initiatives">Initiatives</a>
+                    <a href="#events" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.events">Events</a>
+                    <a href="#resources" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.resources">Resources</a>
+                    <a href="#contact-form" class="text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="#coin"
+                        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl"
+                        data-i18n="hero.cta.coin">
+                        The Coin Initiative
+                    </a>
+
+                    <!-- Language Toggle Button -->
+                    <button id="lang-toggle"
+                        class="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-50 transition-colors">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <span id="current-lang" class="text-sm font-medium">EN</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-40 hidden flex-col items-center justify-center space-y-8 opacity-0 transition-opacity duration-300">
+            <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-gray-600">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <a href="#mission" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.mission">Mission</a>
+            <a href="#legacy" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.legacy">Stephanie's Story</a>
+            <a href="#initiatives" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.initiatives">Initiatives</a>
+            <a href="#events" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.events">Events</a>
+            <a href="#resources" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.resources">Resources</a>
+            <a href="#contact-form" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero: Immersive & Emotive -->
+        <header class="relative w-full h-screen overflow-hidden bg-white">
+            <!-- Parallax Background -->
+            <div class="absolute inset-0 z-0">
+                <img src="resources/stepahnie-enhanced.png"
+                    alt="Stephanie Marie Rodriguez - Inspiration behind Keep Her Light Alive Foundation for boating safety awareness"
+                    class="w-full h-full object-cover object-top opacity-100 scale-110" id="hero-image"
+                    style="mask-image: linear-gradient(to right, transparent 0%, black 60%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);">
+                <!-- Lighter gradient overlay for better image visibility -->
+                <div class="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-transparent"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 h-full flex flex-col justify-end pb-24 px-6 lg:px-12 max-w-[1400px] mx-auto">
+                <div class="hero-content max-w-4xl">
+                    <div class="mb-6"></div>
+                    <!-- Headline Updated: Readable Dark Text -->
+                    <h1 class="font-serif text-6xl md:text-8xl text-gray-900 leading-[1] mb-8">
+                        Keep Her <br>
+                        Light <span class="italic font-semibold text-brand-gold">Alive.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-800 max-w-xl font-light leading-relaxed mb-10 text-balance"
+                        data-i18n="hero.description">
+                        Promoting boating safety awareness across Florida to prevent tragedies on the water. Our
+                        foundation provides water safety education, resources, and community support - in loving memory
+                        of
+                        Stephanie M. Rodriguez.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about-coin"
+                            class="px-8 py-4 bg-brand-gold text-black rounded-full font-bold transition-transform hover:scale-105 hover:bg-white shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                            data-i18n="hero.cta.coin">
+                            The Coin Initiative
+                        </a>
+                        <a href="#mission"
+                            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white hover:scale-105 transition-all duration-300">
+                            <span data-i18n="hero.cta.mission">Our Mission</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mission Statement -->
+        <section id="mission" class="py-32 bg-white px-6 lg:px-12">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+                    <div class="lg:col-span-4 sticky top-32">
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                            data-i18n="mission.label">The
+                            Mission</span>
+                        <h2 class="font-serif text-4xl lg:text-5xl text-gray-900 leading-tight">
+                            <span data-i18n="mission.title.line1">Awareness.</span><br><span
+                                data-i18n="mission.title.line2">Compassion.</span><br><span
+                                data-i18n="mission.title.line3">Action.</span>
+                        </h2>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <p class="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed mb-12 text-balance reveal-text"
+                            data-i18n="mission.quote">
+                            "We believe that water safety education saves lives. Our foundation was born from a desire
+                            to prevent boating accidents and ensure no other family endures the pain of a preventable
+                            loss on Florida's waters."
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-100 pt-12">
+                            <div>
+                                <h3 class="font-serif text-xl mb-4 text-gray-900" data-i18n="mission.pillar1.title">
+                                    Boating Accident Prevention</h3>
+                                <p class="text-gray-500 leading-relaxed" data-i18n="mission.pillar1.text">
+                                    Through advocacy for stricter boating regulations and free safety courses in
+                                    Miami-Dade, we're working to change the culture of water recreation in South Florida
+                                    and prevent preventable boating accidents.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl mb-4 text-gray-900" data-i18n="mission.pillar2.title">
+                                    Support for Affected Families</h3>
+                                <p class="text-gray-500 leading-relaxed" data-i18n="mission.pillar2.text">
+                                    Beyond safety resources, we provide emotional support and community connection for
+                                    families affected by boating accidents in Florida, offering hope and healing during
+                                    difficult times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy / Her Story -->
+        <section id="legacy" class="py-32 bg-brand-sand relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <!-- Title -->
+                <div class="mb-20 text-center">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="legacy.label">In
+                        Loving Memory</span>
+                    <h2 class="font-serif text-5xl md:text-6xl text-gray-900" data-i18n="legacy.title">Stephanie's Light
+                    </h2>
+                </div>
+
+                <!-- Content Block -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Image Stack -->
+                    <div class="relative h-[600px] w-full flex items-center justify-center">
+                        <!-- Decorative Circle -->
+                        <div
+                            class="absolute w-[500px] h-[500px] border border-gray-300 rounded-full opacity-30 animate-[spin_60s_linear_infinite]">
+                        </div>
+
+                        <div
+                            class="relative z-10 w-[80%] h-[90%] overflow-hidden rounded-[2rem] shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-700 ease-out">
+                            <!-- Using correct png path -->
+                            <img src="resources/stephanie-photo.png"
+                                alt="Memorial portrait of Stephanie Marie Rodriguez, remembered for her vibrant spirit and love of life"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="space-y-8">
+                        <p class="text-xl text-gray-600 leading-relaxed font-light" data-i18n="legacy.p1">
+                            On <span class="text-gray-900 font-medium">November 7, 2024</span>, a preventable boating
+                            accident in the Florida Keys took the life of Stephanie Marie Rodriguez, a 24-year-old woman
+                            whose light touched everyone she met. She wasn't just a daughter, sister, and friend; she
+                            was the person who remembered your birthday, who showed up when you needed her most, who
+                            made strangers feel like family.
+                        </p>
+                        <p class="text-xl text-gray-600 leading-relaxed font-light" data-i18n="legacy.p2">
+                            Stephanie had dreams of becoming a nurse, driven by her deep desire to care for others. She
+                            loved the ocean, sunset boat rides with friends, and the simple joy of being surrounded by
+                            the people she cherished. Her laughter was contagious, her kindness boundless, and her
+                            presence made every room brighter.
+                        </p>
+                        <p class="text-xl text-gray-600 leading-relaxed font-light" data-i18n="legacy.p3">
+                            That November evening was supposed to be another beautiful memory - a day on the water with
+                            friends, celebrating life. Instead, it became a tragedy that shattered four families and an
+                            entire community. The accident was preventable. The safety measures were absent. And in an
+                            instant, the world lost someone irreplaceable.
+                        </p>
+                        <p class="text-xl text-gray-600 leading-relaxed font-light" data-i18n="legacy.p4">
+                            Her passing ignited a spark in those who loved her most. Her mother, Magaly, along with
+                            close friends Midalys, Vivian, and Natalie, refused to let her memory fade into silence.
+                            They founded Keep Her Light Alive - not just as a memorial, but as a mission to ensure no
+                            other family experiences this preventable heartbreak. Through boating safety advocacy,
+                            education, and community support, we're working to protect lives across Florida and honor
+                            the spirit of a young woman who gave so much love to the world.
+                        </p>
+
+                        <blockquote class="border-l-2 border-brand-gold pl-6 py-2 my-8">
+                            <p class="font-serif text-2xl italic text-gray-800" data-i18n="legacy.quote">
+                                "Stephanie's light didn't dim when she left us - it multiplied. Every life we save,
+                                every
+                                family we educate, every act of kindness we inspire carries her spirit forward."
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEET THE FOUNDERS (Appended to Legacy structure or separate) -->
+        <!-- I will keep the Founders section since it was specifically built with content.
+         Adapting it to the new design system (brand-slate bg, serif fonts, minimal cards). -->
+        <section class="py-32 bg-brand-slate border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <div class="text-center mb-20">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="leadership.label">Leadership</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6" data-i18n="leadership.title">Meet the
+                        Founders</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="leadership.description">
+                        United by love and loss, four women came together to turn their grief into a powerful force for
+                        change.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Magaly Bea -->
+                    <div class="text-center group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white">
+                            <img src="resources/founder-1.png" alt="Magaly Bea"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Magaly Bea</h3>
+                        <p class="text-brand-gold text-xs uppercase tracking-widest font-bold mb-4"
+                            data-i18n="leadership.cofounder">Co-Founder</p>
+                    </div>
+                    <!-- Midalys Armas -->
+                    <div class="text-center group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white">
+                            <img src="resources/founder-2.png" alt="Midalys Armas"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Midalys Armas</h3>
+                        <p class="text-brand-gold text-xs uppercase tracking-widest font-bold mb-4">Co-Founder</p>
+                    </div>
+                    <!-- Vivian Martinez -->
+                    <div class="text-center group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white">
+                            <img src="resources/founder-3.png" alt="Vivian Martinez"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Vivian Martinez</h3>
+                        <p class="text-brand-gold text-xs uppercase tracking-widest font-bold mb-4">Co-Founder</p>
+                    </div>
+                    <!-- Natalie Fitoria -->
+                    <div class="text-center group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white">
+                            <img src="resources/founder-4.png" alt="Natalie Fitoria"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Natalie Fitoria</h3>
+                        <p class="text-brand-gold text-xs uppercase tracking-widest font-bold mb-4">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Initiatives: Updated with Images -->
+        <section id="initiatives" class="py-32 bg-white px-6 lg:px-12">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <div>
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                            data-i18n="initiatives.label">Our
+                            Impact</span>
+                        <h2 class="font-serif text-4xl md:text-5xl text-gray-900" data-i18n="initiatives.title">Pillars
+                            of Action</h2>
+                    </div>
+                    <p class="text-gray-500 max-w-sm mt-6 md:mt-0" data-i18n="initiatives.description">
+                        Our water safety initiatives create real change through education, advocacy, and community
+                        connection across South Florida.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[400px]">
+
+                    <!-- Card 1: Boating Safety (Image Background) -->
+                    <div class="md:col-span-2 relative rounded-3xl overflow-hidden group">
+                        <div class="img-placeholder bg-blue-50">
+                            <!-- Using existing resource image -->
+                            <img src="resources/pillar-education.png"
+                                alt="Florida boating safety education workshop - free community water safety training"
+                                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-end p-10 text-white">
+                            <h3 class="font-serif text-3xl mb-3" data-i18n="initiatives.card1.title">Free Boating Safety
+                                Courses</h3>
+                            <p class="text-white/90 max-w-lg text-lg" data-i18n="initiatives.card1.text">
+                                Partnering with local authorities in Miami-Dade and the Florida Keys to provide free
+                                water safety resources, pre-departure checklists, and boating safety workshops for
+                                families.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Coin Initiative (Icon based) -->
+                    <!-- Card 2: Coin Initiative (Split Face Visual) -->
+                    <!-- Card 2: Spacer for Grid Layout (Empty or decorative since Coin moved to dedicated section) -->
+                    <div
+                        class="bg-brand-slate rounded-3xl p-8 flex items-center justify-center relative overflow-hidden group">
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-brand-gold mb-4 shadow-sm">
+                                <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-gray-900" data-i18n="initiatives.card2.title">Join the
+                                Movement</h3>
+                            <a href="#about-coin"
+                                class="inline-block mt-4 text-sm font-medium border-b border-black pb-1 hover:text-brand-gold hover:border-brand-gold transition-colors"
+                                data-i18n="initiatives.card2.link">Learn
+                                more about the Coin &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Community Events (Image Background) -->
+                    <div class="relative rounded-3xl overflow-hidden group">
+                        <div class="img-placeholder bg-brand-gold/20">
+                            <img src="resources/pillar-awareness.png"
+                                alt="Water safety awareness community event hosted by Keep Her Light Alive Foundation"
+                                class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+                            <h3 class="font-serif text-2xl mb-2" data-i18n="initiatives.card3.title">Water Safety Events
+                                in Florida</h3>
+                            <p class="text-white/90 text-sm" data-i18n="initiatives.card3.description">
+                                From memorial walks to boating safety seminars in Hialeah and Miami, we bring the
+                                community together for healing and education.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Advocacy (Image based) -->
+                    <div class="md:col-span-2 relative rounded-3xl overflow-hidden group">
+                        <img src="resources/stepahnie-in-water.png"
+                            alt="Honoring Stephanie through legislative advocacy for boating safety regulations in Florida"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 p-10 text-white">
+                            <h3 class="font-serif text-3xl mb-2" data-i18n="initiatives.card4.title">Florida Boating
+                                Safety Advocacy</h3>
+                            <p class="text-white/80 max-w-lg" data-i18n="initiatives.card4.description">Advocating for
+                                stricter boating safety laws and
+                                regulations in Florida to help prevent accidents and ensure every boat trip ends safely.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- EVENTS: Upcoming & Past -->
+        <section id="events" class="py-32 bg-brand-sand/30 border-t border-gray-100 relative">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="events.label">Community</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6" data-i18n="events.title">Events &
+                        Gatherings</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="events.description">
+                        Join us in our mission to celebrate life and promote safety.
+                    </p>
+                </div>
+
+                <!-- UPCOMING EVENTS -->
+                <div class="mb-24">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="h-[1px] w-12 bg-gray-300"></div>
+                        <span class="text-gray-400 text-xs tracking-[0.2em] uppercase font-bold"
+                            data-i18n="events.upcoming">Upcoming Events</span>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-10">
+                        <!-- Event 1: Gala -->
+                        <div
+                            class="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                            <div class="h-[400px] overflow-hidden">
+                                <img src="resources/event-gala.png" alt="Gala"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl text-center border border-white/50 shadow-sm">
+                                <span class="block text-xs font-bold uppercase tracking-widest text-gray-500">Feb</span>
+                                <span class="block text-2xl font-serif font-bold text-gray-900">14</span>
+                            </div>
+                            <div class="p-10">
+                                <span
+                                    class="inline-block px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider mb-4"
+                                    data-i18n="events.event1.category">Fundraiser</span>
+                                <h3 class="text-3xl font-serif text-gray-900 mb-4 group-hover:text-brand-gold transition-colors"
+                                    data-i18n="events.event1.title">
+                                    Light the Night Gala</h3>
+                                <p class="text-gray-500 mb-8 leading-relaxed" data-i18n="events.event1.description">
+                                    An elegant evening of remembrance and hope. Join us for a charity dinner to support
+                                    our
+                                    educational programs and victim assistance fund.
+                                </p>
+                                <a href="#contact-form"
+                                    class="inline-flex items-center text-gray-900 font-bold hover:text-brand-gold transition-colors">
+                                    Reserve Tickets <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Event 2: Safety Workshop -->
+                        <div
+                            class="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                            <div class="h-[400px] overflow-hidden">
+                                <img src="resources/event-safety.png" alt="Safety Workshop"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl text-center border border-white/50 shadow-sm">
+                                <span class="block text-xs font-bold uppercase tracking-widest text-gray-500">Mar</span>
+                                <span class="block text-2xl font-serif font-bold text-gray-900">05</span>
+                            </div>
+                            <div class="p-10">
+                                <span
+                                    class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-4"
+                                    data-i18n="events.event2.category">Education</span>
+                                <h3 class="text-3xl font-serif text-gray-900 mb-4 group-hover:text-blue-600 transition-colors"
+                                    data-i18n="events.event2.title">
+                                    Safe Waters Workshop</h3>
+                                <p class="text-gray-500 mb-8 leading-relaxed" data-i18n="events.event2.description">
+                                    A hands-on boating safety course for all ages. Learn proper life jacket use,
+                                    navigation
+                                    rules, and emergency protocols.
+                                </p>
+                                <a href="#contact-form"
+                                    class="inline-flex items-center text-gray-900 font-bold hover:text-blue-600 transition-colors">
+                                    Register Free <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAST EVENTS -->
+                <div class="relative">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="h-[1px] w-12 bg-gray-300"></div>
+                        <span class="text-gray-400 text-xs tracking-[0.2em] uppercase font-bold">Past Highlights</span>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-[2rem] p-4 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden">
+                            <img src="resources/event-walk.png" alt="Memorial Walk" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full md:w-2/3 pr-8 py-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-sm font-medium text-gray-400">November 2025</span>
+                                <div class="h-1 w-1 bg-gray-300 rounded-full"></div>
+                                <span class="text-sm font-medium text-brand-gold">Community Event</span>
+                            </div>
+                            <h3 class="text-2xl font-serif text-gray-900 mb-3">Inaugural Memorial Walk</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">
+                                Over 500 community members gathered at sunset to walk 5k in memory of lost loved ones.
+                                The
+                                event raised funds for 300 life jackets donated to local youth centers.
+                            </p>
+                            <a href="#"
+                                class="text-sm font-bold text-gray-900 underline decoration-gray-300 underline-offset-4 hover:text-brand-gold transition-colors">View
+                                Photo Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW DEDICATED COIN SECTION -->
+        <section id="about-coin" class="py-32 bg-gray-900 relative overflow-hidden">
+            <!-- Background Glow -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+                    <!-- Left: Text Content -->
+                    <div class="order-2 lg:order-1">
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-6 block"
+                            data-i18n="coin.label">Spread
+                            Kindness</span>
+                        <h2 class="font-serif text-5xl md:text-6xl text-white mb-8 leading-tight">
+                            <span data-i18n="coin.title.part1">The Coin</span> <br> <span class="text-brand-gold italic"
+                                data-i18n="coin.title.part2">Initiative</span>
+                        </h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg" data-i18n="coin.description1">
+                            Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness.
+                            One
+                            side bears our promise: <strong class="text-white">"Keep Her Light Alive,"</strong> while
+                            the
+                            other connects you to a community of good deeds.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg" data-i18n="coin.description2">
+                            When you receive this coin, hold it, scan it, and then pass it on by performing a random act
+                            of
+                            kindness. Let the ripple effect begin.
+                        </p>
+
+                        <a href="#contact-form"
+                            class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white">
+                            Request a Coin
+                        </a>
+                    </div>
+
+                    <!-- Right: Dynamic Coin Visuals -->
+                    <div class="order-1 lg:order-2 relative h-[500px] flex items-center justify-center">
+                        <!-- Diagonal Layout Container -->
+                        <div class="relative w-full h-full">
+
+                            <!-- Back Coin (QR) - Top Right -->
+                            <div class="absolute top-0 right-0 lg:right-10 w-64 h-64 animate-[float_6s_ease-in-out_infinite] z-0"
+                                style="animation-delay: 1.5s;">
+                                <img src="resources/coin-back.png" alt="Coin QR Code - Scan to spread kindness"
+                                    class="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(212,175,55,0.2)] hover:scale-110 transition-transform duration-500 opacity-80 hover:opacity-100 hover:z-20">
+                            </div>
+
+                            <!-- Front Coin (Text) - Bottom Left -->
+                            <div
+                                class="absolute bottom-0 left-0 lg:left-10 w-72 h-72 animate-[float_6s_ease-in-out_infinite] z-10">
+                                <img src="resources/coin-front.png"
+                                    alt="Keep Her Light Alive Coin - Front side with sunrise design"
+                                    class="w-full h-full object-contain drop-shadow-[0_20px_60px_rgba(212,175,55,0.4)] hover:scale-110 transition-transform duration-500">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: RESOURCES -->
+        <section id="resources" class="py-32 bg-brand-slate px-6 lg:px-12 border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                            data-i18n="resources.label">Education</span>
+                        <h2 class="font-serif text-4xl text-gray-900 mb-6" data-i18n="resources.title">Water Safety
+                            Resources</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8" data-i18n="resources.description">
+                            Essential boating safety guides, pre-departure checklists, and life jacket guidelines to
+                            help Florida families prepare for a safe day on the water. Download, print, and share.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-brand-dark font-medium border-b border-black pb-1 hover:text-brand-gold hover:border-brand-gold transition-colors"
+                            data-i18n="resources.cta">
+                            View all documents <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Resource Item 1 -->
+                        <a href="https://myfwc.com/boating/safety-education/safety-equipment/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer block">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg text-gray-900 group-hover:text-blue-600 transition-colors"
+                                        data-i18n="resources.item1.title">
+                                        Boating Safety Pre-Departure Checklist</h4>
+                                    <span class="text-xs text-gray-400 uppercase tracking-wider"
+                                        data-i18n="resources.item1.meta">Official FWC Checklist</span>
+                                </div>
+                            </div>
+                            <i data-lucide="external-link"
+                                class="w-5 h-5 text-gray-300 group-hover:text-blue-600 transition-colors"></i>
+                        </a>
+
+                        <!-- Resource Item 2 -->
+                        <a href="https://myfwc.com/boating/safety-education/life-jackets/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer block">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600">
+                                    <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg text-gray-900 group-hover:text-green-600 transition-colors"
+                                        data-i18n="resources.item2.title">
+                                        Coast Guard Life Jacket Guidelines</h4>
+                                    <span class="text-xs text-gray-400 uppercase tracking-wider"
+                                        data-i18n="resources.item2.meta">Official FWC Guidelines</span>
+                                </div>
+                            </div>
+                            <i data-lucide="external-link"
+                                class="w-5 h-5 text-gray-300 group-hover:text-green-600 transition-colors"></i>
+                        </a>
+
+                        <!-- Resource Item 3 -->
+                        <a href="https://myfwc.com/boating/regulations/" target="_blank" rel="noopener noreferrer"
+                            class="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer block">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg text-gray-900 group-hover:text-brand-gold transition-colors"
+                                        data-i18n="resources.item3.title">
+                                        Florida Boating Regulations</h4>
+                                    <span class="text-xs text-gray-400 uppercase tracking-wider"
+                                        data-i18n="resources.item3.meta">External Link</span>
+                                </div>
+                            </div>
+                            <i data-lucide="external-link"
+                                class="w-5 h-5 text-gray-300 group-hover:text-brand-gold transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: CONTACT FORM -->
+        <section id="contact-form" class="py-32 bg-white px-6 lg:px-12">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                    <!-- Contact Info -->
+                    <div>
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                            data-i18n="contact.label">Get
+                            Involved</span>
+                        <h2 class="font-serif text-5xl text-gray-900 mb-8" data-i18n="contact.title">Join Our Water
+                            Safety Mission</h2>
+                        <p class="text-gray-500 text-lg leading-relaxed mb-12" data-i18n="contact.description">
+                            Whether you want to volunteer at boating safety events, sponsor an initiative, or share your
+                            story, we're here to connect and help prevent future tragedies.
+                        </p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-brand-gold mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Location</h4>
+                                    <p class="text-gray-500">Florida, United States</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="mail" class="w-6 h-6 text-brand-gold mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Email</h4>
+                                    <a href="mailto:Keepherlightalivesmr@gmail.com"
+                                        class="text-gray-500 hover:text-black transition-colors">Keepherlightalivesmr@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="phone" class="w-6 h-6 text-brand-gold mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Phone</h4>
+                                    <a href="tel:786-486-8120"
+                                        class="text-gray-500 hover:text-black transition-colors">786-486-8120</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="bg-gray-50 p-10 rounded-3xl">
+                        <form action="#" class="space-y-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Name</label>
+                                    <input type="text" placeholder="Jane Doe" class="form-input">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Email</label>
+                                    <input type="email" placeholder="jane@example.com" class="form-input">
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Subject</label>
+                                <select class="form-input bg-transparent">
+                                    <option>General Inquiry</option>
+                                    <option>Volunteering</option>
+                                    <option>Donation Support</option>
+                                    <option>Press / Media</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Message</label>
+                                <textarea rows="4" placeholder="How can we help?"
+                                    class="form-input resize-none"></textarea>
+                            </div>
+                            <button type="button"
+                                class="w-full py-4 bg-brand-dark text-white font-medium rounded-full hover:bg-brand-gold transition-colors duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-32 bg-brand-slate px-6 lg:px-12">
+            <div class="max-w-[900px] mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="faq.label">Questions</span>
+                    <h2 class="font-serif text-5xl text-gray-900 mb-6" data-i18n="faq.title">Frequently Asked Questions
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto" data-i18n="faq.description">
+                        Everything you need to know about our foundation and how you can help.
+                    </p>
+                </div>
+
+                <!-- FAQ Accordion -->
+                <div class="space-y-4">
+                    <!-- Question 1 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q1.question">
+                                What is Keep Her Light Alive Foundation?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q1.answer">
+                                We are a nonprofit organization dedicated to preventing boating accidents through
+                                education, advocacy, and community support. Founded in memory of Stephanie Marie
+                                Rodriguez, we work to ensure no family experiences the preventable tragedy of losing a
+                                loved one on the water.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q2.question">
+                                How can I get a Coin of Kindness?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q2.answer">
+                                You can request a coin through our contact form or at any of our events. Each coin is
+                                free and comes with a simple mission: perform an act of kindness, then pass it on. The
+                                QR code on the back lets you track the coin's journey and see the ripple effect of good
+                                deeds.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q3.question">
+                                How can I support the foundation?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q3.answer">
+                                There are many ways to help: volunteer at our events, sponsor a safety workshop, share
+                                our resources with boaters in your community, or make a donation. Every contribution
+                                helps us provide free safety education and support families affected by boating
+                                accidents.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q4.question">
+                                Are your boating safety courses really free?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q4.answer">
+                                Yes! All our safety courses, workshops, and educational resources are completely free.
+                                We believe that financial barriers should never prevent anyone from learning life-saving
+                                water safety skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q5.question">
+                                Where do you operate?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q5.answer">
+                                We primarily serve South Florida, including Miami-Dade County, Hialeah, and the Florida
+                                Keys. However, our educational resources are available to anyone, and we're working to
+                                expand our reach throughout Florida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                        <button
+                            class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <h3 class="font-serif text-xl text-gray-900 pr-8" data-i18n="faq.q6.question">
+                                How can I share my story or get support?
+                            </h3>
+                            <i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>
+                        </button>
+                        <div class="accordion-content px-8 pb-6">
+                            <p class="text-gray-600 leading-relaxed" data-i18n="faq.q6.answer">
+                                If you or your family have been affected by a boating accident, please reach out through
+                                our contact form or call us directly. We provide emotional support, connect families
+                                with resources, and offer a compassionate community of people who understand your
+                                experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky CTA Button -->
+    <div id="sticky-cta" class="fixed bottom-8 right-8 z-40 opacity-0 transition-opacity duration-300">
+        <a href="#about-coin"
+            class="flex items-center gap-2 px-6 py-4 bg-brand-gold text-black font-bold rounded-full shadow-2xl hover:scale-105 transition-transform">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+            <span data-i18n="cta.sticky.coin">Get Your Coin</span>
+        </a>
+    </div>
+
+
+    <!-- Footer: Clean & Essential -->
+    <footer class="bg-black text-white pt-24 pb-12 px-6 lg:px-12">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
+                <div class="max-w-md">
+                    <div class="flex items-center gap-3 mb-8">
+                        <!-- Inverted Logo for Dark Background -->
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                            <!-- Simulating logo shape since actual image has white bg -->
+                            <img src="resources/logo-final.png" class="w-10 h-10 object-contain" alt="Logo">
+                        </div>
+                        <h2 class="font-serif text-2xl">Keep Her Light Alive</h2>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-8" data-i18n="footer.tagline">
+                        Honoring the memory of Stephanie M. Rodriguez by ensuring safety and serenity on the waters
+                        we
+                        all love.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/keepherlightalive"
+                            class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:Keepherlightalivesmr@gmail.com"
+                            class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-16">
+                    <div>
+                        <h4 class="text-white font-medium mb-6" data-i18n="footer.contact">Contact</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="mailto:Keepherlightalivesmr@gmail.com"
+                                    class="hover:text-brand-gold transition-colors">Keepherlightalivesmr@gmail.com</a>
+                            </li>
+                            <li><a href="tel:786-486-8120"
+                                    class="hover:text-brand-gold transition-colors">786-486-8120</a></li>
+                            <li>Florida, United States</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-6" data-i18n="footer.menu">Menu</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
+                            <li><a href="#legacy" class="hover:text-white transition-colors">Legacy</a></li>
+                            <li><a href="#resources" class="hover:text-white transition-colors">Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2026 Keep Her Light Alive Foundation, Inc.</p>
+                <p class="mt-4 md:mt-0">Design by Creative Studio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. Icons ---
+        lucide.createIcons();
+
+        // --- 2. Animations (GSAP) ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax
+        gsap.to("#hero-image", {
+            scrollTrigger: {
+                trigger: "header",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            },
+            y: 100, // Moves image down slightly as we scroll
+            scale: 1, // Zooms out slightly
+            ease: "none"
+        });
+
+        // Text Reveals
+        gsap.utils.toArray('.reveal-text').forEach(text => {
+            gsap.from(text, {
+                scrollTrigger: {
+                    trigger: text,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+        });
+
+        // Bento Grid Stagger
+        gsap.from("#initiatives .grid > div", {
+            scrollTrigger: {
+                trigger: "#initiatives",
+                start: "top 70%"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
+
+        // --- 3. Navbar Logic ---
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.style.background = "rgba(255, 255, 255, 0.9)";
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.style.background = "rgba(255, 255, 255, 0.8)";
+            }
+        });
+
+        // --- 4. Accordion Logic ---
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.accordion-item').forEach(other => {
+                    other.classList.remove('active');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // --- 5. Mobile Menu ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        function openMenu() {
+            menu.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                menu.classList.remove('opacity-0');
+                menu.classList.add('flex');
+            }, 10);
+        }
+
+        function closeMenu() {
+            menu.classList.add('opacity-0');
+            setTimeout(() => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // --- 6. Sticky CTA Logic ---
+        const stickyCta = document.getElementById('sticky-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight) {
+                stickyCta.classList.remove('opacity-0');
+            } else {
+                stickyCta.classList.add('opacity-0');
+            }
+        });
+
+        // --- 7. FAQ Accordion Logic ---
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const button = item.querySelector('button');
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+
+            // Initially hide all content
+            content.style.maxHeight = '0';
+            content.style.overflow = 'hidden';
+            content.style.transition = 'max-height 0.3s ease-out';
+
+            button.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight !== '0px';
+
+                if (isOpen) {
+                    // Close
+                    content.style.maxHeight = '0';
+                    icon.setAttribute('data-lucide', 'plus');
+                } else {
+                    // Close all other accordions first
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherContent = otherItem.querySelector('.accordion-content');
+                            const otherIcon = otherItem.querySelector('.accordion-icon');
+                            otherContent.style.maxHeight = '0';
+                            otherIcon.setAttribute('data-lucide', 'plus');
+                        }
+                    });
+
+                    // Open this one
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.setAttribute('data-lucide', 'x');
+                }
+
+                // Re-initialize lucide icons
+                lucide.createIcons();
+            });
+        });
+
+    </script>
+
+    <!-- Bilingual Translation System -->
+    <script src="translations.js"></script>
+
+</body>
+
+</html>

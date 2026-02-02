@@ -1,0 +1,8 @@
+# Robots.txt for Keep Her Light Alive Foundation
+# https://keepherlightalive.org
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://keepherlightalive.org/sitemap.xml
