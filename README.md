@@ -1,134 +1,108 @@
-# Content Analysis Agent System
+# Keep Her Light Alive Foundation
 
-A multi-agent system for analyzing website content, checking grammar, detecting repetition, and ensuring content coherence.
+A nonprofit foundation website dedicated to preventing boating tragedies through education, awareness, and honoring the radiant spirit of Stephanie Marie Rodriguez.
 
-## Overview
+## About
 
-This system uses two AI agents that work together:
+Keep Her Light Alive Foundation, Inc. is a nonprofit organization founded in memory of Stephanie Marie Rodriguez, who tragically lost her life in a preventable boating accident in the Florida Keys on November 7, 2024. The foundation works to prevent future boating accidents through education, advocacy, and community support across South Florida.
 
-- **ContentWriterAgent**: Extracts and organizes content from website files
-- **ContentEditorAgent**: Reviews content for grammar, punctuation, repetition, and coherence issues
+## Mission
+
+**Awareness. Compassion. Action.**
+
+We believe that water safety education saves lives. Our foundation was born from a desire to prevent boating accidents and ensure no other family endures the pain of a preventable loss on Florida's waters.
+
+### Our Pillars
+
+- **Boating Accident Prevention**: Through advocacy for stricter boating regulations and free safety courses in Miami-Dade, we're working to change the culture of water recreation in South Florida.
+- **Support for Affected Families**: We provide emotional support and community connection for families affected by boating accidents in Florida.
 
 ## Features
 
-✅ **Grammar & Punctuation Checking**
-- Missing punctuation detection
-- Capitalization errors
-- Double space detection
-- Passive voice identification
+- **Bilingual Support**: Full English and Spanish translations
+- **Responsive Design**: Modern, mobile-first design with smooth animations
+- **SEO Optimized**: Comprehensive meta tags, structured data, and sitemap
+- **Accessibility**: Clean, accessible HTML structure
+- **Interactive Elements**: 
+  - Smooth scroll animations using GSAP
+  - Accordion FAQ section
+  - Mobile-responsive navigation
+  - Language toggle functionality
 
-✅ **Repetition Detection**
-- Exact sentence repetition
-- Phrase repetition (5+ words)
-- Semantic similarity analysis
+## Technology Stack
 
-✅ **Coherence Analysis**
-- Content flow checking
-- Transition word suggestions
-- Paragraph length analysis
+- **HTML5**: Semantic markup
+- **Tailwind CSS**: Utility-first CSS framework (via CDN)
+- **GSAP**: Animation library for scroll effects
+- **Lucide Icons**: Modern icon library
+- **Vanilla JavaScript**: For interactivity and translations
 
-✅ **Bilingual Support**
-- Analyzes both English and Spanish content
-- Consistency checking between translations
-
-## Installation
-
-1. Install Python dependencies:
-```bash
-pip3 install -r requirements.txt
-```
-
-2. Verify the configuration in `config.yaml`
-
-## Usage
-
-Run the content analysis:
-
-```bash
-python3 run_analysis.py
-```
-
-The system will:
-1. Extract content from `website/index.html` and `website/translations.js`
-2. Analyze both English and Spanish content
-3. Generate detailed reports in the `reports/` directory
-
-## Output
-
-The analysis generates two types of reports:
-
-### Markdown Report
-- Human-readable analysis report
-- Categorized by issue type
-- Includes suggestions and recommendations
-- Located in `reports/analysis_report_[timestamp].md`
-
-### JSON Report
-- Machine-readable data
-- Complete issue details
-- Located in `reports/analysis_[timestamp].json`
-
-## Configuration
-
-Edit `config.yaml` to customize:
-
-- **Analysis thresholds**: Adjust sensitivity for repetition detection
-- **Sections to analyze**: Choose which content sections to check
-- **Report settings**: Configure output format and detail level
-
-## Example Output
+## Project Structure
 
 ```
-📋 Total Issues Found: 126
-🌐 Languages Analyzed: EN, ES
-
-📊 Issues by Severity:
-  🔴 High: 0
-  🟡 Medium: 74
-  🟢 Low: 43
-  ℹ️ Info: 9
-
-📂 Issues by Category:
-  • Missing Punctuation: 71
-  • Double Space: 43
-  • Missing Transitions: 7
-  • Phrase Repetition: 3
+website/
+├── index.html          # Main HTML file
+├── translations.js     # Bilingual translation system
+├── robots.txt          # SEO robots configuration
+├── sitemap.xml         # SEO sitemap
+├── resources/          # Images and assets
+│   ├── logo-final.png
+│   ├── coin-front.png
+│   ├── coin-back.png
+│   └── ... (other images)
+└── README.md           # This file
 ```
 
-## Agent Workflow
+## Sections
 
-```
-┌─────────────────────┐
-│ ContentWriterAgent  │
-│ Extracts content    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│ ContentEditorAgent  │
-│ Analyzes & reviews  │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│ Recommendations     │
-│ Sent back to writer │
-└─────────────────────┘
-```
+1. **Hero**: Immersive introduction with Stephanie's story
+2. **Mission**: Foundation mission and pillars
+3. **Legacy**: Stephanie's story and the founders
+4. **Initiatives**: Programs and impact areas
+5. **Events**: Upcoming and past community events
+6. **Coin Initiative**: The Kindness Coin program
+7. **Resources**: Water safety guides and checklists
+8. **Contact**: Contact form and information
+9. **FAQ**: Frequently asked questions
 
-## Files
+## Contact Information
 
-- `run_analysis.py` - Main script to run the analysis
-- `content_extractor.py` - Content extraction utilities
-- `content_agents.py` - Agent system implementation
-- `config.yaml` - Configuration settings
-- `requirements.txt` - Python dependencies
+- **Email**: Keepherlightalivesmr@gmail.com
+- **Phone**: 786-486-8120
+- **Location**: Florida, United States
+- **Instagram**: [@keepherlightalive](https://instagram.com/keepherlightalive)
+- **Website**: https://keepherlightalive.org
 
-## Support
+## Founders
 
-For issues or questions, please review the generated reports in the `reports/` directory.
+- Magaly Bea (Co-Founder)
+- Midalys Armas (Co-Founder)
+- Vivian Martinez (Co-Founder)
+- Natalie Fitoria (Co-Founder)
+
+## License
+
+© 2026 Keep Her Light Alive Foundation, Inc. All rights reserved.
+
+## Development
+
+This is a static website that can be hosted on any web server. No build process is required - simply upload the files to your hosting provider.
+
+### Local Development
+
+1. Clone the repository
+2. Open `index.html` in a web browser
+3. For best results, use a local server (e.g., Python's `http.server` or Node's `http-server`)
+
+### Browser Support
+
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Contributing
+
+This is a foundation website. For inquiries about contributions or partnerships, please contact us through the website's contact form.
 
 ---
 
-**Keep Her Light Alive Foundation**  
-*Content Analysis Agent System v1.0*
+**Keep Her Light Alive** - Honoring the memory of Stephanie M. Rodriguez by ensuring safety and serenity on the waters we all love.
