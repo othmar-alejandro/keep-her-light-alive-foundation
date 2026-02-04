@@ -63,7 +63,7 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-786-486-8120",
+            "telephone": "+1-786-874-1881",
             "email": "Keepherlightalivesmr@gmail.com",
             "contactType": "General Inquiries"
         },
@@ -224,7 +224,7 @@
                 <!-- Logo Only (Text Removed) -->
                 <a href="#" class="flex items-center group">
                     <img src="resources/logo-final.png" alt="Logo"
-                        class="h-28 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
+                        class="h-32 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -255,7 +255,7 @@
 
                     <!-- Language Toggle Button -->
                     <button id="lang-toggle"
-                        class="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-50 transition-colors">
+                        class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300">
                         <i data-lucide="globe" class="w-4 h-4"></i>
                         <span id="current-lang" class="text-sm font-medium">EN</span>
                     </button>
@@ -285,6 +285,13 @@
                 data-i18n="nav.resources">Resources</a>
             <a href="#contact-form" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
                 data-i18n="nav.contact">Contact</a>
+
+            <!-- Language Toggle in Mobile Menu -->
+            <button id="lang-toggle-mobile"
+                class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-black/5 border border-black/10 text-gray-900 hover:bg-black/10 transition-all duration-300 mt-4">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span id="current-lang-mobile" class="text-sm font-medium">EN</span>
+            </button>
         </div>
     </nav>
 
@@ -295,7 +302,7 @@
             <div class="absolute inset-0 z-0">
                 <img src="resources/stepahnie-enhanced.png"
                     alt="Stephanie Marie Rodriguez - Inspiration behind Keep Her Light Alive Foundation for boating safety awareness"
-                    class="w-full h-full object-cover object-top opacity-100 scale-110" id="hero-image"
+                    class="w-full h-full object-cover object-top opacity-100 scale-100 md:scale-110" id="hero-image"
                     style="mask-image: linear-gradient(to right, transparent 0%, black 50%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);">
                 <!-- Darker gradient overlay for better text contrast/readability -->
                 <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/40 to-transparent"></div>
@@ -920,8 +927,8 @@
                                 <i data-lucide="phone" class="w-6 h-6 text-brand-gold mt-1"></i>
                                 <div>
                                     <h4 class="font-medium text-gray-900">Phone</h4>
-                                    <a href="tel:786-486-8120"
-                                        class="text-gray-500 hover:text-black transition-colors">786-486-8120</a>
+                                    <a href="tel:786-874-1881"
+                                        class="text-gray-500 hover:text-black transition-colors">786-874-1881</a>
                                 </div>
                             </div>
                         </div>
@@ -1145,10 +1152,10 @@
                         <h4 class="text-white font-medium mb-6" data-i18n="footer.contact">Contact</h4>
                         <ul class="space-y-4 text-gray-400 text-sm">
                             <li><a href="mailto:Keepherlightalivesmr@gmail.com"
-                                    class="hover:text-brand-gold transition-colors">Keepherlightalivesmr@gmail.com</a>
+                                    class="hover:text-brand-gold transition-colors break-all">Keepherlightalivesmr@gmail.com</a>
                             </li>
-                            <li><a href="tel:786-486-8120"
-                                    class="hover:text-brand-gold transition-colors">786-486-8120</a></li>
+                            <li><a href="tel:786-874-1881"
+                                    class="hover:text-brand-gold transition-colors">786-874-1881</a></li>
                             <li>Florida, United States</li>
                         </ul>
                     </div>
@@ -1158,6 +1165,10 @@
                             <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
                             <li><a href="#legacy" class="hover:text-white transition-colors">Legacy</a></li>
                             <li><a href="#resources" class="hover:text-white transition-colors">Resources</a></li>
+                            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy
+                                    Policy</a></li>
+                            <li><a href="terms-of-use.html" class="hover:text-white transition-colors">Terms of Use</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1219,17 +1230,8 @@
             ease: "power2.out"
         });
 
-        // --- 3. Navbar Logic ---
-        const nav = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-sm');
-                nav.style.background = "rgba(255, 255, 255, 0.9)";
-            } else {
-                nav.classList.remove('shadow-sm');
-                nav.style.background = "rgba(255, 255, 255, 0.8)";
-            }
-        });
+        // Navbar scroll logic removed - keeping navbar transparent always
+
 
         // --- 4. Accordion Logic ---
         document.querySelectorAll('.accordion-item').forEach(item => {
@@ -1273,44 +1275,8 @@
         menuBtn.addEventListener('click', openMenu);
         closeBtn.addEventListener('click', closeMenu);
 
-        // --- Navbar Scroll Logic (DISABLED - keeping navbar transparent always) ---
-        /*
-        const navbar = document.getElementById('navbar');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileMenuBtnIcon = document.getElementById('mobile-menu-btn');
+        // Navbar scroll logic removed - keeping navbar transparent always
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                // Scrolled state
-                navbar.classList.remove('bg-transparent');
-                navbar.classList.add('glass-panel');
-
-                if (mobileMenuBtnIcon) {
-                    mobileMenuBtnIcon.classList.remove('text-white');
-                    mobileMenuBtnIcon.classList.add('text-gray-900');
-                }
-
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white/90', 'hover:text-white');
-                    link.classList.add('text-gray-500', 'hover:text-black');
-                });
-            } else {
-                // Top state
-                navbar.classList.add('bg-transparent');
-                navbar.classList.remove('glass-panel');
-
-                if (mobileMenuBtnIcon) {
-                    mobileMenuBtnIcon.classList.add('text-white');
-                    mobileMenuBtnIcon.classList.remove('text-gray-900');
-                }
-
-                navLinks.forEach(link => {
-                    link.classList.add('text-white/90', 'hover:text-white');
-                    link.classList.remove('text-gray-500', 'hover:text-black');
-                });
-            }
-        });
-        */
 
         // --- 6. Sticky CTA Logic ---
         const stickyCta = document.getElementById('sticky-cta');

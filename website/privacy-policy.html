@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Keep Her Light Alive Foundation</title>
+    <meta name="description"
+        content="Privacy Policy for Keep Her Light Alive Foundation - Learn how we collect, use, and protect your personal information.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="resources/logo-final.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --brand-gold: #D4AF37;
+            --brand-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .glass-panel {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body class="text-brand-dark selection:bg-brand-gold selection:text-white overflow-x-hidden bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="absolute w-full z-50 bg-transparent" id="navbar">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center group">
+                    <img src="resources/logo-final.png" alt="Keep Her Light Alive Foundation Logo"
+                        class="h-32 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="index.html#mission"
+                        class="text-sm font-medium text-white/90 hover:text-white transition-colors">Mission</a>
+                    <a href="index.html#legacy"
+                        class="text-sm font-medium text-white/90 hover:text-white transition-colors">Stephanie's
+                        Story</a>
+                    <a href="index.html#initiatives"
+                        class="text-sm font-medium text-white/90 hover:text-white transition-colors">Initiatives</a>
+                    <a href="index.html#contact-form"
+                        class="text-sm font-medium text-white/90 hover:text-white transition-colors">Contact</a>
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+                        Back to Home
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-50 hidden opacity-0 transition-opacity duration-300 flex-col items-center justify-center p-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 p-2">
+            <i data-lucide="x" class="w-8 h-8 text-gray-900"></i>
+        </button>
+        <div class="flex flex-col items-center space-y-8 text-center">
+            <a href="index.html#mission" class="text-2xl font-serif text-gray-900" onclick="closeMenu()">Mission</a>
+            <a href="index.html#legacy" class="text-2xl font-serif text-gray-900" onclick="closeMenu()">Stephanie's
+                Story</a>
+            <a href="index.html#initiatives" class="text-2xl font-serif text-gray-900"
+                onclick="closeMenu()">Initiatives</a>
+            <a href="index.html#contact-form" class="text-2xl font-serif text-gray-900"
+                onclick="closeMenu()">Contact</a>
+            <a href="index.html" class="text-2xl font-serif text-gray-900" onclick="closeMenu()">Back to Home</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <header class="relative w-full h-[40vh] min-h-[300px] overflow-hidden bg-gray-900">
+            <div class="absolute inset-0 z-0">
+                <img src="resources/stepahnie-enhanced.png" alt="Keep Her Light Alive Foundation"
+                    class="w-full h-full object-cover object-top opacity-100 scale-100 md:scale-110"
+                    style="mask-image: linear-gradient(to right, transparent 0%, black 50%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);">
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/40 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 h-full flex flex-col justify-center px-6 lg:px-12 max-w-[1400px] mx-auto">
+                <h1 class="font-serif text-5xl md:text-7xl text-white leading-tight">Privacy Policy</h1>
+                <p class="text-white/80 text-lg mt-4">Last Updated: February 3, 2026</p>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="prose prose-lg max-w-none">
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+                    <p class="text-gray-700 mb-6">
+                        Keep Her Light Alive Foundation ("we," "us," or "our") is a nonprofit organization dedicated to
+                        promoting boating safety awareness across Florida. We value your privacy and are committed to
+                        protecting your personal information. This Privacy Policy explains how we collect, use, share,
+                        and protect information about our donors, website visitors, volunteers, and anyone who interacts
+                        with our Services.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">1. Information We Collect</h2>
+
+                    <h3 class="font-serif text-2xl font-semibold text-gray-900 mb-4 mt-8">Personal Information You
+                        Provide</h3>
+                    <p class="text-gray-700 mb-4">We may collect the following types of personal information when you
+                        interact with us:</p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                        <li><strong>Contact Information:</strong> Name, email address, phone number, mailing address
+                        </li>
+                        <li><strong>Donation Information:</strong> Payment details, donation amount, donation frequency
+                        </li>
+                        <li><strong>Communication Preferences:</strong> Newsletter subscriptions, event notifications
+                        </li>
+                        <li><strong>Volunteer Information:</strong> Skills, availability, background check information
+                            (if applicable)</li>
+                        <li><strong>Event Registration:</strong> Names of attendees, dietary restrictions, accessibility
+                            needs</li>
+                    </ul>
+
+                    <h3 class="font-serif text-2xl font-semibold text-gray-900 mb-4 mt-8">Information Collected
+                        Automatically</h3>
+                    <p class="text-gray-700 mb-4">When you visit our website, we may automatically collect:</p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                        <li><strong>Device Information:</strong> IP address, browser type, operating system</li>
+                        <li><strong>Usage Data:</strong> Pages visited, time spent on pages, links clicked</li>
+                        <li><strong>Cookies:</strong> Small data files stored on your device (see Cookies section below)
+                        </li>
+                    </ul>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">2. How We Use Your Information
+                    </h2>
+                    <p class="text-gray-700 mb-4">We use your personal information for the following purposes:</p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                        <li><strong>Processing Donations:</strong> To process and acknowledge your charitable
+                            contributions</li>
+                        <li><strong>Communications:</strong> To send newsletters, event invitations, and updates about
+                            our programs</li>
+                        <li><strong>Program Delivery:</strong> To coordinate educational programs, safety initiatives,
+                            and community events</li>
+                        <li><strong>Legal Compliance:</strong> To comply with IRS regulations and other legal
+                            requirements for 501(c)(3) organizations</li>
+                        <li><strong>Website Improvement:</strong> To analyze website usage and improve user experience
+                        </li>
+                        <li><strong>Fundraising:</strong> To conduct fundraising campaigns and donor stewardship
+                            activities</li>
+                    </ul>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">3. How We Share Your Information
+                    </h2>
+                    <p class="text-gray-700 mb-4">We do not sell, rent, or trade your personal information. We may share
+                        your information in the following limited circumstances:</p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                        <li><strong>Service Providers:</strong> With trusted third-party vendors who help us operate our
+                            website, process donations, or send communications (e.g., payment processors, email service
+                            providers)</li>
+                        <li><strong>Legal Requirements:</strong> When required by law, court order, or government
+                            regulation</li>
+                        <li><strong>Public Recognition:</strong> Donor names may be publicly recognized unless you
+                            request to remain anonymous</li>
+                        <li><strong>Partner Organizations:</strong> With partner organizations for collaborative
+                            programs, only with your explicit consent</li>
+                    </ul>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">4. Cookies and Tracking
+                        Technologies</h2>
+                    <p class="text-gray-700 mb-6">
+                        Our website uses cookies to enhance your browsing experience. Cookies are small text files
+                        stored on your device. We use cookies to remember your preferences, analyze website traffic, and
+                        improve our services. You can control cookie settings through your browser, but disabling
+                        cookies may limit some website functionality.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">5. Data Security</h2>
+                    <p class="text-gray-700 mb-6">
+                        We implement appropriate technical and organizational security measures to protect your personal
+                        information from unauthorized access, disclosure, alteration, or destruction. However, no
+                        internet transmission is completely secure, and we cannot guarantee absolute security.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">6. Your Privacy Rights</h2>
+                    <p class="text-gray-700 mb-4">You have the right to:</p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                        <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal
+                            retention requirements)</li>
+                        <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications at any time</li>
+                        <li><strong>Anonymity:</strong> Request that your donations remain anonymous</li>
+                    </ul>
+                    <p class="text-gray-700 mb-6">
+                        To exercise these rights, please contact us at <a href="mailto:Keepherlightalivesmr@gmail.com"
+                            class="text-brand-gold hover:underline">Keepherlightalivesmr@gmail.com</a> or call <a
+                            href="tel:786-874-1881" class="text-brand-gold hover:underline">786-874-1881</a>.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">7. Children's Privacy</h2>
+                    <p class="text-gray-700 mb-6">
+                        Our website is not directed to children under 13 years of age. We do not knowingly collect
+                        personal information from children under 13. If you believe we have inadvertently collected
+                        information from a child under 13, please contact us immediately.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">8. Third-Party Links</h2>
+                    <p class="text-gray-700 mb-6">
+                        Our website may contain links to third-party websites. We are not responsible for the privacy
+                        practices of these external sites. We encourage you to review their privacy policies before
+                        providing any personal information.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">9. Data Retention</h2>
+                    <p class="text-gray-700 mb-6">
+                        We retain your personal information for as long as necessary to fulfill the purposes outlined in
+                        this Privacy Policy, unless a longer retention period is required by law. Donation records are
+                        retained in accordance with IRS requirements for tax-exempt organizations.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">10. Updates to This Privacy
+                        Policy</h2>
+                    <p class="text-gray-700 mb-6">
+                        We may update this Privacy Policy from time to time to reflect changes in our practices or legal
+                        requirements. We will post the updated policy on this page with a new "Last Updated" date. We
+                        encourage you to review this policy periodically.
+                    </p>
+
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 mt-12">11. Contact Us</h2>
+                    <p class="text-gray-700 mb-4">
+                        If you have any questions, concerns, or requests regarding this Privacy Policy or our data
+                        practices, please contact us:
+                    </p>
+                    <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                        <p class="text-gray-900 font-medium mb-2">Keep Her Light Alive Foundation</p>
+                        <p class="text-gray-700">Email: <a href="mailto:Keepherlightalivesmr@gmail.com"
+                                class="text-brand-gold hover:underline">Keepherlightalivesmr@gmail.com</a></p>
+                        <p class="text-gray-700">Phone: <a href="tel:786-874-1881"
+                                class="text-brand-gold hover:underline">786-874-1881</a></p>
+                        <p class="text-gray-700">Location: Florida, United States</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6 lg:px-12">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h4 class="text-white font-medium mb-6">Keep Her Light Alive</h4>
+                    <p class="text-gray-400 text-sm">Promoting boating safety awareness across Florida in loving memory
+                        of Stephanie M. Rodriguez.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                        </li>
+                        <li><a href="terms-of-use.html" class="hover:text-white transition-colors">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="mailto:Keepherlightalivesmr@gmail.com"
+                                class="hover:text-brand-gold transition-colors break-all">Keepherlightalivesmr@gmail.com</a>
+                        </li>
+                        <li><a href="tel:786-874-1881" class="hover:text-brand-gold transition-colors">786-874-1881</a>
+                        </li>
+                        <li>Florida, United States</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Keep Her Light Alive Foundation. All rights reserved. | Designed by OAC Digital
+                    Innovations</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        function openMenu() {
+            menu.classList.remove('hidden');
+            setTimeout(() => {
+                menu.classList.remove('opacity-0');
+                menu.classList.add('flex');
+            }, 10);
+        }
+
+        function closeMenu() {
+            menu.classList.add('opacity-0');
+            setTimeout(() => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+    </script>
+</body>
+
+</html>

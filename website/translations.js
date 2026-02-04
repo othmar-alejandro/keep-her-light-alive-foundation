@@ -347,10 +347,16 @@ function setLanguage(lang) {
         }
     });
 
-    // Update language toggle button
+    // Update language toggle buttons (desktop and mobile)
     const langToggle = document.getElementById('current-lang');
+    const langToggleMobile = document.getElementById('current-lang-mobile');
+
     if (langToggle) {
         langToggle.textContent = lang.toUpperCase();
+    }
+
+    if (langToggleMobile) {
+        langToggleMobile.textContent = lang.toUpperCase();
     }
 
     // Save preference to localStorage
@@ -366,12 +372,21 @@ window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     setLanguage(savedLang);
 
-    // Add click event to language toggle button
+
+    // Add click event to language toggle buttons (desktop and mobile)
     const langToggleBtn = document.getElementById('lang-toggle');
+    const langToggleMobileBtn = document.getElementById('lang-toggle-mobile');
+
+    const toggleLanguage = () => {
+        const newLang = currentLang === 'en' ? 'es' : 'en';
+        setLanguage(newLang);
+    };
+
     if (langToggleBtn) {
-        langToggleBtn.addEventListener('click', () => {
-            const newLang = currentLang === 'en' ? 'es' : 'en';
-            setLanguage(newLang);
-        });
+        langToggleBtn.addEventListener('click', toggleLanguage);
+    }
+
+    if (langToggleMobileBtn) {
+        langToggleMobileBtn.addEventListener('click', toggleLanguage);
     }
 });
