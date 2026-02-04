@@ -218,13 +218,13 @@
 <body class="text-brand-dark selection:bg-brand-gold selection:text-white overflow-x-hidden">
 
     <!-- Navbar: Minimal & Sticky -->
-    <nav class="fixed w-full z-50 bg-transparent transition-all duration-500" id="navbar">
+    <nav class="absolute w-full z-50 bg-transparent" id="navbar">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo Only (Text Removed) -->
                 <a href="#" class="flex items-center group">
                     <img src="resources/logo-final.png" alt="Logo"
-                        class="h-20 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
+                        class="h-28 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity transform group-hover:scale-105 duration-300">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -1273,7 +1273,8 @@
         menuBtn.addEventListener('click', openMenu);
         closeBtn.addEventListener('click', closeMenu);
 
-        // --- Navbar Scroll Logic (Transparent to Glass) ---
+        // --- Navbar Scroll Logic (DISABLED - keeping navbar transparent always) ---
+        /*
         const navbar = document.getElementById('navbar');
         const navLinks = document.querySelectorAll('.nav-link');
         const mobileMenuBtnIcon = document.getElementById('mobile-menu-btn');
@@ -1309,6 +1310,7 @@
                 });
             }
         });
+        */
 
         // --- 6. Sticky CTA Logic ---
         const stickyCta = document.getElementById('sticky-cta');
