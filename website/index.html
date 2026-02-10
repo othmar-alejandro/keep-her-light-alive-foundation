@@ -252,10 +252,10 @@
                     <a href="#contact-form"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
                         data-i18n="nav.contact">Contact</a>
-                    <a href="#about-coin"
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
                         class="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl"
-                        data-i18n="hero.cta.coin">
-                        The Coin Initiative
+                        data-i18n="nav.donate">
+                        Donate
                     </a>
 
                     <!-- Language Toggle Button -->
@@ -288,6 +288,8 @@
                 data-i18n="nav.events">Events</a>
             <a href="#resources" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
                 data-i18n="nav.resources">Resources</a>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
+                class="text-2xl font-serif text-brand-gold" onclick="closeMenu()" data-i18n="nav.donate">Donate</a>
             <a href="#contact-form" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
                 data-i18n="nav.contact">Contact</a>
 
@@ -330,20 +332,18 @@
                         Stephanie M. Rodriguez.
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#about-coin"
-                            class="px-8 py-4 bg-brand-gold text-black rounded-full font-bold transition-transform hover:scale-105 hover:bg-white shadow-[0_0_20px_rgba(212,175,55,0.4)]"
-                            data-i18n="hero.cta.coin">
-                            The Coin Initiative
-                        </a>
-                        <a href="#mission"
-                            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-gray-900 hover:scale-105 transition-all duration-300">
-                            <span data-i18n="hero.cta.mission">Our Mission</span>
-                            <i data-lucide="arrow-right"
-                                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
+                    <a href="#about-coin"
+                        class="px-8 py-4 bg-brand-gold text-black rounded-full font-bold transition-transform hover:scale-105 hover:bg-white shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                        data-i18n="nav.coin">
+                        The Coin Initiative
+                    </a>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
+                        class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-gray-900 hover:scale-105 transition-all duration-300">
+                        <span data-i18n="nav.donate">Donate</span>
+                        <i data-lucide="heart" class="w-4 h-4 transition-transform group-hover:scale-110"></i>
+                    </a>
                 </div>
+            </div>
             </div>
         </header>
 
@@ -558,19 +558,23 @@
                         </div>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="relative z-10 h-full flex flex-col justify-end p-10 text-white">
-                            <h3 class="font-serif text-3xl mb-3" data-i18n="initiatives.card1.title">Free Boating Safety
-                                Courses</h3>
-                            <p class="text-white/90 max-w-lg text-lg" data-i18n="initiatives.card1.text">
-                                Partnering with local authorities in Miami-Dade and the Florida Keys to provide free
-                                water safety resources, pre-departure checklists, and boating safety workshops for
-                                families.
+                            <h3 class="font-serif text-3xl mb-3" data-i18n="initiatives.card1.title">Boating Safety
+                                Education</h3>
+                            <p class="text-white/90 max-w-lg text-lg mb-6" data-i18n="initiatives.card1.text">
+                                We are working to partner with local authorities in Miami-Dade and the Florida Keys to
+                                provide free
+                                water safety resources. In the meantime, explore these essential safety videos.
                             </p>
+                            <a href="https://www.youtube.com/results?search_query=boating+safety+education+florida"
+                                target="_blank"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white hover:text-black backdrop-blur-md rounded-full transition-all duration-300 font-medium text-sm border border-white/30">
+                                <i data-lucide="youtube" class="w-4 h-4"></i>
+                                Watch Safety Videos
+                            </a>
                         </div>
                     </div>
 
                     <!-- Card 2: Coin Initiative (Icon based) -->
-                    <!-- Card 2: Coin Initiative (Split Face Visual) -->
-                    <!-- Card 2: Spacer for Grid Layout (Empty or decorative since Coin moved to dedicated section) -->
                     <div
                         class="bg-brand-slate rounded-3xl p-8 flex items-center justify-center relative overflow-hidden group">
                         <div class="text-center">
@@ -599,7 +603,8 @@
                             <h3 class="font-serif text-2xl mb-2" data-i18n="initiatives.card3.title">Water Safety Events
                                 in Florida</h3>
                             <p class="text-white/90 text-sm" data-i18n="initiatives.card3.description">
-                                From memorial walks to boating safety seminars in Hialeah and Miami, we bring the
+                                From memorial walks to boating safety seminars in Hialeah and Miami, we are planning
+                                events to bring the
                                 community together for healing and education.
                             </p>
                         </div>
@@ -607,8 +612,8 @@
 
                     <!-- Card 4: Advocacy (Image based) -->
                     <div class="md:col-span-2 relative rounded-3xl overflow-hidden group">
-                        <img src="resources/stepahnie-in-water.png"
-                            alt="Honoring Stephanie through legislative advocacy for boating safety regulations in Florida"
+                        <img src="resources/pillar-law-advocacy.png"
+                            alt="Florida Marine Patrol boat at sunset, symbolizing safety advocacy and legislative reform"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
                         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
                         <div class="absolute bottom-0 left-0 p-10 text-white">
@@ -627,122 +632,55 @@
         </section>
 
         <!-- EVENTS: Upcoming & Past -->
+        <!-- EVENTS: Coming Soon -->
         <section id="events" class="py-32 bg-brand-sand/30 border-t border-gray-100 relative">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <!-- Section Header -->
-                <div class="text-center mb-20">
+                <div class="text-center mb-16">
                     <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
                         data-i18n="events.label">Community</span>
                     <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6" data-i18n="events.title">Events &
                         Gatherings</h2>
                     <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed" data-i18n="events.description">
-                        Join us in our mission to celebrate life and promote safety.
+                        We are currently planning a series of impactful events to honor Stephanie's legacy and promote
+                        water safety.
                     </p>
                 </div>
 
-                <!-- UPCOMING EVENTS -->
-                <div class="mb-24">
-                    <div class="flex items-center gap-4 mb-10">
-                        <div class="h-[1px] w-12 bg-gray-300"></div>
-                        <span class="text-gray-400 text-xs tracking-[0.2em] uppercase font-bold"
-                            data-i18n="events.upcoming">Upcoming Events</span>
-                    </div>
-
-                    <div class="grid lg:grid-cols-2 gap-10">
-                        <!-- Event 1: Gala -->
-                        <div
-                            class="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                            <div class="h-[400px] overflow-hidden">
-                                <img src="resources/event-gala.png" alt="Gala"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div
-                                class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl text-center border border-white/50 shadow-sm">
-                                <span class="block text-xs font-bold uppercase tracking-widest text-gray-500">Feb</span>
-                                <span class="block text-2xl font-serif font-bold text-gray-900">14</span>
-                            </div>
-                            <div class="p-10">
-                                <span
-                                    class="inline-block px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider mb-4"
-                                    data-i18n="events.event1.category">Fundraiser</span>
-                                <h3 class="text-3xl font-serif text-gray-900 mb-4 group-hover:text-brand-gold transition-colors"
-                                    data-i18n="events.event1.title">
-                                    Light the Night Gala</h3>
-                                <p class="text-gray-500 mb-8 leading-relaxed" data-i18n="events.event1.description">
-                                    An elegant evening of remembrance and hope. Join us for a charity dinner to support
-                                    our
-                                    educational programs and victim assistance fund.
-                                </p>
-                                <a href="#contact-form"
-                                    class="inline-flex items-center text-gray-900 font-bold hover:text-brand-gold transition-colors">
-                                    Reserve Tickets <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Event 2: Safety Workshop -->
-                        <div
-                            class="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                            <div class="h-[400px] overflow-hidden">
-                                <img src="resources/event-safety.png" alt="Safety Workshop"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div
-                                class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl text-center border border-white/50 shadow-sm">
-                                <span class="block text-xs font-bold uppercase tracking-widest text-gray-500">Mar</span>
-                                <span class="block text-2xl font-serif font-bold text-gray-900">05</span>
-                            </div>
-                            <div class="p-10">
-                                <span
-                                    class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-4"
-                                    data-i18n="events.event2.category">Education</span>
-                                <h3 class="text-3xl font-serif text-gray-900 mb-4 group-hover:text-blue-600 transition-colors"
-                                    data-i18n="events.event2.title">
-                                    Safe Waters Workshop</h3>
-                                <p class="text-gray-500 mb-8 leading-relaxed" data-i18n="events.event2.description">
-                                    A hands-on boating safety course for all ages. Learn proper life jacket use,
-                                    navigation
-                                    rules, and emergency protocols.
-                                </p>
-                                <a href="#contact-form"
-                                    class="inline-flex items-center text-gray-900 font-bold hover:text-blue-600 transition-colors">
-                                    Register Free <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PAST EVENTS -->
-                <div class="relative">
-                    <div class="flex items-center gap-4 mb-10">
-                        <div class="h-[1px] w-12 bg-gray-300"></div>
-                        <span class="text-gray-400 text-xs tracking-[0.2em] uppercase font-bold">Past Highlights</span>
-                    </div>
-
+                <!-- Coming Soon State -->
+                <div
+                    class="max-w-4xl mx-auto text-center bg-white rounded-[2rem] p-12 shadow-sm border border-gray-100">
                     <div
-                        class="bg-white rounded-[2rem] p-4 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
-                        <div class="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden">
-                            <img src="resources/event-walk.png" alt="Memorial Walk" class="w-full h-full object-cover">
-                        </div>
-                        <div class="w-full md:w-2/3 pr-8 py-4">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="text-sm font-medium text-gray-400">November 2025</span>
-                                <div class="h-1 w-1 bg-gray-300 rounded-full"></div>
-                                <span class="text-sm font-medium text-brand-gold">Community Event</span>
-                            </div>
-                            <h3 class="text-2xl font-serif text-gray-900 mb-3">Inaugural Memorial Walk</h3>
-                            <p class="text-gray-500 leading-relaxed mb-4">
-                                Over 500 community members gathered at sunset to walk 5k in memory of lost loved ones.
-                                The
-                                event raised funds for 300 life jackets donated to local youth centers.
-                            </p>
-                            <a href="#"
-                                class="text-sm font-bold text-gray-900 underline decoration-gray-300 underline-offset-4 hover:text-brand-gold transition-colors">View
-                                Photo Gallery</a>
-                        </div>
+                        class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-gold/10 text-brand-gold mb-8">
+                        <i data-lucide="calendar-clock" class="w-10 h-10"></i>
+                    </div>
+
+                    <h3 class="text-3xl font-serif text-gray-900 mb-6" data-i18n="events.coming_soon.title">
+                        Calendar Coming Soon
+                    </h3>
+
+                    <p class="text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto"
+                        data-i18n="events.coming_soon.text">
+                        Our team is working hard to organize workshops, memorial walks, and community gatherings for
+                        2026.
+                        Please check back soon for dates and details, or sign up to stay notified.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#contact-form"
+                            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-brand-gold hover:text-black transition-colors duration-300">
+                            <span data-i18n="events.cta.notify">Notify Me of Updates</span>
+                            <i data-lucide="bell" class="w-4 h-4"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Past Highlights Placeholder (Hidden/Modified) -->
+                <!-- 
+                <div class="mt-24 text-center opacity-60">
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Our journey is just beginning</p>
+                </div>
+                -->
             </div>
         </section>
 
@@ -778,10 +716,16 @@
                             kindness. Let the ripple effect begin.
                         </p>
 
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
-                            class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white">
-                            Request a Coin
-                        </a>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact-form"
+                                class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white">
+                                Request a Coin
+                            </a>
+                            <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
+                                class="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-sm font-medium text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white hover:text-black hover:border-transparent">
+                                Donate
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Right: Dynamic Coin Visuals -->
@@ -942,36 +886,52 @@
 
                     <!-- Form -->
                     <div class="bg-gray-50 p-10 rounded-3xl">
-                        <form action="#" class="space-y-8">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+                            <!-- Web3Forms Configuration -->
+                            <input type="hidden" name="access_key" value="548f4ad5-4639-484c-a8ea-957421aee930">
+                            <!-- Optional: Redirect to a custom success page or let Web3Forms handle it -->
+                            <!-- <input type="hidden" name="redirect" value="https://keepherlightalive.org/thank-you"> -->
+                            <input type="hidden" name="subject" value="New Submission from Website">
+                            <input type="hidden" name="from_name" value="Keep Her Light Alive Foundation">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div>
                                     <label
                                         class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Name</label>
-                                    <input type="text" placeholder="Jane Doe" class="form-input">
+                                    <input type="text" name="name" placeholder="Jane Doe" class="form-input" required>
                                 </div>
                                 <div>
                                     <label
                                         class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Email</label>
-                                    <input type="email" placeholder="jane@example.com" class="form-input">
+                                    <input type="email" name="email" placeholder="jane@example.com" class="form-input"
+                                        required>
                                 </div>
                             </div>
                             <div>
                                 <label
                                     class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Subject</label>
-                                <select class="form-input bg-transparent">
-                                    <option>General Inquiry</option>
-                                    <option>Volunteering</option>
-                                    <option>Donation Support</option>
-                                    <option>Press / Media</option>
-                                </select>
+                                <div class="relative">
+                                    <select name="subject_type" class="form-input bg-transparent appearance-none">
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Request a Coin">Request a Coin</option>
+                                        <option value="Volunteering">Volunteering</option>
+                                        <option value="Donation Support">Donation Support</option>
+                                        <option value="Press / Media">Press / Media</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <label
                                     class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Message</label>
-                                <textarea rows="4" placeholder="How can we help?"
-                                    class="form-input resize-none"></textarea>
+                                <textarea name="message" rows="4" placeholder="How can we help?"
+                                    class="form-input resize-none" required></textarea>
                             </div>
-                            <button type="button"
+                            <button type="submit"
                                 class="w-full py-4 bg-brand-dark text-white font-medium rounded-full hover:bg-brand-gold transition-colors duration-300">
                                 Send Message
                             </button>
@@ -1115,7 +1075,7 @@
 
     <!-- Sticky CTA Button -->
     <div id="sticky-cta" class="hidden md:fixed bottom-24 right-8 z-40 opacity-0 transition-opacity duration-300">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
+        <a href="#contact-form"
             class="flex items-center justify-center gap-0 md:gap-2 w-14 h-14 md:w-auto md:h-auto p-0 md:px-6 md:py-4 bg-brand-gold text-black font-bold rounded-full shadow-2xl hover:scale-105 transition-transform">
             <i data-lucide="coins" class="w-6 h-6 md:w-5 md:h-5"></i>
             <span data-i18n="cta.sticky.coin" class="hidden md:inline">Get Your Coin</span>
