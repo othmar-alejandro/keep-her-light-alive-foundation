@@ -79,6 +79,7 @@ const translations = {
         'coin.title.part2': 'Initiative',
         'coin.description1': 'Inspired by Stephanie\'s boundless generosity, this coin is a symbol of purposeless kindness. One side bears our promise: <strong class="text-white">"Keep Her Light Alive,"</strong> while the other connects you to a community of good deeds.',
         'coin.description2': 'When you receive this coin, hold it, scan it, and then pass it on by performing a random act of kindness. Let the ripple effect begin.',
+        'coin.description3': 'When you request a coin, we will mail a physical token directly to your address as a token of our heartfelt appreciation. Keep it as a beautiful remembrance of Stephanie\'s vibrant spirit, or pass it along to inspire others.',
         'coin.cta': 'Request a Coin',
 
         // Resources Section
@@ -105,6 +106,8 @@ const translations = {
         'contact.form.email': 'Email',
         'contact.form.phone': 'Phone Number',
         'contact.form.phone.placeholder': '786-874-1881',
+        'contact.form.address': 'Mailing Address',
+        'contact.form.address.placeholder': '123 Main St, Miami, FL 33101',
         'contact.form.subject': 'Subject',
         'contact.form.subject.option1': 'General Inquiry',
         'contact.form.subject.option2': 'Volunteering',
@@ -229,6 +232,7 @@ const translations = {
         'coin.title.part2': 'de la Moneda',
         'coin.description1': 'Inspirada en la generosidad ilimitada de Stephanie, esta moneda es un símbolo de bondad desinteresada. Un lado lleva nuestra promesa: <strong class="text-white">"Mantén Su Luz Viva"</strong>, mientras que el otro te conecta con una comunidad de buenas acciones.',
         'coin.description2': 'Cuando recibas esta moneda, sostenla, escanéala y luego pásala realizando un acto aleatorio de bondad. Deja que comience el efecto dominó.',
+        'coin.description3': 'Cuando solicites una moneda, te enviaremos una ficha física directamente a tu dirección como muestra de nuestro sincero agradecimiento. Consérvala como un hermoso recuerdo del espíritu vibrante de Stephanie, o pásala para inspirar a otros.',
         'coin.cta': 'Solicitar una Moneda',
 
         // Resources Section
@@ -305,6 +309,8 @@ const translations = {
         'contact.form.email': 'Correo Electrónico',
         'contact.form.phone': 'Número de Teléfono',
         'contact.form.phone.placeholder': '786-874-1881',
+        'contact.form.address': 'Dirección Postal',
+        'contact.form.address.placeholder': '123 Main St, Miami, FL 33101',
         'contact.form.subject': 'Asunto',
         'contact.form.subject.option1': 'Consulta General',
         'contact.form.subject.option2': 'Voluntariado',
