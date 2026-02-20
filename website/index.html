@@ -249,6 +249,7 @@
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
                         data-i18n="nav.resources">Resources</a>
                     <a href="#contact-form"
+                        onclick="document.getElementById('subject-select').value='General Inquiry'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
                         data-i18n="nav.contact">Contact</a>
                     <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
@@ -289,7 +290,8 @@
                 data-i18n="nav.resources">Resources</a>
             <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
                 class="text-2xl font-serif text-brand-gold" onclick="closeMenu()" data-i18n="nav.donate">Donate</a>
-            <a href="#contact-form" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+            <a href="#contact-form" class="text-2xl font-serif text-gray-900"
+                onclick="closeMenu(); document.getElementById('subject-select').value='General Inquiry'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
                 data-i18n="nav.contact">Contact</a>
 
             <!-- Language Toggle in Mobile Menu -->
@@ -667,6 +669,7 @@
 
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="#contact-form"
+                            onclick="document.getElementById('subject-select').value='General Inquiry'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
                             class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-brand-gold hover:text-black transition-colors duration-300">
                             <span data-i18n="events.cta.notify">Notify Me of Updates</span>
                             <i data-lucide="bell" class="w-4 h-4"></i>
@@ -722,7 +725,8 @@
 
                         <div class="flex flex-wrap gap-4">
                             <a href="#contact-form"
-                                class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white">
+                                onclick="document.getElementById('subject-select').value='Request a Coin'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
+                                class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white text-center">
                                 Request a Coin
                             </a>
                             <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
@@ -1096,6 +1100,7 @@
     <!-- Sticky CTA Button -->
     <div id="sticky-cta" class="hidden md:fixed bottom-24 right-8 z-40 opacity-0 transition-opacity duration-300">
         <a href="#contact-form"
+            onclick="document.getElementById('subject-select').value='Request a Coin'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
             class="flex items-center justify-center gap-0 md:gap-2 w-14 h-14 md:w-auto md:h-auto p-0 md:px-6 md:py-4 bg-brand-gold text-black font-bold rounded-full shadow-2xl hover:scale-105 transition-transform">
             <i data-lucide="coins" class="w-6 h-6 md:w-5 md:h-5"></i>
             <span data-i18n="cta.sticky.coin" class="hidden md:inline">Get Your Coin</span>
