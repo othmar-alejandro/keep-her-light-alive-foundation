@@ -30,6 +30,8 @@
       '  }\n' +
       '  globalSiteSettings(first: 1, stage: PUBLISHED) {\n' +
       '    primaryEmail primaryPhone locationText instagramUrl\n' +
+      '    missionQuote missionPillar1Title missionPillar1Text\n' +
+      '    missionPillar2Title missionPillar2Text\n' +
       '  }\n' +
       '  coinInitiativeSettings(first: 1, stage: PUBLISHED) {\n' +
       '    body { html } donateCtaUrl\n' +
@@ -328,6 +330,23 @@
     container.innerHTML = doc.body.innerHTML;
   }
 
+  // --- render: mission section ---
+
+  function renderMission(settings) {
+    var s = Array.isArray(settings) ? settings[0] : settings;
+    if (!s) return;
+    var quoteEl = el('mission-quote');
+    var p1t     = el('mission-p1-title');
+    var p1d     = el('mission-p1-text');
+    var p2t     = el('mission-p2-title');
+    var p2d     = el('mission-p2-text');
+    if (quoteEl && s.missionQuote)      quoteEl.textContent = '\u201c' + s.missionQuote + '\u201d';
+    if (p1t && s.missionPillar1Title)   p1t.textContent = s.missionPillar1Title;
+    if (p1d && s.missionPillar1Text)    p1d.textContent = s.missionPillar1Text;
+    if (p2t && s.missionPillar2Title)   p2t.textContent = s.missionPillar2Title;
+    if (p2d && s.missionPillar2Text)    p2d.textContent = s.missionPillar2Text;
+  }
+
   // --- render: contact info + footer ---
 
   function renderContactInfo(settings) {
@@ -387,6 +406,7 @@
       renderFAQs(data.fAQItems);
       renderResources(data.resources);
       renderEvents(data.events);
+      renderMission(data.globalSiteSettings);
       renderInitiatives(data.initiatives);
       renderCoin(data.coinInitiativeSettings);
       renderLegacy(data.legalPages);
