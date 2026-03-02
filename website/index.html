@@ -483,7 +483,7 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div id="founders-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <!-- Magaly Bea -->
                     <div class="text-center group">
                         <div
@@ -648,8 +648,11 @@
                     </p>
                 </div>
 
+                <!-- Dynamic Events List (hidden until CMS returns events) -->
+                <div id="events-list" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+
                 <!-- Coming Soon State -->
-                <div
+                <div id="events-coming-soon"
                     class="max-w-4xl mx-auto text-center bg-white rounded-[2rem] p-12 shadow-sm border border-gray-100">
                     <div
                         class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-gold/10 text-brand-gold mb-8">
@@ -782,7 +785,7 @@
                         </a>
                     </div>
 
-                    <div class="space-y-4">
+                    <div id="resources-list" class="space-y-4">
                         <!-- Resource Item 1 -->
                         <a href="https://myfwc.com/boating/safety-education/safety-equipment/" target="_blank"
                             rel="noopener noreferrer"
@@ -870,14 +873,14 @@
                                 <i data-lucide="map-pin" class="w-6 h-6 text-brand-gold mt-1"></i>
                                 <div>
                                     <h4 class="font-medium text-gray-900">Location</h4>
-                                    <p class="text-gray-500">Florida, United States</p>
+                                    <p id="contact-location" class="text-gray-500">Florida, United States</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
                                 <i data-lucide="mail" class="w-6 h-6 text-brand-gold mt-1"></i>
                                 <div>
                                     <h4 class="font-medium text-gray-900">Email</h4>
-                                    <a href="mailto:Keepherlightalivesmr@gmail.com"
+                                    <a id="contact-email" href="mailto:Keepherlightalivesmr@gmail.com"
                                         class="text-gray-500 hover:text-black transition-colors">Keepherlightalivesmr@gmail.com</a>
                                 </div>
                             </div>
@@ -885,7 +888,7 @@
                                 <i data-lucide="phone" class="w-6 h-6 text-brand-gold mt-1"></i>
                                 <div>
                                     <h4 class="font-medium text-gray-900">Phone</h4>
-                                    <a href="tel:786-874-1881"
+                                    <a id="contact-phone" href="tel:786-874-1881"
                                         class="text-gray-500 hover:text-black transition-colors">786-874-1881</a>
                                 </div>
                             </div>
@@ -980,7 +983,7 @@
                 </div>
 
                 <!-- FAQ Accordion -->
-                <div class="space-y-4">
+                <div id="faq-list" class="space-y-4">
                     <!-- Question 1 -->
                     <div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
                         <button
@@ -1127,11 +1130,11 @@
                         all love.
                     </p>
                     <div class="flex gap-4">
-                        <a href="https://instagram.com/keepherlightalive"
+                        <a id="footer-instagram" href="https://instagram.com/keepherlightalive"
                             class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="mailto:Keepherlightalivesmr@gmail.com"
+                        <a id="footer-email-icon" href="mailto:Keepherlightalivesmr@gmail.com"
                             class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </a>
@@ -1142,12 +1145,12 @@
                     <div>
                         <h4 class="text-white font-medium mb-6" data-i18n="footer.contact">Contact</h4>
                         <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="mailto:Keepherlightalivesmr@gmail.com"
+                            <li><a id="footer-email-text" href="mailto:Keepherlightalivesmr@gmail.com"
                                     class="hover:text-brand-gold transition-colors break-all">Keepherlightalivesmr@gmail.com</a>
                             </li>
-                            <li><a href="tel:786-874-1881"
+                            <li><a id="footer-phone" href="tel:786-874-1881"
                                     class="hover:text-brand-gold transition-colors">786-874-1881</a></li>
-                            <li>Florida, United States</li>
+                            <li id="footer-location">Florida, United States</li>
                         </ul>
                     </div>
                     <div>
@@ -1342,6 +1345,9 @@
 
     <!-- Bilingual Translation System -->
     <script src="translations.js"></script>
+
+    <!-- CMS: Hygraph runtime content -->
+    <script src="cms.js"></script>
 
 </body>
 
