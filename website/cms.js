@@ -34,6 +34,9 @@
       '  coinInitiativeSettings(first: 1, stage: PUBLISHED) {\n' +
       '    body { html } donateCtaUrl\n' +
       '  }\n' +
+      '  initiatives(first: 3, orderBy: sortOrder_ASC, stage: PUBLISHED) {\n' +
+      '    title summary\n' +
+      '  }\n' +
       '  legalPages(where: { slug: "stephanie-story" }, first: 1, stage: PUBLISHED) {\n' +
       '    body { html }\n' +
       '  }\n' +
@@ -279,6 +282,25 @@
     }
   }
 
+  // --- render: initiatives ---
+
+  function renderInitiatives(initiatives) {
+    if (!initiatives || !initiatives.length) return;
+    // Maps sortOrder index (0,1,2) to card ID pairs
+    var slots = [
+      ['init-1-title', 'init-1-desc'],
+      ['init-2-title', 'init-2-desc'],
+      ['init-3-title', 'init-3-desc']
+    ];
+    initiatives.forEach(function (init, i) {
+      if (i >= slots.length) return;
+      var titleEl = el(slots[i][0]);
+      var descEl  = el(slots[i][1]);
+      if (titleEl) titleEl.textContent = init.title;
+      if (descEl)  descEl.textContent  = init.summary;
+    });
+  }
+
   // --- render: Stephanie's story ---
 
   function renderLegacy(pages) {
@@ -365,6 +387,7 @@
       renderFAQs(data.fAQItems);
       renderResources(data.resources);
       renderEvents(data.events);
+      renderInitiatives(data.initiatives);
       renderCoin(data.coinInitiativeSettings);
       renderLegacy(data.legalPages);
       renderContactInfo(data.globalSiteSettings);
