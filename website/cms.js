@@ -31,6 +31,9 @@
       '  globalSiteSettings(first: 1, stage: PUBLISHED) {\n' +
       '    primaryEmail primaryPhone locationText instagramUrl\n' +
       '  }\n' +
+      '  coinInitiativeSettings(first: 1, stage: PUBLISHED) {\n' +
+      '    body { html } donateCtaUrl\n' +
+      '  }\n' +
       '}';
   }
 
@@ -258,6 +261,27 @@
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }
 
+  // --- render: coin initiative ---
+
+  function renderCoin(settings) {
+    var s = Array.isArray(settings) ? settings[0] : settings;
+    if (!s) return;
+
+    var coinBody = el('coin-body');
+    if (coinBody && s.body && s.body.html) {
+      // Wrap CMS paragraphs with the same styling classes
+      var html = s.body.html
+        .replace(/<p>/g, '<p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg">')
+        .replace(/<\/p>/g, '</p>');
+      coinBody.innerHTML = html;
+    }
+
+    var donateBtn = el('coin-cta-donate');
+    if (donateBtn && s.donateCtaUrl) {
+      donateBtn.href = s.donateCtaUrl;
+    }
+  }
+
   // --- render: contact info + footer ---
 
   function renderContactInfo(settings) {
@@ -317,6 +341,7 @@
       renderFAQs(data.fAQItems);
       renderResources(data.resources);
       renderEvents(data.events);
+      renderCoin(data.coinInitiativeSettings);
       renderContactInfo(data.globalSiteSettings);
     });
   });

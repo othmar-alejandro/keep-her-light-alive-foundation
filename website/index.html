@@ -708,6 +708,7 @@
                             <span data-i18n="coin.title.part1">The Coin</span> <br> <span class="text-brand-gold italic"
                                 data-i18n="coin.title.part2">Initiative</span>
                         </h2>
+                        <div id="coin-body">
                         <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg" data-i18n="coin.description1">
                             Inspired by Stephanie’s boundless generosity, this coin is a symbol of purposeless kindness.
                             One
@@ -722,17 +723,18 @@
                         </p>
                         <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg" data-i18n="coin.description3">
                             When you request a coin, we will mail a physical token directly to your address as a token
-                            of our heartfelt appreciation. Keep it as a beautiful remembrance of Stephanie's vibrant
+                            of our heartfelt appreciation. Keep it as a beautiful remembrance of Stephanie’s vibrant
                             spirit, or pass it along to inspire others.
                         </p>
+                        </div>
 
                         <div class="flex flex-wrap gap-4">
                             <a href="#contact-form"
-                                onclick="document.getElementById('subject-select').value='Request a Coin'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
+                                onclick="document.getElementById(‘subject-select’).value=’Request a Coin’; document.getElementById(‘subject-select’).dispatchEvent(new Event(‘change’));"
                                 class="inline-flex h-12 items-center justify-center rounded-full bg-brand-gold px-8 text-sm font-medium text-black transition-transform hover:scale-105 hover:bg-white text-center">
                                 Request a Coin
                             </a>
-                            <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
+                            <a id="coin-cta-donate" href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
                                 class="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-sm font-medium text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white hover:text-black hover:border-transparent">
                                 Donate
                             </a>
