@@ -105,28 +105,22 @@
   function initAccordion(container) {
     container.querySelectorAll('.accordion-item').forEach(function (item) {
       var button = item.querySelector('button');
-      var content = item.querySelector('.accordion-content');
       var icon = item.querySelector('.accordion-icon');
-      if (!button || !content || !icon) return;
-
-      content.style.maxHeight = '0';
-      content.style.overflow = 'hidden';
-      content.style.transition = 'max-height 0.3s ease-out';
+      if (!button) return;
 
       button.addEventListener('click', function () {
-        var isOpen = content.style.maxHeight !== '0px';
+        var isOpen = item.classList.contains('active');
 
         // close all
         container.querySelectorAll('.accordion-item').forEach(function (other) {
-          var oc = other.querySelector('.accordion-content');
+          other.classList.remove('active');
           var oi = other.querySelector('.accordion-icon');
-          if (oc) oc.style.maxHeight = '0';
           if (oi) oi.setAttribute('data-lucide', 'plus');
         });
 
         if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          icon.setAttribute('data-lucide', 'x');
+          item.classList.add('active');
+          if (icon) icon.setAttribute('data-lucide', 'x');
         }
 
         if (typeof lucide !== 'undefined') lucide.createIcons();
