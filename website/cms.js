@@ -34,6 +34,9 @@
       '  coinInitiativeSettings(first: 1, stage: PUBLISHED) {\n' +
       '    body { html } donateCtaUrl\n' +
       '  }\n' +
+      '  legalPages(where: { slug: "stephanie-story" }, first: 1, stage: PUBLISHED) {\n' +
+      '    body { html }\n' +
+      '  }\n' +
       '}';
   }
 
@@ -276,6 +279,33 @@
     }
   }
 
+  // --- render: Stephanie's story ---
+
+  function renderLegacy(pages) {
+    var container = el('legacy-body');
+    if (!container || !pages || !pages.length) return;
+    var page = pages[0];
+    if (!page || !page.body || !page.body.html) return;
+
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(page.body.html, 'text/html');
+
+    // Style blockquotes and their inner paragraphs first
+    doc.querySelectorAll('blockquote').forEach(function (bq) {
+      bq.className = 'border-l-2 border-brand-gold pl-6 py-2 my-8';
+      bq.querySelectorAll('p').forEach(function (p) {
+        p.className = 'font-serif text-2xl italic text-gray-800';
+      });
+    });
+
+    // Style top-level paragraphs
+    doc.querySelectorAll('body > p').forEach(function (p) {
+      p.className = 'text-xl text-gray-600 leading-relaxed font-light';
+    });
+
+    container.innerHTML = doc.body.innerHTML;
+  }
+
   // --- render: contact info + footer ---
 
   function renderContactInfo(settings) {
@@ -336,6 +366,7 @@
       renderResources(data.resources);
       renderEvents(data.events);
       renderCoin(data.coinInitiativeSettings);
+      renderLegacy(data.legalPages);
       renderContactInfo(data.globalSiteSettings);
     });
   });
