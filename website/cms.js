@@ -28,6 +28,7 @@
       '    title eventStatus startDateTime endDateTime\n' +
       '    locationName city registrationUrl\n' +
       '    coverImage { url }\n' +
+      '    description { html }\n' +
       '  }\n' +
       '  globalSiteSettings(first: 1, stage: PUBLISHED) {\n' +
       '    primaryEmail primaryPhone locationText instagramUrl\n' +
@@ -228,7 +229,7 @@
       return;
     }
 
-    list.innerHTML = events.map(function (ev) {
+    var cards = events.map(function (ev, idx) {
       var statusKey = ev.eventStatus || 'planned';
       var statusLabel = STATUS_LABELS[statusKey] || statusKey;
       var statusClass = STATUS_COLORS[statusKey] || STATUS_COLORS.planned;
@@ -239,29 +240,24 @@
       // Cover image: real photo or graceful placeholder
       var imageUrl = (ev.coverImage && ev.coverImage.url) ? ev.coverImage.url : '';
       var imageBlock = imageUrl
-        ? '<div class="w-full h-52 overflow-hidden rounded-t-2xl -mx-0 -mt-0 mb-6 relative">' +
+        ? '<div class="w-full h-52 overflow-hidden rounded-t-2xl mb-6 relative">' +
         '<img src="' + esc(imageUrl) + '" alt="' + esc(ev.title) + '" ' +
         'class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">' +
         '<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>' +
         '</div>'
-        : '<div class="w-full h-52 rounded-t-2xl -mx-0 -mt-0 mb-6 overflow-hidden relative flex items-center justify-center" ' +
+        : '<div class="w-full h-52 rounded-t-2xl mb-6 overflow-hidden relative flex items-center justify-center" ' +
         'style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #D4AF37 100%)">' +
         '<div class="text-center z-10 px-6">' +
-        '<div class="w-14 h-14 mx-auto mb-3 rounded-full bg-brand-gold/20 flex items-center justify-center">' +
+        '<div class="w-14 h-14 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center">' +
         '<i data-lucide="sun" class="w-7 h-7 text-brand-gold"></i>' +
         '</div>' +
         '<p class="text-white/80 text-xs uppercase tracking-widest font-medium">Keep Her Light Alive</p>' +
         '</div>' +
-        '<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 70% 30%, #D4AF37 0%, transparent 60%)"></div>' +
         '</div>';
 
-      var regBtn = ev.registrationUrl
-        ? '<a href="' + esc(ev.registrationUrl) + '" target="_blank" rel="noopener noreferrer" ' +
-        'class="mt-auto pt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-dark border-b border-black pb-0.5 hover:text-brand-gold hover:border-brand-gold transition-colors">' +
-        'Register <i data-lucide="arrow-right" class="w-4 h-4"></i></a>'
-        : '';
-
-      return '<div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col group">' +
+      return '<div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col group ' +
+        'cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1" ' +
+        'data-event-idx="' + idx + '" role="button" tabindex="0" aria-label="' + esc(ev.title) + ' - click for details">' +
         imageBlock +
         '<div class="px-8 pb-8 flex flex-col flex-1">' +
         '<span class="inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 ' + statusClass + '">' + esc(statusLabel) + '</span>' +
@@ -274,10 +270,27 @@
           '<i data-lucide="map-pin" class="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0"></i>' +
           '<span>' + esc(location) + '</span>' +
           '</div>' : '') +
-        regBtn +
+        '<p class="mt-auto pt-4 text-xs text-brand-gold font-semibold uppercase tracking-widest flex items-center gap-1">' +
+        '<i data-lucide="info" class="w-3 h-3"></i> View details' +
+        '</p>' +
         '</div>' +
         '</div>';
-    }).join('');
+    });
+
+    list.innerHTML = cards.join('');
+
+    // Wire click handlers — each card opens the modal
+    list.querySelectorAll('[data-event-idx]').forEach(function (card) {
+      var idx = parseInt(card.getAttribute('data-event-idx'), 10);
+      function open() { openEventModal(events[idx]); }
+      card.addEventListener('click', open);
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+
+    // Init modal close listeners once
+    initModalListeners();
 
     // Show list, hide coming-soon
     list.classList.remove('hidden');
@@ -286,6 +299,7 @@
 
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }
+
 
   // --- render: coin initiative ---
 
@@ -324,6 +338,118 @@
       var descEl = el(slots[i][1]);
       if (titleEl) titleEl.textContent = init.title;
       if (descEl) descEl.textContent = init.summary;
+    });
+  }
+
+  // --- event modal ---
+
+  var STATUS_LABELS_MODAL = {
+    planned: 'Upcoming',
+    scheduled: 'Scheduled',
+    completed: 'Past Event',
+    canceled: 'Canceled'
+  };
+
+  var STATUS_COLORS_MODAL = {
+    planned: 'bg-brand-gold/20 text-amber-700',
+    scheduled: 'bg-blue-50 text-blue-600',
+    completed: 'bg-gray-100 text-gray-500',
+    canceled: 'bg-red-50 text-red-400'
+  };
+
+  function openEventModal(ev) {
+    var modal = el('event-modal');
+    var panel = el('event-modal-panel');
+    var heroImg = el('modal-hero-img');
+    var heroPlaceholder = el('modal-hero-placeholder');
+    var badge = el('modal-status-badge');
+    var title = el('modal-event-title');
+    var dateEl = el('modal-date');
+    var locEl = el('modal-location');
+    var locRow = el('modal-location-row');
+    var descEl = el('modal-description');
+    var ctaDiv = el('modal-cta');
+    var ctaBtn = el('modal-register-btn');
+
+    if (!modal) return;
+
+    // Populate status badge
+    var statusKey = ev.eventStatus || 'planned';
+    badge.textContent = STATUS_LABELS_MODAL[statusKey] || statusKey;
+    badge.className = 'inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 ' +
+      (STATUS_COLORS_MODAL[statusKey] || STATUS_COLORS_MODAL.planned);
+
+    // Title
+    title.textContent = ev.title || '';
+
+    // Cover image
+    var imgUrl = (ev.coverImage && ev.coverImage.url) ? ev.coverImage.url : '';
+    if (imgUrl) {
+      heroImg.src = imgUrl;
+      heroImg.alt = ev.title || '';
+      heroImg.classList.remove('hidden');
+      heroPlaceholder.classList.add('hidden');
+    } else {
+      heroImg.classList.add('hidden');
+      heroPlaceholder.classList.remove('hidden');
+    }
+
+    // Date + time
+    var dateStr = formatEventDate(ev.startDateTime);
+    var timeStr = formatEventTime(ev.startDateTime);
+    dateEl.textContent = dateStr + (timeStr ? '  ·  ' + timeStr : '');
+
+    // Location
+    var loc = [ev.locationName, ev.locationAddress, ev.city].filter(Boolean).join(', ');
+    if (loc) {
+      locEl.textContent = loc;
+      locRow.classList.remove('hidden');
+    } else {
+      locRow.classList.add('hidden');
+    }
+
+    // Description
+    descEl.innerHTML = (ev.description && ev.description.html) ? ev.description.html : '';
+
+    // CTA
+    if (ev.registrationUrl) {
+      ctaBtn.href = ev.registrationUrl;
+      ctaDiv.classList.remove('hidden');
+    } else {
+      ctaDiv.classList.add('hidden');
+    }
+
+    // Show modal (animate in)
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    if (panel) {
+      panel.classList.remove('scale-95');
+      panel.classList.add('scale-100');
+    }
+    document.body.style.overflow = 'hidden';
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+
+  function closeEventModal() {
+    var modal = el('event-modal');
+    var panel = el('event-modal-panel');
+    if (!modal) return;
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    if (panel) {
+      panel.classList.add('scale-95');
+      panel.classList.remove('scale-100');
+    }
+    document.body.style.overflow = '';
+  }
+
+  function initModalListeners() {
+    var closeBtn = el('event-modal-close');
+    var backdrop = el('event-modal-backdrop');
+    if (closeBtn) closeBtn.addEventListener('click', closeEventModal);
+    if (backdrop) backdrop.addEventListener('click', closeEventModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeEventModal();
     });
   }
 
