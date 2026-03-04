@@ -27,6 +27,7 @@
       '  ) {\n' +
       '    title eventStatus startDateTime endDateTime\n' +
       '    locationName city registrationUrl\n' +
+      '    coverImage { url }\n' +
       '  }\n' +
       '  globalSiteSettings(first: 1, stage: PUBLISHED) {\n' +
       '    primaryEmail primaryPhone locationText instagramUrl\n' +
@@ -70,18 +71,18 @@
       },
       body: JSON.stringify({ query: buildQuery(now), variables: { now: now } })
     })
-    .then(function (res) { return res.json(); })
-    .then(function (json) {
-      if (json.errors) {
-        console.warn('[CMS] Hygraph errors:', json.errors);
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.errors) {
+          console.warn('[CMS] Hygraph errors:', json.errors);
+          return null;
+        }
+        return json.data;
+      })
+      .catch(function (err) {
+        console.warn('[CMS] Fetch failed, using hardcoded fallback.', err);
         return null;
-      }
-      return json.data;
-    })
-    .catch(function (err) {
-      console.warn('[CMS] Fetch failed, using hardcoded fallback.', err);
-      return null;
-    });
+      });
   }
 
   // --- render: founders ---
@@ -98,11 +99,11 @@
 
       return '<div class="text-center group">' +
         '<div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white">' +
-          imgTag +
+        imgTag +
         '</div>' +
         '<h3 class="text-xl font-serif font-bold text-gray-900 mb-2">' + esc(f.name) + '</h3>' +
         '<p class="text-brand-gold text-xs uppercase tracking-widest font-bold mb-4">' + esc(f.roleTitle || 'Co-Founder') + '</p>' +
-      '</div>';
+        '</div>';
     }).join('');
 
     if (typeof lucide !== 'undefined') lucide.createIcons();
@@ -144,13 +145,13 @@
       var answerHtml = (faq.answer && faq.answer.html) ? faq.answer.html : '';
       return '<div class="accordion-item bg-white rounded-2xl border border-gray-100 overflow-hidden">' +
         '<button class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">' +
-          '<h3 class="font-serif text-xl text-gray-900 pr-8">' + esc(faq.question) + '</h3>' +
-          '<i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>' +
+        '<h3 class="font-serif text-xl text-gray-900 pr-8">' + esc(faq.question) + '</h3>' +
+        '<i data-lucide="plus" class="accordion-icon w-6 h-6 text-brand-gold flex-shrink-0"></i>' +
         '</button>' +
         '<div class="accordion-content px-8 pb-6">' +
-          '<div class="text-gray-600 leading-relaxed">' + answerHtml + '</div>' +
+        '<div class="text-gray-600 leading-relaxed">' + answerHtml + '</div>' +
         '</div>' +
-      '</div>';
+        '</div>';
     }).join('');
 
     initAccordion(list);
@@ -160,9 +161,9 @@
   // --- render: resources ---
 
   var RESOURCE_STYLES = [
-    { bg: 'bg-blue-50',         text: 'text-blue-600',    hover: 'group-hover:text-blue-600',    icon: 'file-text'    },
-    { bg: 'bg-green-50',        text: 'text-green-600',   hover: 'group-hover:text-green-600',   icon: 'life-buoy'    },
-    { bg: 'bg-brand-gold/10',   text: 'text-brand-gold',  hover: 'group-hover:text-brand-gold',  icon: 'shield-check' }
+    { bg: 'bg-blue-50', text: 'text-blue-600', hover: 'group-hover:text-blue-600', icon: 'file-text' },
+    { bg: 'bg-green-50', text: 'text-green-600', hover: 'group-hover:text-green-600', icon: 'life-buoy' },
+    { bg: 'bg-brand-gold/10', text: 'text-brand-gold', hover: 'group-hover:text-brand-gold', icon: 'shield-check' }
   ];
 
   function renderResources(resources) {
@@ -172,18 +173,18 @@
     list.innerHTML = resources.map(function (r, i) {
       var s = RESOURCE_STYLES[i % RESOURCE_STYLES.length];
       return '<a href="' + esc(r.url || '#') + '" target="_blank" rel="noopener noreferrer" ' +
-          'class="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer block">' +
+        'class="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer block">' +
         '<div class="flex items-center gap-4">' +
-          '<div class="w-12 h-12 ' + s.bg + ' rounded-full flex items-center justify-center ' + s.text + '">' +
-            '<i data-lucide="' + s.icon + '" class="w-6 h-6"></i>' +
-          '</div>' +
-          '<div>' +
-            '<h4 class="font-serif text-lg text-gray-900 ' + s.hover + ' transition-colors">' + esc(r.title) + '</h4>' +
-            '<span class="text-xs text-gray-400 uppercase tracking-wider">' + esc(r.sourceLabel || '') + '</span>' +
-          '</div>' +
+        '<div class="w-12 h-12 ' + s.bg + ' rounded-full flex items-center justify-center ' + s.text + '">' +
+        '<i data-lucide="' + s.icon + '" class="w-6 h-6"></i>' +
+        '</div>' +
+        '<div>' +
+        '<h4 class="font-serif text-lg text-gray-900 ' + s.hover + ' transition-colors">' + esc(r.title) + '</h4>' +
+        '<span class="text-xs text-gray-400 uppercase tracking-wider">' + esc(r.sourceLabel || '') + '</span>' +
+        '</div>' +
         '</div>' +
         '<i data-lucide="external-link" class="w-5 h-5 text-gray-300 ' + s.hover + ' transition-colors"></i>' +
-      '</a>';
+        '</a>';
     }).join('');
 
     if (typeof lucide !== 'undefined') lucide.createIcons();
@@ -192,17 +193,17 @@
   // --- render: events ---
 
   var STATUS_LABELS = {
-    planned:   'Upcoming',
+    planned: 'Upcoming',
     scheduled: 'Scheduled',
     completed: 'Past Event',
-    canceled:  'Canceled'
+    canceled: 'Canceled'
   };
 
   var STATUS_COLORS = {
-    planned:   'bg-brand-gold/10 text-brand-gold',
+    planned: 'bg-brand-gold/10 text-brand-gold',
     scheduled: 'bg-blue-50 text-blue-600',
     completed: 'bg-gray-100 text-gray-500',
-    canceled:  'bg-red-50 text-red-400'
+    canceled: 'bg-red-50 text-red-400'
   };
 
   function formatEventDate(isoString) {
@@ -218,7 +219,7 @@
   }
 
   function renderEvents(events) {
-    var list    = el('events-list');
+    var list = el('events-list');
     var comingSoon = el('events-coming-soon');
     if (!list) return;
 
@@ -228,31 +229,54 @@
     }
 
     list.innerHTML = events.map(function (ev) {
-      var statusKey   = ev.eventStatus || 'planned';
+      var statusKey = ev.eventStatus || 'planned';
       var statusLabel = STATUS_LABELS[statusKey] || statusKey;
       var statusClass = STATUS_COLORS[statusKey] || STATUS_COLORS.planned;
-      var dateStr     = formatEventDate(ev.startDateTime);
-      var timeStr     = formatEventTime(ev.startDateTime);
-      var location    = [ev.locationName, ev.city].filter(Boolean).join(' — ');
-      var regBtn      = ev.registrationUrl
+      var dateStr = formatEventDate(ev.startDateTime);
+      var timeStr = formatEventTime(ev.startDateTime);
+      var location = [ev.locationName, ev.city].filter(Boolean).join(' — ');
+
+      // Cover image: real photo or graceful placeholder
+      var imageUrl = (ev.coverImage && ev.coverImage.url) ? ev.coverImage.url : '';
+      var imageBlock = imageUrl
+        ? '<div class="w-full h-52 overflow-hidden rounded-t-2xl -mx-0 -mt-0 mb-6 relative">' +
+        '<img src="' + esc(imageUrl) + '" alt="' + esc(ev.title) + '" ' +
+        'class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">' +
+        '<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>' +
+        '</div>'
+        : '<div class="w-full h-52 rounded-t-2xl -mx-0 -mt-0 mb-6 overflow-hidden relative flex items-center justify-center" ' +
+        'style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #D4AF37 100%)">' +
+        '<div class="text-center z-10 px-6">' +
+        '<div class="w-14 h-14 mx-auto mb-3 rounded-full bg-brand-gold/20 flex items-center justify-center">' +
+        '<i data-lucide="sun" class="w-7 h-7 text-brand-gold"></i>' +
+        '</div>' +
+        '<p class="text-white/80 text-xs uppercase tracking-widest font-medium">Keep Her Light Alive</p>' +
+        '</div>' +
+        '<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 70% 30%, #D4AF37 0%, transparent 60%)"></div>' +
+        '</div>';
+
+      var regBtn = ev.registrationUrl
         ? '<a href="' + esc(ev.registrationUrl) + '" target="_blank" rel="noopener noreferrer" ' +
-            'class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-dark border-b border-black pb-0.5 hover:text-brand-gold hover:border-brand-gold transition-colors">' +
-            'Register <i data-lucide="arrow-right" class="w-4 h-4"></i></a>'
+        'class="mt-auto pt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-dark border-b border-black pb-0.5 hover:text-brand-gold hover:border-brand-gold transition-colors">' +
+        'Register <i data-lucide="arrow-right" class="w-4 h-4"></i></a>'
         : '';
 
-      return '<div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col">' +
-        '<span class="inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5 ' + statusClass + '">' + esc(statusLabel) + '</span>' +
+      return '<div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col group">' +
+        imageBlock +
+        '<div class="px-8 pb-8 flex flex-col flex-1">' +
+        '<span class="inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 ' + statusClass + '">' + esc(statusLabel) + '</span>' +
         '<h3 class="font-serif text-xl text-gray-900 mb-4 leading-snug">' + esc(ev.title) + '</h3>' +
         '<div class="flex items-start gap-2 text-gray-500 text-sm mb-2">' +
-          '<i data-lucide="calendar" class="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0"></i>' +
-          '<span>' + esc(dateStr) + (timeStr ? ' · ' + esc(timeStr) : '') + '</span>' +
+        '<i data-lucide="calendar" class="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0"></i>' +
+        '<span>' + esc(dateStr) + (timeStr ? ' · ' + esc(timeStr) : '') + '</span>' +
         '</div>' +
         (location ? '<div class="flex items-start gap-2 text-gray-500 text-sm mb-2">' +
           '<i data-lucide="map-pin" class="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0"></i>' +
           '<span>' + esc(location) + '</span>' +
-        '</div>' : '') +
+          '</div>' : '') +
         regBtn +
-      '</div>';
+        '</div>' +
+        '</div>';
     }).join('');
 
     // Show list, hide coming-soon
@@ -297,9 +321,9 @@
     initiatives.forEach(function (init, i) {
       if (i >= slots.length) return;
       var titleEl = el(slots[i][0]);
-      var descEl  = el(slots[i][1]);
+      var descEl = el(slots[i][1]);
       if (titleEl) titleEl.textContent = init.title;
-      if (descEl)  descEl.textContent  = init.summary;
+      if (descEl) descEl.textContent = init.summary;
     });
   }
 
@@ -336,15 +360,15 @@
     var s = Array.isArray(settings) ? settings[0] : settings;
     if (!s) return;
     var quoteEl = el('mission-quote');
-    var p1t     = el('mission-p1-title');
-    var p1d     = el('mission-p1-text');
-    var p2t     = el('mission-p2-title');
-    var p2d     = el('mission-p2-text');
-    if (quoteEl && s.missionQuote)      quoteEl.textContent = '\u201c' + s.missionQuote + '\u201d';
-    if (p1t && s.missionPillar1Title)   p1t.textContent = s.missionPillar1Title;
-    if (p1d && s.missionPillar1Text)    p1d.textContent = s.missionPillar1Text;
-    if (p2t && s.missionPillar2Title)   p2t.textContent = s.missionPillar2Title;
-    if (p2d && s.missionPillar2Text)    p2d.textContent = s.missionPillar2Text;
+    var p1t = el('mission-p1-title');
+    var p1d = el('mission-p1-text');
+    var p2t = el('mission-p2-title');
+    var p2d = el('mission-p2-text');
+    if (quoteEl && s.missionQuote) quoteEl.textContent = '\u201c' + s.missionQuote + '\u201d';
+    if (p1t && s.missionPillar1Title) p1t.textContent = s.missionPillar1Title;
+    if (p1d && s.missionPillar1Text) p1d.textContent = s.missionPillar1Text;
+    if (p2t && s.missionPillar2Title) p2t.textContent = s.missionPillar2Title;
+    if (p2d && s.missionPillar2Text) p2d.textContent = s.missionPillar2Text;
   }
 
   // --- render: contact info + footer ---
@@ -355,16 +379,16 @@
     if (!s) return;
 
     // Contact section
-    var contactEmail    = el('contact-email');
-    var contactPhone    = el('contact-phone');
+    var contactEmail = el('contact-email');
+    var contactPhone = el('contact-phone');
     var contactLocation = el('contact-location');
 
     if (contactEmail && s.primaryEmail) {
-      contactEmail.href        = 'mailto:' + s.primaryEmail;
+      contactEmail.href = 'mailto:' + s.primaryEmail;
       contactEmail.textContent = s.primaryEmail;
     }
     if (contactPhone && s.primaryPhone) {
-      contactPhone.href        = 'tel:' + s.primaryPhone;
+      contactPhone.href = 'tel:' + s.primaryPhone;
       contactPhone.textContent = s.primaryPhone;
     }
     if (contactLocation && s.locationText) {
@@ -374,19 +398,19 @@
     // Footer
     var footerEmailIcon = el('footer-email-icon');
     var footerEmailText = el('footer-email-text');
-    var footerPhone     = el('footer-phone');
-    var footerLocation  = el('footer-location');
+    var footerPhone = el('footer-phone');
+    var footerLocation = el('footer-location');
     var footerInstagram = el('footer-instagram');
 
     if (footerEmailIcon && s.primaryEmail) {
       footerEmailIcon.href = 'mailto:' + s.primaryEmail;
     }
     if (footerEmailText && s.primaryEmail) {
-      footerEmailText.href        = 'mailto:' + s.primaryEmail;
+      footerEmailText.href = 'mailto:' + s.primaryEmail;
       footerEmailText.textContent = s.primaryEmail;
     }
     if (footerPhone && s.primaryPhone) {
-      footerPhone.href        = 'tel:' + s.primaryPhone;
+      footerPhone.href = 'tel:' + s.primaryPhone;
       footerPhone.textContent = s.primaryPhone;
     }
     if (footerLocation && s.locationText) {
