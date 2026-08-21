@@ -209,7 +209,7 @@ window.KHLA = (() => {
     <div class="banner text-center text-[12px] tracking-wide py-2 px-4" data-i18n="banner"></div>
     <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
       <div class="flex items-center justify-between h-20">
-        <a href="../website/index.html" class="flex items-center gap-3 group" aria-label="Keep Her Light Alive Foundation">
+        <a href="../index.html" class="flex items-center gap-3 group" aria-label="Keep Her Light Alive Foundation">
           <img src="assets/logo.png" alt="" class="h-16 w-auto object-contain">
           <span class="hidden sm:block font-serif text-lg text-gray-900">Keep Her Light Alive</span>
         </a>
@@ -252,14 +252,14 @@ window.KHLA = (() => {
             <ul class="space-y-3 text-gray-400 text-sm">
               <li><a href="index.html" class="hover:text-white" data-i18n="home.all"></a></li>
               <li><a href="#" class="hover:text-white" data-i18n="footer.track"></a></li>
-              <li><a href="../website/index.html" class="hover:text-white" data-i18n="nav.back"></a></li>
+              <li><a href="../index.html" class="hover:text-white" data-i18n="nav.back"></a></li>
             </ul></div>
           <div><h4 class="text-white font-medium mb-5" data-i18n="footer.policies"></h4>
             <ul class="space-y-3 text-gray-400 text-sm">
               <li><a href="#" class="hover:text-white" data-i18n="footer.shipping"></a></li>
               <li><a href="#" class="hover:text-white" data-i18n="footer.returns"></a></li>
               <li><a href="#" class="hover:text-white" data-i18n="footer.terms"></a></li>
-              <li><a href="../website/privacy-policy.html" class="hover:text-white" data-i18n="footer.privacy"></a></li>
+              <li><a href="../privacy-policy.html" class="hover:text-white" data-i18n="footer.privacy"></a></li>
             </ul></div>
         </div>
       </div>
