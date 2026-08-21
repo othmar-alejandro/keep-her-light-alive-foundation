@@ -649,6 +649,50 @@
 
         <!-- EVENTS: Upcoming & Past -->
         <!-- EVENTS: Coming Soon -->
+        <!-- SHOP -->
+        <section id="shop" class="py-32 bg-brand-sand px-6 lg:px-12 border-t border-gray-100 relative overflow-hidden">
+            <!-- sunrise motif: the brand's own mark, as light rather than an image -->
+            <div class="pointer-events-none absolute inset-x-0 -bottom-40 h-96 bg-[radial-gradient(closest-side,rgba(212,175,55,0.20),transparent)]"
+                aria-hidden="true"></div>
+
+            <div class="max-w-3xl mx-auto text-center relative">
+                <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-6 block"
+                    data-i18n="shop.label">The Shop</span>
+                <h2 class="font-serif text-4xl md:text-6xl text-gray-900 mb-8 leading-[1.1]"
+                    data-i18n="shop.title">Wear her light.</h2>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-12 max-w-2xl mx-auto"
+                    data-i18n="shop.body">
+                    Apparel made by Stephanie's family and friends. Every piece funds water-safety education in
+                    South Florida &mdash; and carries the message onto the water.
+                </p>
+
+                <a href="../shop-prototype/index.html" data-shop-link
+                    class="inline-flex items-center gap-2 px-10 py-5 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+                    <span data-i18n="shop.cta">Visit the shop</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+
+                <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 mt-12 text-sm text-gray-600">
+                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                        <i data-lucide="package" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                        <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
+                    </span>
+                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                        <i data-lucide="fingerprint" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                        <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
+                    </span>
+                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                        <i data-lucide="map-pin" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                        <span data-i18n="shop.point3">Free local pickup in Miami</span>
+                    </span>
+                </div>
+
+                <p class="text-xs text-gray-500 mt-10 max-w-lg mx-auto leading-relaxed" data-i18n="shop.note">
+                    A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
+                </p>
+            </div>
+        </section>
+
         <section id="events" class="py-32 bg-brand-sand/30 border-t border-gray-100 relative">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <!-- Section Header -->
@@ -762,10 +806,7 @@
                                 class="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-sm font-medium text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white hover:text-black hover:border-transparent">
                                 Donate
                             </a>
-                            <a href="../shop-prototype/index.html" data-shop-link
-                                class="inline-flex h-12 items-center gap-2 px-2 text-sm font-medium text-white/70 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white transition-colors"
-                                data-i18n="coin.shopLink">Or buy a coin in the shop</a>
-                        </div>
+                                                </div>
                     </div>
 
                     <!-- Right: Dynamic Coin Visuals -->
@@ -790,58 +831,6 @@
 
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SHOP -->
-        <section id="shop" class="py-32 bg-brand-sand px-6 lg:px-12">
-            <div class="max-w-[1400px] mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
-
-                    <div class="order-2 lg:order-1">
-                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
-                            data-i18n="shop.label">The Shop</span>
-                        <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
-                            data-i18n="shop.title">Wear her light.</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-xl" data-i18n="shop.body">
-                            Apparel and memorial coins made by Stephanie's family and friends. Every piece funds
-                            water-safety education in South Florida &mdash; and carries the message onto the water.
-                        </p>
-
-                        <ul class="space-y-3 mb-10">
-                            <li class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="package" class="w-5 h-5 text-brand-gold shrink-0"></i>
-                                <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="fingerprint" class="w-5 h-5 text-brand-gold shrink-0"></i>
-                                <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-gold shrink-0"></i>
-                                <span data-i18n="shop.point3">Free local pickup in Miami</span>
-                            </li>
-                        </ul>
-
-                        <a href="../shop-prototype/index.html" data-shop-link
-                            class="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
-                            <span data-i18n="shop.cta">Visit the shop</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-
-                        <p class="text-xs text-gray-500 mt-6 max-w-md leading-relaxed" data-i18n="shop.note">
-                            A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
-                        </p>
-                    </div>
-
-                    <div class="order-1 lg:order-2 relative h-[260px] md:h-[400px] lg:h-[460px] flex items-center justify-center">
-                        <div class="absolute w-72 h-72 md:w-80 md:h-80 rounded-full bg-brand-gold/10 blur-3xl"></div>
-                        <img src="resources/coin-front.png"
-                            alt="The Keep Her Light Alive memorial coin, sold in the foundation shop"
-                            class="relative w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain drop-shadow-[0_20px_60px_rgba(212,175,55,0.35)] animate-[float_6s_ease-in-out_infinite]">
-                    </div>
-
                 </div>
             </div>
         </section>

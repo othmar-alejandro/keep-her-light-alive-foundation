@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>The Shop — Keep Her Light Alive Foundation</title>
-  <meta name="description" content="Apparel and memorial coins made by Stephanie's family and friends. Every piece funds water-safety education in South Florida.">
+  <meta name="description" content="Apparel made by Stephanie's family and friends. Every piece funds water-safety education in South Florida.">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -55,7 +55,6 @@
         <div class="flex gap-1 p-1 rounded-full bg-brand-sand w-max" role="tablist" id="tabs">
           <button role="tab" class="tab btn-press" data-cat="all" aria-selected="true" data-i18n="home.tab.all"></button>
           <button role="tab" class="tab btn-press" data-cat="apparel" aria-selected="false" data-i18n="home.tab.apparel"></button>
-          <button role="tab" class="tab btn-press" data-cat="coin" aria-selected="false" data-i18n="home.tab.coin"></button>
           <button role="tab" class="tab btn-press" data-cat="accessory" aria-selected="false" data-i18n="home.tab.accessory"></button>
         </div>
       </div>
@@ -112,8 +111,8 @@
       const fmt = (n) => new Intl.NumberFormat(KHLA.lang === 'es' ? 'es-US' : 'en-US').format(n);
       const I = data.settings.impact;
       document.getElementById('hero-cards').innerHTML =
-        `<div class="card overflow-hidden translate-y-6"><div class="relative aspect-[4/5] bg-white">${KHLA.imgOrPh(P[2].images[0])}</div></div>
-         <div class="card overflow-hidden"><div class="relative aspect-[4/5] bg-white">${KHLA.imgOrPh(P[0].images[2])}</div></div>`;
+        `<div class="card overflow-hidden translate-y-6"><div class="relative aspect-[4/5] bg-brand-sand">${KHLA.imgOrPh(P[0].images[2])}</div></div>
+         <div class="card overflow-hidden"><div class="relative aspect-[4/5] bg-brand-sand">${KHLA.imgOrPh(P[1].images[0])}</div></div>`;
       document.getElementById('impact').innerHTML = [[I.coinsShared, 'home.impact.coins'], [I.eventsHeld, 'home.impact.events'], [I.peopleReached, 'home.impact.people']]
         .map(([n, k]) => `<div class="flex items-baseline gap-4"><span class="font-serif text-4xl lg:text-5xl tnum text-gray-900">${fmt(n)}</span><span class="text-sm text-gray-600 leading-snug max-w-[12rem]">${t(k)}</span></div>`).join('')
         + `<p class="sm:col-span-3 text-[11px] text-gray-400">${esc(I.note)}</p>`;
