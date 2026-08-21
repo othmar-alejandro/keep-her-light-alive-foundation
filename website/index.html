@@ -248,6 +248,9 @@
                     <a href="#resources"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
                         data-i18n="nav.resources">Resources</a>
+                    <a href="shop/index.html" data-shop-link
+                        class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
+                        data-i18n="nav.shop">Shop</a>
                     <a href="#contact-form"
                         onclick="document.getElementById('subject-select').value='General Inquiry'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
@@ -288,6 +291,8 @@
                 data-i18n="nav.events">Events</a>
             <a href="#resources" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
                 data-i18n="nav.resources">Resources</a>
+            <a href="shop/index.html" data-shop-link class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.shop">Shop</a>
             <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
                 class="text-2xl font-serif text-brand-gold" onclick="closeMenu()" data-i18n="nav.donate">Donate</a>
             <a href="#contact-form" class="text-2xl font-serif text-gray-900"
@@ -644,6 +649,92 @@
 
         <!-- EVENTS: Upcoming & Past -->
         <!-- EVENTS: Coming Soon -->
+        <!-- SHOP -->
+        <section id="shop" class="py-24 md:py-32 bg-brand-sand px-6 lg:px-12 border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto">
+
+                <div id="shop-preview-notice" hidden
+                    class="max-w-2xl mx-auto mb-10 flex items-start gap-3 rounded-2xl bg-[#1C1917] text-[#FCD34D] px-5 py-4 text-left">
+                    <span class="mt-[7px] w-[7px] h-[7px] rounded-full bg-[#FCD34D] shrink-0" aria-hidden="true"></span>
+                    <p class="text-[13px] leading-relaxed">
+                        <strong class="text-[#FDE68A] font-semibold" data-i18n="preview.title">Design preview &mdash; not a real store</strong>
+                        <span class="opacity-80" data-i18n="preview.body">Products, photos, prices and checkout are placeholders. Nothing can be bought and no payment is taken.</span>
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto text-center mb-14">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="shop.label">The Shop</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
+                        data-i18n="shop.title">Wear her light.</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="shop.body">
+                        Apparel made by Stephanie's family and friends. Every piece funds water-safety education in
+                        South Florida &mdash; and carries the message onto the water.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-14">
+                    <a href="shop/index.html" data-shop-link class="group block">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/sunshirt-white.jpg"
+                                alt="White long-sleeve UPF 50+ sun shirt with the gold sunrise back print"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item1">Sunrise Performance Sun Shirt</p>
+                        <p class="text-sm text-gray-500">$42</p>
+                    </a>
+                    <a href="shop/index.html" data-shop-link class="group block">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/hoodie-sand.jpg"
+                                alt="Sand-colored fleece hoodie with the embroidered gold sunrise"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item2">Light on the Water Hoodie</p>
+                        <p class="text-sm text-gray-500">$52</p>
+                    </a>
+                    <a href="shop/index.html" data-shop-link class="group block col-span-2 lg:col-span-1">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/cap-navy.jpg"
+                                alt="Navy cotton cap with the embroidered gold sunrise"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item3">Dock Cap</p>
+                        <p class="text-sm text-gray-500">$26</p>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <a href="shop/index.html" data-shop-link
+                        class="inline-flex items-center gap-2 px-10 py-5 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+                        <span data-i18n="shop.cta">Visit the shop</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+
+                    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-10 text-sm text-gray-600">
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="package" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
+                        </span>
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="fingerprint" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
+                        </span>
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point3">Free local pickup in Miami</span>
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-8 max-w-lg mx-auto leading-relaxed" data-i18n="shop.note">
+                        A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section id="events" class="py-32 bg-brand-sand/30 border-t border-gray-100 relative">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <!-- Section Header -->
@@ -757,7 +848,7 @@
                                 class="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-sm font-medium text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white hover:text-black hover:border-transparent">
                                 Donate
                             </a>
-                        </div>
+                                                </div>
                     </div>
 
                     <!-- Right: Dynamic Coin Visuals -->
@@ -1255,6 +1346,7 @@
                             <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
                             <li><a href="#legacy" class="hover:text-white transition-colors">Legacy</a></li>
                             <li><a href="#resources" class="hover:text-white transition-colors">Resources</a></li>
+                            <li><a href="shop/index.html" data-shop-link class="hover:text-white transition-colors" data-i18n="nav.shop">Shop</a></li>
                             <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy
                                     Policy</a></li>
                             <li><a href="terms-of-use.html" class="hover:text-white transition-colors">Terms of Use</a>
@@ -1445,6 +1537,17 @@
     <!-- CMS: Hygraph runtime content -->
     <script src="cms.js"></script>
 
+<script>
+    /* Preview hosts only (*.vercel.app, local dev). Hidden on the real domain,
+       so this notice retires itself when the shop ships to keepherlightalive.com. */
+    (function () {
+        var h = location.hostname;
+        if (/(^|\.)vercel\.app$/.test(h) || ['localhost', '127.0.0.1', ''].indexOf(h) !== -1) {
+            var n = document.getElementById('shop-preview-notice');
+            if (n) n.hidden = false;
+        }
+    })();
+</script>
 </body>
 
 </html>

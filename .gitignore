@@ -1,0 +1,25 @@
+# Environment secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Build output
+dist/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports / temp
+reports/
+*.log
+
+# Internal documentation — kept OUTSIDE this public repo.
+# Location: ~/KHLA-private-docs  (PRD, design spine, SOP, archived snapshots)
+docs/
