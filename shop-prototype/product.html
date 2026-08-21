@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Product — Keep Her Light Alive Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{gold:'#D4AF37',sand:'#F5F5F0',dark:'#111111',slate:'#F8FAFC',navy:'#0D2E47'}},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}</script>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="shared/shop.css">
+</head>
+<body class="font-sans">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] bg-brand-dark text-white px-4 py-2 rounded-full">Skip to content</a>
+<header id="site-header" class="relative z-20 bg-white"></header>
+
+<main id="main" class="pb-28 lg:pb-0">
+  <div class="max-w-[1400px] mx-auto px-5 lg:px-12 pt-4 lg:pt-8">
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-500 mb-4 lg:mb-8"><a href="index.html" class="hover:text-gray-900" data-i18n="pdp.crumb"></a><span class="mx-2">/</span><span id="crumb-cat"></span></nav>
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <!-- GALLERY -->
+      <div class="lg:col-span-7">
+        <div class="relative">
+          <div id="gallery" class="gallery rounded-[1.5rem] bg-brand-sand aspect-square lg:aspect-[4/5]" role="region" data-i18n-aria="a11y.gallery" tabindex="0"></div>
+          <button type="button" id="g-prev" class="hidden lg:grid btn-press absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 backdrop-blur shadow place-items-center" data-i18n-aria="a11y.prev"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+          <button type="button" id="g-next" class="hidden lg:grid btn-press absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 backdrop-blur shadow place-items-center" data-i18n-aria="a11y.next"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+        </div>
+        <div id="dots" class="flex justify-center gap-2 mt-4 lg:hidden"></div>
+        <div id="thumbs" class="hidden lg:flex gap-3 mt-4"></div>
+      </div>
+
+      <!-- INFO -->
+      <div class="lg:col-span-5 lg:pt-4">
+        <p id="p-cat" class="text-[11px] uppercase tracking-[0.22em] text-gray-500 mb-3"></p>
+        <h1 id="p-title" class="display font-serif text-3xl lg:text-[2.6rem] leading-[1.08] text-gray-900 mb-2"></h1>
+        <p id="p-sub" class="text-gray-600 mb-5"></p>
+
+        <p class="flex items-baseline gap-3 mb-1"><span id="p-price" class="tnum text-2xl font-medium"></span></p>
+        <p class="text-sm text-gray-600 leading-relaxed mb-7 flex items-start gap-2"><i data-lucide="truck" class="w-4 h-4 mt-0.5 shrink-0" style="color:var(--gold-deep)"></i><span><span data-i18n="pdp.shipsIn"></span> · <span data-i18n="pdp.flat"></span>, <span data-i18n="pdp.freeOver"></span> · <span data-i18n="pdp.pickup"></span></span></p>
+
+        <div class="flex items-center justify-between mb-3">
+          <span id="opt-label" class="text-sm font-medium"></span>
+          <button type="button" id="size-guide-btn" class="text-sm underline underline-offset-4 decoration-black/20 hover:decoration-black hidden" data-i18n="pdp.sizeGuide"></button>
+        </div>
+        <div id="variants" class="flex flex-wrap gap-2 mb-2" role="radiogroup"></div>
+        <p id="variant-note" class="text-sm min-h-[1.25rem] mb-6" aria-live="polite"></p>
+
+        <div class="flex items-center gap-4 mb-5">
+          <div class="stepper" aria-label="Quantity">
+            <button type="button" id="q-dec" data-i18n-aria="a11y.dec"><i data-lucide="minus" class="w-4 h-4"></i></button>
+            <output id="q-val" class="tnum">1</output>
+            <button type="button" id="q-inc" data-i18n-aria="a11y.inc"><i data-lucide="plus" class="w-4 h-4"></i></button>
+          </div>
+          <button type="button" id="add-btn" class="cta btn-press flex-1 text-base" disabled><span id="add-label" class="flex-1 text-left"></span><span class="chev"><i data-lucide="shopping-bag" class="w-4 h-4"></i></span></button>
+        </div>
+        <p class="text-[12px] text-gray-500 flex items-center gap-2 mb-10"><i data-lucide="lock" class="w-3.5 h-3.5"></i><span>Apple Pay · Google Pay · Link · <span data-i18n="pdp.secure"></span></span></p>
+
+        <!-- STORY -->
+        <div class="rounded-2xl bg-brand-sand p-6 mb-8">
+          <div class="flex items-center gap-3 mb-3"><span class="w-8 h-8 rounded-full bg-white grid place-items-center"><i data-lucide="sun" class="w-4 h-4" style="color:var(--gold-deep)"></i></span><h2 class="font-serif text-xl" data-i18n="pdp.storyTitle"></h2></div>
+          <p id="p-story" class="text-gray-700 leading-relaxed"></p>
+        </div>
+
+        <!-- DETAILS -->
+        <div class="divide-y divide-black/8 border-y border-black/8 mb-8">
+          <details class="py-4"><summary class="flex items-center justify-between"><span class="font-medium" data-i18n="pdp.fabric"></span><span class="acc-icon w-7 h-7 rounded-full border border-black/10 grid place-items-center"><i data-lucide="plus" class="w-3.5 h-3.5"></i></span></summary><p id="p-fabric" class="text-gray-600 leading-relaxed mt-3"></p></details>
+          <details class="py-4"><summary class="flex items-center justify-between"><span class="font-medium" data-i18n="pdp.care"></span><span class="acc-icon w-7 h-7 rounded-full border border-black/10 grid place-items-center"><i data-lucide="plus" class="w-3.5 h-3.5"></i></span></summary><p id="p-care" class="text-gray-600 leading-relaxed mt-3"></p></details>
+          <details class="py-4"><summary class="flex items-center justify-between"><span class="font-medium" data-i18n="pdp.shipping"></span><span class="acc-icon w-7 h-7 rounded-full border border-black/10 grid place-items-center"><i data-lucide="plus" class="w-3.5 h-3.5"></i></span></summary><p class="text-gray-600 leading-relaxed mt-3" data-i18n="pdp.shippingBody"></p></details>
+          <details class="py-4"><summary class="flex items-center justify-between"><span class="font-medium" data-i18n="pdp.tax"></span><span class="acc-icon w-7 h-7 rounded-full border border-black/10 grid place-items-center"><i data-lucide="plus" class="w-3.5 h-3.5"></i></span></summary><p class="text-gray-600 leading-relaxed mt-3" data-i18n="pdp.taxBody"></p></details>
+        </div>
+
+        <!-- TRUST -->
+        <div class="flex items-center gap-4">
+          <div class="flex -space-x-2 shrink-0">
+            <img src="assets/founder-magaly.jpg" alt="" class="w-9 h-9 rounded-full object-cover ring-2 ring-white">
+            <img src="assets/founder-midalys.jpg" alt="" class="w-9 h-9 rounded-full object-cover ring-2 ring-white">
+            <img src="assets/founder-vivian.jpg" alt="" class="w-9 h-9 rounded-full object-cover ring-2 ring-white">
+            <img src="assets/founder-natalie.jpg" alt="" class="w-9 h-9 rounded-full object-cover ring-2 ring-white">
+          </div>
+          <ul class="text-[13px] text-gray-600 leading-snug space-y-0.5">
+            <li data-i18n="pdp.trust.1"></li><li data-i18n="pdp.trust.2"></li><li><a href="https://instagram.com/keepherlightalive" class="underline underline-offset-4 decoration-black/20 hover:decoration-black" data-i18n="pdp.trust.3"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALSO LIKE -->
+    <section class="mt-20 lg:mt-28 mb-20">
+      <h2 class="display font-serif text-2xl lg:text-3xl mb-6" data-i18n="pdp.alsoLike"></h2>
+      <div id="also" class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"></div>
+    </section>
+  </div>
+</main>
+
+<!-- STICKY MOBILE BAR -->
+<div id="sticky-bar" hidden class="lg:hidden fixed inset-x-0 bottom-0 z-30 bg-white/95 backdrop-blur border-t border-black/5 px-5 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex items-center gap-4">
+  <div class="min-w-0"><p id="s-title" class="text-sm font-medium truncate"></p><p id="s-price" class="tnum text-sm text-gray-600"></p></div>
+  <button type="button" id="s-add" class="cta btn-press flex-1 !py-3" disabled><span id="s-label" class="flex-1 text-left text-sm"></span><span class="chev"><i data-lucide="shopping-bag" class="w-4 h-4"></i></span></button>
+</div>
+
+<!-- SIZE GUIDE sheet -->
+<div id="size-sheet" class="fixed inset-0 z-50" aria-hidden="true" hidden>
+  <div class="absolute inset-0 bg-black/50" data-sheet-close></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="size-title" class="absolute bottom-0 inset-x-0 md:inset-0 md:m-auto md:h-max md:max-w-lg bg-white rounded-t-[1.5rem] md:rounded-[1.5rem] p-6 shadow-2xl">
+    <div class="flex items-center justify-between mb-4"><h2 id="size-title" class="font-serif text-2xl" data-i18n="pdp.sizeGuide"></h2><button type="button" class="btn-press w-10 h-10 rounded-full hover:bg-black/5 grid place-items-center" data-sheet-close data-i18n-aria="cart.close"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+    <div id="size-table" class="overflow-x-auto"></div>
+  </div>
+</div>
+
+<footer id="site-footer" class="bg-black text-white pt-20 pb-10"></footer>
+
+<script src="shared/shop.js"></script>
+<script>
+  KHLA.boot(() => {
+    const { data, t, L, esc, money } = KHLA;
+    const slug = new URLSearchParams(location.search).get('slug') || data.products[0].slug;
+    const p = KHLA.product(slug);
+    if (!p) { document.getElementById('main').innerHTML = '<div class="max-w-xl mx-auto px-5 py-32 text-center"><h1 class="font-serif text-3xl mb-4">We couldn’t find that one.</h1><a href="index.html" class="cta btn-press">Back to the shop</a></div>'; return; }
+    document.title = `${L(p.title)} — Keep Her Light Alive Shop`;
+    let sel = null, qty = 1, idx = 0;
+    const isPack = p.optionName === 'Pack';
+    const single = p.variants.length === 1;
+    if (single && p.variants[0].available > 0) sel = p.variants[0].sku;
+
+    function renderStatic() {
+      document.getElementById('crumb-cat').textContent = KHLA.categoryLabel(p.category);
+      document.getElementById('p-cat').textContent = KHLA.categoryLabel(p.category);
+      document.getElementById('p-title').textContent = L(p.title);
+      document.getElementById('p-sub').textContent = L(p.subtitle);
+      document.getElementById('p-price').textContent = money(p.priceCents);
+      document.getElementById('p-story').textContent = L(p.story);
+      document.getElementById('p-fabric').textContent = L(p.fabric);
+      document.getElementById('p-care').textContent = L(p.care);
+      document.getElementById('opt-label').textContent = isPack ? t('pdp.pack') : t('pdp.size');
+      document.getElementById('s-title').textContent = L(p.title);
+      document.getElementById('s-price').textContent = money(p.priceCents);
+      document.getElementById('gallery').innerHTML = p.images.map((im, i) => `<div class="relative aspect-square lg:aspect-[4/5]">${KHLA.imgOrPh(im, 'p-10 lg:p-16')}</div>`).join('');
+      document.getElementById('dots').innerHTML = p.images.map((_, i) => `<span class="dot" aria-current="${i === 0}"></span>`).join('');
+      document.getElementById('thumbs').innerHTML = p.images.map((im, i) => `<button type="button" data-go="${i}" class="btn-press relative w-20 h-20 rounded-xl overflow-hidden bg-brand-sand ring-2 ${i === 0 ? 'ring-brand-gold' : 'ring-transparent'}" aria-label="${esc(L(im.alt))}">${KHLA.imgOrPh(im, 'p-2', true)}</button>`).join('');
+      document.getElementById('also').innerHTML = data.products.filter(x => x.slug !== p.slug).slice(0, 4).map(KHLA.cardHTML).join('');
+      const sg = document.getElementById('size-guide-btn');
+      if (p.sizeChart) { sg.classList.remove('hidden'); document.getElementById('size-table').innerHTML = `<table class="w-full text-sm tnum"><caption class="text-left text-xs text-gray-500 mb-3">${t('pdp.sizeTable.caption')} ${esc(L(p.sizeChart.model))}</caption><thead><tr>${p.sizeChart.columns.map(c => `<th class="text-left font-medium py-2 border-b border-black/10">${esc(c)}</th>`).join('')}</tr></thead><tbody>${p.sizeChart.rows.map(r => `<tr>${r.map((c, i) => `<td class="py-2 border-b border-black/5 ${i === 0 ? 'font-medium' : 'text-gray-600'}">${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`; }
+    }
+    function renderVariants() {
+      const wrap = document.getElementById('variants');
+      wrap.innerHTML = p.variants.map(v => `<button type="button" role="radio" class="pill btn-press" data-sku="${v.sku}" aria-checked="${sel === v.sku}" aria-disabled="${v.available === 0}" ${v.available === 0 ? `aria-label="${esc(v.optionValue)} — ${t('pdp.soldOut')}"` : ''}>${esc(v.optionValue)}</button>`).join('');
+      wrap.querySelectorAll('[data-sku]').forEach(b => b.addEventListener('click', () => { if (b.getAttribute('aria-disabled') === 'true') { note(`${b.dataset.sku.split('-').pop()} — ${t('pdp.soldOut')}`, true); return; } sel = b.dataset.sku; qty = Math.min(qty, KHLA.variant(sel).v.available); renderVariants(); }));
+      renderCTA();
+    }
+    function note(msg, muted) { const n = document.getElementById('variant-note'); n.textContent = msg || ''; n.className = `text-sm min-h-[1.25rem] mb-6 ${muted ? 'text-gray-500' : ''}`; if (!muted) n.style.color = 'var(--gold-deep)'; else n.style.color = ''; }
+    function renderCTA() {
+      const all0 = KHLA.productAvailable(p) === 0;
+      const v = sel ? KHLA.variant(sel).v : null;
+      const labels = [document.getElementById('add-label'), document.getElementById('s-label')];
+      const btns = [document.getElementById('add-btn'), document.getElementById('s-add')];
+      document.getElementById('q-val').textContent = qty;
+      document.getElementById('q-dec').disabled = qty <= 1;
+      document.getElementById('q-inc').disabled = !v || qty >= v.available;
+      if (all0) { labels.forEach(l => l.textContent = t('pdp.notify')); btns.forEach(b => { b.disabled = false; b.dataset.mode = 'notify'; }); note(t('pdp.soldOut'), true); return; }
+      if (!v) { labels.forEach(l => l.textContent = t('pdp.chooseSize')); btns.forEach(b => { b.disabled = true; b.dataset.mode = ''; }); note(''); return; }
+      labels.forEach(l => l.textContent = `${t('pdp.add')} — ${money(p.priceCents * qty)}`); btns.forEach(b => { b.disabled = false; b.dataset.mode = 'add'; });
+      note(v.available <= 3 ? t('pdp.onlyLeft', { n: v.available }) : '');
+    }
+    function onAdd(e) {
+      const b = e.currentTarget;
+      if (b.dataset.mode === 'notify') { b.disabled = true; b.querySelector('span').textContent = t('pdp.notifyOk'); return; }
+      const r = KHLA.add(sel, qty);
+      if (!r.ok) { note(t('pdp.soldOutNow', { size: KHLA.variant(sel).v.optionValue })); return; }
+      if (r.capped) KHLA.toast(t('cart.capAdded', { n: KHLA.variant(sel).v.available }));
+      [document.getElementById('add-btn'), document.getElementById('s-add')].forEach(x => { x.classList.add('is-added'); const l = x.querySelector('span'); l.textContent = t('pdp.added'); setTimeout(() => { x.classList.remove('is-added'); renderCTA(); }, 1100); });
+      setTimeout(() => KHLA.openDrawer(sel), 350);
+    }
+    document.getElementById('add-btn').addEventListener('click', onAdd);
+    document.getElementById('s-add').addEventListener('click', onAdd);
+    document.getElementById('q-inc').addEventListener('click', () => { qty++; renderCTA(); });
+    document.getElementById('q-dec').addEventListener('click', () => { qty = Math.max(1, qty - 1); renderCTA(); });
+
+    // gallery
+    const g = document.getElementById('gallery');
+    const go = (i) => { idx = (i + p.images.length) % p.images.length; g.children[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); };
+    document.getElementById('g-prev').addEventListener('click', () => go(idx - 1));
+    document.getElementById('g-next').addEventListener('click', () => go(idx + 1));
+    document.getElementById('thumbs').addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) go(+b.dataset.go); });
+    g.addEventListener('scroll', () => { const i = Math.round(g.scrollLeft / g.clientWidth); if (i !== idx) { idx = i; document.querySelectorAll('#dots .dot').forEach((d, k) => d.setAttribute('aria-current', k === i)); document.querySelectorAll('#thumbs [data-go]').forEach((b, k) => b.classList.toggle('ring-brand-gold', k === i)); } }, { passive: true });
+    g.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(idx + 1); if (e.key === 'ArrowLeft') go(idx - 1); });
+
+    // sticky bar: show once the static CTA scrolls out
+    const bar = document.getElementById('sticky-bar');
+    new IntersectionObserver(([e]) => { bar.hidden = !(e.boundingClientRect.bottom < 0); }, { threshold: 0 }).observe(document.getElementById('add-btn'));
+
+    // size sheet
+    const sheet = document.getElementById('size-sheet'); let sheetFocus = null;
+    const openSheet = () => { sheetFocus = document.activeElement; sheet.hidden = false; sheet.setAttribute('aria-hidden', 'false'); sheet.querySelector('[data-sheet-close]:not(.absolute)')?.focus(); };
+    const closeSheet = () => { sheet.hidden = true; sheet.setAttribute('aria-hidden', 'true'); sheetFocus?.focus(); };
+    document.getElementById('size-guide-btn').addEventListener('click', openSheet);
+    sheet.querySelectorAll('[data-sheet-close]').forEach(b => b.addEventListener('click', closeSheet));
+    sheet.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeSheet(); return; }
+      if (e.key !== 'Tab') return;
+      const f = [...sheet.querySelectorAll('button,[href],[tabindex]:not([tabindex="-1"])')].filter(x => x.offsetParent !== null);
+      if (!f.length) return; const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    renderStatic(); renderVariants();
+    document.addEventListener('khla:lang', () => { renderStatic(); renderVariants(); KHLA.icons(); });
+  });
+</script>
+</body>
+</html>

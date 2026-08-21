@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Shop — Keep Her Light Alive Foundation</title>
+  <meta name="description" content="Apparel and memorial coins made by Stephanie's family and friends. Every piece funds water-safety education in South Florida.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{gold:'#D4AF37',sand:'#F5F5F0',dark:'#111111',slate:'#F8FAFC',navy:'#0D2E47'}},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}</script>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="shared/shop.css">
+</head>
+<body class="font-sans">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] bg-brand-dark text-white px-4 py-2 rounded-full">Skip to content</a>
+<header id="site-header" class="relative z-20 bg-white"></header>
+
+<main id="main">
+  <!-- HERO: split, product-first (from the kit), KHLA voice -->
+  <section class="bg-brand-sand">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12 pt-10 pb-16 lg:pt-20 lg:pb-28 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div class="lg:col-span-5 reveal">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-gray-500 mb-5" data-i18n="home.eyebrow"></p>
+        <h1 class="display font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-gray-900 mb-6" data-i18n="home.h1"></h1>
+        <p class="measure text-lg text-gray-700 leading-relaxed mb-8" data-i18n="home.lede"></p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#all" class="cta btn-press"><span data-i18n="home.cta"></span><span class="chev"><i data-lucide="arrow-down" class="w-4 h-4"></i></span></a>
+          <a href="#why" class="inline-flex items-center gap-2 h-12 px-2 text-sm font-medium underline underline-offset-4 decoration-black/20 hover:decoration-black" data-i18n="home.cta2"></a>
+        </div>
+      </div>
+      <div class="lg:col-span-7 grid grid-cols-2 gap-4 lg:gap-6 reveal" id="hero-cards"></div>
+    </div>
+  </section>
+
+  <!-- IMPACT strip — real numbers only; labelled illustrative in the prototype -->
+  <section class="border-y border-black/5">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12 py-10 grid sm:grid-cols-3 gap-8" id="impact"></div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
+      <h2 class="display font-serif text-3xl lg:text-4xl text-gray-900 mb-8 reveal" data-i18n="home.featured"></h2>
+      <div id="featured" class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 reveal"></div>
+    </div>
+  </section>
+
+  <!-- ALL with category tabs -->
+  <section id="all" class="pb-20 lg:pb-28 scroll-mt-20">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-8 reveal">
+        <h2 class="display font-serif text-3xl lg:text-4xl text-gray-900" data-i18n="home.all"></h2>
+        <div class="flex gap-1 p-1 rounded-full bg-brand-sand w-max" role="tablist" id="tabs">
+          <button role="tab" class="tab btn-press" data-cat="all" aria-selected="true" data-i18n="home.tab.all"></button>
+          <button role="tab" class="tab btn-press" data-cat="apparel" aria-selected="false" data-i18n="home.tab.apparel"></button>
+          <button role="tab" class="tab btn-press" data-cat="coin" aria-selected="false" data-i18n="home.tab.coin"></button>
+          <button role="tab" class="tab btn-press" data-cat="accessory" aria-selected="false" data-i18n="home.tab.accessory"></button>
+        </div>
+      </div>
+      <div id="grid" class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6" role="tabpanel"></div>
+    </div>
+  </section>
+
+  <!-- WHY: editorial (the kit's "Our approach" pattern) carrying the memorial tone -->
+  <section id="why" class="bg-brand-sand py-20 lg:py-32 scroll-mt-20">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
+      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
+        <h2 class="display font-serif text-4xl lg:text-5xl text-gray-900 mb-6" data-i18n="home.why.h2"></h2>
+        <p class="text-lg text-gray-700 leading-relaxed" data-i18n="home.why.p"></p>
+        <a href="../website/index.html#legacy" class="inline-flex items-center gap-2 mt-6 text-sm font-medium underline underline-offset-4 decoration-black/20 hover:decoration-black"><span data-i18n="home.why.link"></span><i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 items-end reveal">
+        <figure class="rounded-2xl overflow-hidden aspect-[3/4] md:translate-y-6"><img src="assets/event-walk.jpg" alt="Families at the memorial walk at golden hour" class="w-full h-full object-cover" loading="lazy"></figure>
+        <figure class="rounded-2xl overflow-hidden aspect-[3/4] md:-translate-y-4"><img src="assets/event-safety.jpg" alt="A life-jacket fitting at a community safety day" class="w-full h-full object-cover" loading="lazy"></figure>
+        <figure class="rounded-2xl overflow-hidden aspect-[3/4] md:translate-y-10"><img src="assets/coins-shared.jpg" alt="Memorial coins laid out to be shared" class="w-full h-full object-cover" loading="lazy"></figure>
+        <figure class="rounded-2xl overflow-hidden aspect-[3/4]"><img src="assets/magaly-stephanie.jpg" alt="Magaly and Stephanie together" class="w-full h-full object-cover" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
+      <h2 class="display font-serif text-3xl lg:text-4xl text-gray-900 mb-10 reveal" data-i18n="home.how.h2"></h2>
+      <ol class="grid md:grid-cols-3 gap-10 lg:gap-14 reveal">
+        <li class="flex gap-5"><span class="w-11 h-11 shrink-0 rounded-full bg-brand-sand grid place-items-center"><i data-lucide="ruler" class="w-5 h-5" style="color:var(--gold-deep)"></i></span><div><h3 class="font-medium text-lg mb-1" data-i18n="home.how.1"></h3><p class="text-gray-600 leading-relaxed" data-i18n="home.how.1p"></p></div></li>
+        <li class="flex gap-5"><span class="w-11 h-11 shrink-0 rounded-full bg-brand-sand grid place-items-center"><i data-lucide="fingerprint" class="w-5 h-5" style="color:var(--gold-deep)"></i></span><div><h3 class="font-medium text-lg mb-1" data-i18n="home.how.2"></h3><p class="text-gray-600 leading-relaxed" data-i18n="home.how.2p"></p></div></li>
+        <li class="flex gap-5"><span class="w-11 h-11 shrink-0 rounded-full bg-brand-sand grid place-items-center"><i data-lucide="package" class="w-5 h-5" style="color:var(--gold-deep)"></i></span><div><h3 class="font-medium text-lg mb-1" data-i18n="home.how.3"></h3><p class="text-gray-600 leading-relaxed" data-i18n="home.how.3p"></p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pb-24 lg:pb-32">
+    <div class="max-w-3xl mx-auto px-5 lg:px-12">
+      <h2 class="display font-serif text-3xl lg:text-4xl text-gray-900 mb-8 reveal" data-i18n="home.faq"></h2>
+      <div id="faq" class="divide-y divide-black/8 border-y border-black/8 reveal"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="bg-black text-white pt-20 pb-10"></footer>
+
+<script src="shared/shop.js"></script>
+<script>
+  KHLA.boot(() => {
+    const { data, cardHTML, t, L, esc } = KHLA;
+    const P = data.products;
+    const render = () => {
+      const fmt = (n) => new Intl.NumberFormat(KHLA.lang === 'es' ? 'es-US' : 'en-US').format(n);
+      const I = data.settings.impact;
+      document.getElementById('hero-cards').innerHTML =
+        `<div class="card overflow-hidden translate-y-6"><div class="relative aspect-[4/5] bg-white">${KHLA.imgOrPh(P[2].images[0])}</div></div>
+         <div class="card overflow-hidden"><div class="relative aspect-[4/5] bg-white">${KHLA.imgOrPh(P[0].images[2])}</div></div>`;
+      document.getElementById('impact').innerHTML = [[I.coinsShared, 'home.impact.coins'], [I.eventsHeld, 'home.impact.events'], [I.peopleReached, 'home.impact.people']]
+        .map(([n, k]) => `<div class="flex items-baseline gap-4"><span class="font-serif text-4xl lg:text-5xl tnum text-gray-900">${fmt(n)}</span><span class="text-sm text-gray-600 leading-snug max-w-[12rem]">${t(k)}</span></div>`).join('')
+        + `<p class="sm:col-span-3 text-[11px] text-gray-400">${esc(I.note)}</p>`;
+      document.getElementById('featured').innerHTML = P.slice(0, 4).map(cardHTML).join('');
+      const cat = document.querySelector('#tabs [aria-selected="true"]').dataset.cat;
+      document.getElementById('grid').innerHTML = P.filter(p => cat === 'all' || p.category === cat).map(cardHTML).join('');
+      document.getElementById('faq').innerHTML = data.faq.map(f => `<details class="group py-5"><summary class="flex items-center justify-between gap-6"><span class="font-medium text-lg">${esc(L(f.q))}</span><span class="acc-icon w-8 h-8 rounded-full border border-black/10 grid place-items-center shrink-0"><i data-lucide="plus" class="w-4 h-4"></i></span></summary><p class="measure text-gray-600 leading-relaxed mt-3 pr-12">${esc(L(f.a))}</p></details>`).join('');
+      KHLA.icons();
+    };
+    document.getElementById('tabs').addEventListener('click', (e) => {
+      const b = e.target.closest('[role=tab]'); if (!b) return;
+      document.querySelectorAll('#tabs [role=tab]').forEach(x => x.setAttribute('aria-selected', x === b));
+      render(); KHLA.applyI18n();
+    });
+    document.addEventListener('khla:lang', render);
+    render();
+  });
+</script>
+</body>
+</html>

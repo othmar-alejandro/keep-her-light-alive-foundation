@@ -1,0 +1,137 @@
+{
+  "settings": {
+    "currency": "USD",
+    "flatShippingCents": 500,
+    "freeShippingThresholdCents": 5000,
+    "shipDays": "3–5",
+    "pickupCity": "Miami",
+    "impact": {
+      "note": "Illustrative figures — replace with Hygraph GlobalSiteSettings before launch",
+      "coinsShared": 1200,
+      "eventsHeld": 6,
+      "peopleReached": 3400
+    }
+  },
+  "products": [
+    {
+      "slug": "khla-tee-navy",
+      "category": "apparel",
+      "isNew": true,
+      "title": { "en": "Keep Her Light Alive Tee", "es": "Camiseta Keep Her Light Alive" },
+      "subtitle": { "en": "Unisex heavyweight cotton tee · Memorial Navy", "es": "Camiseta unisex de algodón grueso · Azul Memorial" },
+      "priceCents": 2800,
+      "images": [
+        { "src": "", "alt": { "en": "Front of the navy tee, flat-lay, with the gold light mark on the chest", "es": "Frente de la camiseta azul marino con la marca de luz dorada en el pecho" }, "label": "Front" },
+        { "src": "", "alt": { "en": "Back of the tee with 'Her light shines on' in small gold type", "es": "Espalda de la camiseta con 'Su luz sigue brillando' en dorado" }, "label": "Back" },
+        { "src": "", "alt": { "en": "A volunteer wearing the tee at the memorial walk", "es": "Una voluntaria con la camiseta en la caminata conmemorativa" }, "label": "Worn" }
+      ],
+      "story": {
+        "en": "The small gold mark over the heart is the sunrise over the water from Stephanie's coin. Every tee sold pays for about four life-jacket fittings at a community safety day.",
+        "es": "La pequeña marca dorada sobre el corazón es el amanecer sobre el agua de la moneda de Stephanie. Cada camiseta vendida cubre unas cuatro pruebas de chaleco salvavidas en una jornada comunitaria de seguridad."
+      },
+      "fabric": { "en": "100% ring-spun cotton, 6.5 oz. Relaxed unisex fit; size down for a closer fit. Printed in Hialeah.", "es": "100% algodón ring-spun, 6.5 oz. Corte unisex relajado; elige una talla menos para un ajuste más ceñido. Estampada en Hialeah." },
+      "care": { "en": "Machine wash cold, inside out. Tumble dry low. Do not iron the print.", "es": "Lavar a máquina en frío, al revés. Secar a baja temperatura. No planchar el estampado." },
+      "sizeChart": {
+        "columns": ["Size", "Chest (in)", "Chest (cm)", "Length (in)", "Length (cm)"],
+        "rows": [["S", "36–38", "91–97", "28", "71"], ["M", "39–41", "99–104", "29", "74"], ["L", "42–44", "107–112", "30", "76"], ["XL", "45–48", "114–122", "31", "79"], ["2XL", "49–52", "124–132", "32", "81"], ["3XL", "53–56", "135–142", "33", "84"]],
+        "model": { "en": "Model is 5'6\" and wears a size M.", "es": "La modelo mide 1,68 m y usa talla M." }
+      },
+      "optionName": "Size",
+      "variants": [
+        { "sku": "KHLA-TEE-NVY-S", "optionValue": "S", "available": 12 },
+        { "sku": "KHLA-TEE-NVY-M", "optionValue": "M", "available": 20 },
+        { "sku": "KHLA-TEE-NVY-L", "optionValue": "L", "available": 2 },
+        { "sku": "KHLA-TEE-NVY-XL", "optionValue": "XL", "available": 9 },
+        { "sku": "KHLA-TEE-NVY-2XL", "optionValue": "2XL", "available": 0 },
+        { "sku": "KHLA-TEE-NVY-3XL", "optionValue": "3XL", "available": 4 }
+      ]
+    },
+    {
+      "slug": "khla-hoodie-sand",
+      "category": "apparel",
+      "isNew": false,
+      "title": { "en": "Light on the Water Hoodie", "es": "Sudadera Luz sobre el Agua" },
+      "subtitle": { "en": "Midweight fleece hoodie · Sand", "es": "Sudadera de felpa mediana · Arena" },
+      "priceCents": 5200,
+      "images": [
+        { "src": "", "alt": { "en": "Front of the sand hoodie with the embroidered gold sunrise", "es": "Frente de la sudadera color arena con el amanecer dorado bordado" }, "label": "Front" },
+        { "src": "", "alt": { "en": "Back of the hoodie with the line 'Come home safe'", "es": "Espalda de la sudadera con la frase 'Vuelve a casa seguro'" }, "label": "Back" },
+        { "src": "", "alt": { "en": "Founder wearing the hoodie on the dock at sunrise", "es": "Una fundadora con la sudadera en el muelle al amanecer" }, "label": "Worn" }
+      ],
+      "story": {
+        "en": "'Come home safe' is what Stephanie's mother says to everyone heading to the water. We put it on the back so the people behind you read it too.",
+        "es": "'Vuelve a casa seguro' es lo que la mamá de Stephanie le dice a todo el que sale al agua. Lo pusimos en la espalda para que lo lean también los que van detrás de ti."
+      },
+      "fabric": { "en": "80% cotton / 20% recycled polyester fleece, 8.5 oz. Unisex, slightly oversized.", "es": "80% algodón / 20% poliéster reciclado, 8.5 oz. Unisex, ligeramente holgada." },
+      "care": { "en": "Machine wash cold. Tumble dry low. Embroidery is colorfast.", "es": "Lavar a máquina en frío. Secar a baja temperatura. El bordado no destiñe." },
+      "sizeChart": {
+        "columns": ["Size", "Chest (in)", "Chest (cm)", "Length (in)", "Length (cm)"],
+        "rows": [["S", "38–40", "97–102", "27", "69"], ["M", "41–43", "104–109", "28", "71"], ["L", "44–46", "112–117", "29", "74"], ["XL", "47–50", "119–127", "30", "76"], ["2XL", "51–54", "130–137", "31", "79"]],
+        "model": { "en": "Model is 5'9\" and wears a size L.", "es": "El modelo mide 1,75 m y usa talla L." }
+      },
+      "optionName": "Size",
+      "variants": [
+        { "sku": "KHLA-HOOD-SND-S", "optionValue": "S", "available": 6 },
+        { "sku": "KHLA-HOOD-SND-M", "optionValue": "M", "available": 8 },
+        { "sku": "KHLA-HOOD-SND-L", "optionValue": "L", "available": 7 },
+        { "sku": "KHLA-HOOD-SND-XL", "optionValue": "XL", "available": 3 },
+        { "sku": "KHLA-HOOD-SND-2XL", "optionValue": "2XL", "available": 5 }
+      ]
+    },
+    {
+      "slug": "khla-coin",
+      "category": "coin",
+      "isNew": false,
+      "title": { "en": "Keep Her Light Alive Coin", "es": "Moneda Keep Her Light Alive" },
+      "subtitle": { "en": "Memorial coin · Brushed brass, 1.5\"", "es": "Moneda conmemorativa · Latón cepillado, 3,8 cm" },
+      "priceCents": 1500,
+      "images": [
+        { "src": "assets/coin-front.png", "fit": "circle", "alt": { "en": "Front of the brass memorial coin with the Keep Her Light Alive sunrise", "es": "Frente de la moneda de latón con el amanecer de Keep Her Light Alive" }, "label": "Front" },
+        { "src": "assets/coin-back.png", "fit": "circle", "alt": { "en": "Back of the coin with the water-safety reminder", "es": "Reverso de la moneda con el recordatorio de seguridad en el agua" }, "label": "Back" },
+        { "src": "assets/coins-shared.jpg", "fit": "cover", "alt": { "en": "A handful of coins ready to be shared", "es": "Un puñado de monedas listas para compartir" }, "label": "Shared" }
+      ],
+      "story": {
+        "en": "Carry one, give one. The coin is passed hand to hand with a single promise: wear the jacket, watch the speed, come home. Every coin you buy funds two more to give away at the dock.",
+        "es": "Lleva una, regala una. La moneda pasa de mano en mano con una sola promesa: ponte el chaleco, cuida la velocidad, vuelve a casa. Cada moneda que compras financia dos más para regalar en el muelle."
+      },
+      "fabric": { "en": "Die-struck brass, antique finish, 1.5 in (38 mm), 1 oz. Comes in a small kraft sleeve with the safety card.", "es": "Latón troquelado, acabado envejecido, 38 mm, 28 g. Viene en un sobre kraft con la tarjeta de seguridad." },
+      "care": { "en": "Wipe with a soft cloth. Brass will patina with time — that is the point.", "es": "Limpiar con un paño suave. El latón se oscurece con el tiempo; de eso se trata." },
+      "sizeChart": null,
+      "optionName": "Pack",
+      "variants": [
+        { "sku": "KHLA-COIN-1", "optionValue": "1 coin", "available": 140 },
+        { "sku": "KHLA-COIN-3", "optionValue": "3 coins", "available": 40 }
+      ]
+    },
+    {
+      "slug": "khla-cap-navy",
+      "category": "accessory",
+      "isNew": true,
+      "title": { "en": "Dock Cap", "es": "Gorra del Muelle" },
+      "subtitle": { "en": "Unstructured cotton cap · Navy with gold sunrise", "es": "Gorra de algodón sin estructura · Azul marino con amanecer dorado" },
+      "priceCents": 2600,
+      "images": [
+        { "src": "", "alt": { "en": "Front of the navy cap with the small gold sunrise embroidery", "es": "Frente de la gorra azul marino con la pequeña amanecer dorado bordado" }, "label": "Front" },
+        { "src": "", "alt": { "en": "Side view of the cap showing the adjustable brass buckle", "es": "Vista lateral de la gorra con la hebilla de latón ajustable" }, "label": "Side" },
+        { "src": "", "alt": { "en": "Volunteer wearing the cap at a safety day", "es": "Un voluntario con la gorra en una jornada de seguridad" }, "label": "Worn" }
+      ],
+      "story": {
+        "en": "Made for the people who run the dock table on Saturday mornings. One size, brass buckle, and the sunrise where the sun hits first.",
+        "es": "Hecha para quienes atienden la mesa del muelle los sábados por la mañana. Talla única, hebilla de latón y el amanecer donde primero pega el sol."
+      },
+      "fabric": { "en": "100% washed cotton twill, unstructured, brass slide buckle. One size fits most.", "es": "100% sarga de algodón lavado, sin estructura, hebilla deslizante de latón. Talla única." },
+      "care": { "en": "Spot clean. Air dry.", "es": "Limpiar con paño húmedo. Secar al aire." },
+      "sizeChart": null,
+      "optionName": "Size",
+      "variants": [
+        { "sku": "KHLA-CAP-NVY-OS", "optionValue": "One size", "available": 0 }
+      ]
+    }
+  ],
+  "faq": [
+    { "q": { "en": "Is my purchase tax-deductible?", "es": "¿Mi compra es deducible de impuestos?" }, "a": { "en": "No. A purchase at fair value is not a charitable gift. If you add a separate donation at checkout, that gift is fully deductible and we receipt it separately with our EIN.", "es": "No. Una compra a precio justo no es una donación. Si añades una donación aparte al pagar, ese regalo sí es deducible y te emitimos un comprobante aparte con nuestro EIN." } },
+    { "q": { "en": "How long does shipping take?", "es": "¿Cuánto tarda el envío?" }, "a": { "en": "We pack orders within 3–5 business days and ship USPS from Miami. You get a tracking email the moment it leaves. Free pickup in Miami is available at checkout.", "es": "Empacamos en 3–5 días hábiles y enviamos por USPS desde Miami. Recibes un correo con el rastreo en cuanto sale. También puedes recogerlo gratis en Miami." } },
+    { "q": { "en": "What if the size is wrong?", "es": "¿Y si la talla no me queda?" }, "a": { "en": "Unworn apparel can be exchanged within 30 days. Coins are final sale. Email us and a founder will sort it out.", "es": "La ropa sin usar se puede cambiar en 30 días. Las monedas no tienen devolución. Escríbenos y una fundadora lo resuelve." } },
+    { "q": { "en": "Where does the money go?", "es": "¿A dónde va el dinero?" }, "a": { "en": "After the cost of the item and shipping, every dollar funds water-safety days, life-jacket fittings, and the coins we give away. Our board publishes the numbers every year.", "es": "Después del costo del artículo y el envío, cada dólar financia jornadas de seguridad en el agua, pruebas de chalecos y las monedas que regalamos. La junta publica las cifras cada año." } }
+  ]
+}
