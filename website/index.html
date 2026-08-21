@@ -653,6 +653,15 @@
         <section id="shop" class="py-24 md:py-32 bg-brand-sand px-6 lg:px-12 border-t border-gray-100">
             <div class="max-w-[1400px] mx-auto">
 
+                <div id="shop-preview-notice" hidden
+                    class="max-w-2xl mx-auto mb-10 flex items-start gap-3 rounded-2xl bg-[#1C1917] text-[#FCD34D] px-5 py-4 text-left">
+                    <span class="mt-[7px] w-[7px] h-[7px] rounded-full bg-[#FCD34D] shrink-0" aria-hidden="true"></span>
+                    <p class="text-[13px] leading-relaxed">
+                        <strong class="text-[#FDE68A] font-semibold" data-i18n="preview.title">Design preview &mdash; not a real store</strong>
+                        <span class="opacity-80" data-i18n="preview.body">Products, photos, prices and checkout are placeholders. Nothing can be bought and no payment is taken.</span>
+                    </p>
+                </div>
+
                 <div class="max-w-2xl mx-auto text-center mb-14">
                     <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
                         data-i18n="shop.label">The Shop</span>
@@ -1528,6 +1537,17 @@
     <!-- CMS: Hygraph runtime content -->
     <script src="cms.js"></script>
 
+<script>
+    /* Preview hosts only (*.vercel.app, local dev). Hidden on the real domain,
+       so this notice retires itself when the shop ships to keepherlightalive.com. */
+    (function () {
+        var h = location.hostname;
+        if (/(^|\.)vercel\.app$/.test(h) || ['localhost', '127.0.0.1', ''].indexOf(h) !== -1) {
+            var n = document.getElementById('shop-preview-notice');
+            if (n) n.hidden = false;
+        }
+    })();
+</script>
 </body>
 
 </html>

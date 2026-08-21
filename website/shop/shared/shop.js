@@ -56,6 +56,8 @@ window.KHLA = (() => {
       'footer.disclosure': 'A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE FLORIDA DIVISION OF CONSUMER SERVICES. [VERIFY CURRENT STATUTORY TEXT + CH# BEFORE LAUNCH]',
       'a11y.gallery': 'Product photos', 'a11y.prev': 'Previous photo', 'a11y.next': 'Next photo', 'a11y.dec': 'Decrease quantity', 'a11y.inc': 'Increase quantity', 'a11y.lang': 'Switch language',
       'ph.pending': 'Photo pending',
+      'preview.title': 'Design preview — not a real store',
+      'preview.body': 'Products, photos, prices and checkout are placeholders. Nothing can be bought and no payment is taken.',
     },
     es: {
       'nav.shop': 'Tienda', 'nav.back': 'Volver a la fundación', 'nav.cart': 'Abrir tu bolsa',
@@ -109,6 +111,8 @@ window.KHLA = (() => {
       'footer.disclosure': 'UNA COPIA DEL REGISTRO OFICIAL Y LA INFORMACIÓN FINANCIERA PUEDE OBTENERSE DE LA DIVISIÓN DE SERVICIOS AL CONSUMIDOR DE LA FLORIDA. [VERIFICAR TEXTO LEGAL VIGENTE Y CH# ANTES DEL LANZAMIENTO]',
       'a11y.gallery': 'Fotos del producto', 'a11y.prev': 'Foto anterior', 'a11y.next': 'Foto siguiente', 'a11y.dec': 'Reducir cantidad', 'a11y.inc': 'Aumentar cantidad', 'a11y.lang': 'Cambiar idioma',
       'ph.pending': 'Foto pendiente',
+      'preview.title': 'Vista previa de diseño — no es una tienda real',
+      'preview.body': 'Los productos, las fotos, los precios y el pago son de muestra. No se puede comprar nada y no se cobra.',
     }
   };
   let lang = localStorage.getItem('preferredLanguage') === 'es' ? 'es' : 'en';
@@ -203,9 +207,18 @@ window.KHLA = (() => {
   }
 
   /* ------------------------------------------------------------------ chrome */
+  /* Preview hosts only: *.vercel.app and local dev. Never fires on the real domain,
+     so this notice disappears by itself once the shop ships to keepherlightalive.com. */
+  const isPreviewHost = () => /(^|\.)vercel\.app$/.test(location.hostname)
+    || ['localhost', '127.0.0.1', ''].includes(location.hostname);
+
   function mountHeader() {
     const el = document.getElementById('site-header'); if (!el) return;
     el.innerHTML = `
+    ${isPreviewHost() ? `<div class="preview-strip" role="status">
+      <span class="preview-dot" aria-hidden="true"></span>
+      <span><strong data-i18n="preview.title"></strong> <span class="opacity-80" data-i18n="preview.body"></span></span>
+    </div>` : ''}
     <div class="banner text-center text-[12px] tracking-wide py-2 px-4" data-i18n="banner"></div>
     <div class="max-w-[1400px] mx-auto px-5 lg:px-12">
       <div class="flex items-center justify-between h-20">
