@@ -248,6 +248,9 @@
                     <a href="#resources"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
                         data-i18n="nav.resources">Resources</a>
+                    <a href="../shop-prototype/index.html" data-shop-link
+                        class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
+                        data-i18n="nav.shop">Shop</a>
                     <a href="#contact-form"
                         onclick="document.getElementById('subject-select').value='General Inquiry'; document.getElementById('subject-select').dispatchEvent(new Event('change'));"
                         class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors"
@@ -288,6 +291,8 @@
                 data-i18n="nav.events">Events</a>
             <a href="#resources" class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
                 data-i18n="nav.resources">Resources</a>
+            <a href="../shop-prototype/index.html" data-shop-link class="text-2xl font-serif text-gray-900" onclick="closeMenu()"
+                data-i18n="nav.shop">Shop</a>
             <a href="https://www.paypal.com/donate/?hosted_button_id=FYXLKLEVQ5VYQ" target="_blank"
                 class="text-2xl font-serif text-brand-gold" onclick="closeMenu()" data-i18n="nav.donate">Donate</a>
             <a href="#contact-form" class="text-2xl font-serif text-gray-900"
@@ -757,6 +762,9 @@
                                 class="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-sm font-medium text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white hover:text-black hover:border-transparent">
                                 Donate
                             </a>
+                            <a href="../shop-prototype/index.html" data-shop-link
+                                class="inline-flex h-12 items-center gap-2 px-2 text-sm font-medium text-white/70 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white transition-colors"
+                                data-i18n="coin.shopLink">Or buy a coin in the shop</a>
                         </div>
                     </div>
 
@@ -782,6 +790,58 @@
 
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP -->
+        <section id="shop" class="py-32 bg-brand-sand px-6 lg:px-12">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
+
+                    <div class="order-2 lg:order-1">
+                        <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                            data-i18n="shop.label">The Shop</span>
+                        <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
+                            data-i18n="shop.title">Wear her light.</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-xl" data-i18n="shop.body">
+                            Apparel and memorial coins made by Stephanie's family and friends. Every piece funds
+                            water-safety education in South Florida &mdash; and carries the message onto the water.
+                        </p>
+
+                        <ul class="space-y-3 mb-10">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="package" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                                <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="fingerprint" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                                <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                                <span data-i18n="shop.point3">Free local pickup in Miami</span>
+                            </li>
+                        </ul>
+
+                        <a href="../shop-prototype/index.html" data-shop-link
+                            class="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+                            <span data-i18n="shop.cta">Visit the shop</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+
+                        <p class="text-xs text-gray-500 mt-6 max-w-md leading-relaxed" data-i18n="shop.note">
+                            A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
+                        </p>
+                    </div>
+
+                    <div class="order-1 lg:order-2 relative h-[260px] md:h-[400px] lg:h-[460px] flex items-center justify-center">
+                        <div class="absolute w-72 h-72 md:w-80 md:h-80 rounded-full bg-brand-gold/10 blur-3xl"></div>
+                        <img src="resources/coin-front.png"
+                            alt="The Keep Her Light Alive memorial coin, sold in the foundation shop"
+                            class="relative w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain drop-shadow-[0_20px_60px_rgba(212,175,55,0.35)] animate-[float_6s_ease-in-out_infinite]">
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1255,6 +1315,7 @@
                             <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
                             <li><a href="#legacy" class="hover:text-white transition-colors">Legacy</a></li>
                             <li><a href="#resources" class="hover:text-white transition-colors">Resources</a></li>
+                            <li><a href="../shop-prototype/index.html" data-shop-link class="hover:text-white transition-colors" data-i18n="nav.shop">Shop</a></li>
                             <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy
                                     Policy</a></li>
                             <li><a href="terms-of-use.html" class="hover:text-white transition-colors">Terms of Use</a>
