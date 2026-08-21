@@ -19,3 +19,7 @@ Thumbs.db
 # Reports / temp
 reports/
 *.log
+
+# Internal documentation — kept OUTSIDE this public repo.
+# Location: ~/KHLA-private-docs  (PRD, design spine, SOP, archived snapshots)
+docs/

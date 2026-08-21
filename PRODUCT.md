@@ -13,6 +13,6 @@
 
 **Surfaces.** Main site (static, live): home, story, mission, events, resources, contact. Shop (this phase): catalog, product page, bag, Stripe hosted checkout, thank-you, track. Admin console comes later.
 
-**Constraints.** Existing visual system is the incumbent authority (see `docs/shop-design-spine.md`): Playfair Display + Inter, gold `#D4AF37`, sand `#F5F5F0`, dark `#111111`, navy `#0D2E47`, black footer, gold pill buttons, 12–24px radii. WCAG 2.1 AA. Mobile first (375px). Payment UI never lives on our domain (Stripe Checkout). Hygraph free tier; Supabase; Vercel.
+**Constraints.** Existing visual system is the incumbent authority (see the design spine in the private docs folder): Playfair Display + Inter, gold `#D4AF37`, sand `#F5F5F0`, dark `#111111`, navy `#0D2E47`, black footer, gold pill buttons, 12–24px radii. WCAG 2.1 AA. Mobile first (375px). Payment UI never lives on our domain (Stripe Checkout). Hygraph free tier; Supabase; Vercel.
 
-**Source of truth.** `docs/KHLA-Shop-PRD-v2.md`, `docs/SOP.md` (tone and sensitive-content rules), the live `website/` code (visual tokens).
+**Source of truth.** The live `website/` code (visual tokens), plus internal docs kept **outside this public repo** at `~/KHLA-private-docs/`: `KHLA-Shop-PRD-v2.md` (requirements), `shop-design-spine.md` (tokens, component scorecard, content contract), `SOP.md` (tone and sensitive-content rules).
