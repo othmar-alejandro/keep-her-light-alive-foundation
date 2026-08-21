@@ -19,6 +19,9 @@ const translations = {
         'shop.point1': 'Ships from Miami in 3\u20135 business days',
         'shop.point2': 'Apple Pay, Google Pay, or card \u2014 no account needed',
         'shop.point3': 'Free local pickup in Miami',
+        'shop.item1': 'Sunrise Performance Sun Shirt',
+        'shop.item2': 'Light on the Water Hoodie',
+        'shop.item3': 'Dock Cap',
         'shop.cta': 'Visit the shop',
         'shop.note': 'A purchase is not a tax-deductible donation. Donations are, and are receipted separately.',
 
@@ -181,6 +184,9 @@ const translations = {
         'shop.point1': 'Se env\u00eda desde Miami en 3 a 5 d\u00edas h\u00e1biles',
         'shop.point2': 'Apple Pay, Google Pay o tarjeta, sin crear cuenta',
         'shop.point3': 'Recogida gratis en Miami',
+        'shop.item1': 'Camisa Solar de Rendimiento Amanecer',
+        'shop.item2': 'Sudadera Luz sobre el Agua',
+        'shop.item3': 'Gorra del Muelle',
         'shop.cta': 'Visitar la tienda',
         'shop.note': 'Una compra no es una donaci\u00f3n deducible de impuestos. Las donaciones s\u00ed lo son y se reciben por separado.',
 

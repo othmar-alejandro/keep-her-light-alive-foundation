@@ -650,46 +650,79 @@
         <!-- EVENTS: Upcoming & Past -->
         <!-- EVENTS: Coming Soon -->
         <!-- SHOP -->
-        <section id="shop" class="py-32 bg-brand-sand px-6 lg:px-12 border-t border-gray-100 relative overflow-hidden">
-            <!-- sunrise motif: the brand's own mark, as light rather than an image -->
-            <div class="pointer-events-none absolute inset-x-0 -bottom-40 h-96 bg-[radial-gradient(closest-side,rgba(212,175,55,0.20),transparent)]"
-                aria-hidden="true"></div>
+        <section id="shop" class="py-24 md:py-32 bg-brand-sand px-6 lg:px-12 border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto">
 
-            <div class="max-w-3xl mx-auto text-center relative">
-                <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-6 block"
-                    data-i18n="shop.label">The Shop</span>
-                <h2 class="font-serif text-4xl md:text-6xl text-gray-900 mb-8 leading-[1.1]"
-                    data-i18n="shop.title">Wear her light.</h2>
-                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-12 max-w-2xl mx-auto"
-                    data-i18n="shop.body">
-                    Apparel made by Stephanie's family and friends. Every piece funds water-safety education in
-                    South Florida &mdash; and carries the message onto the water.
-                </p>
-
-                <a href="../shop-prototype/index.html" data-shop-link
-                    class="inline-flex items-center gap-2 px-10 py-5 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
-                    <span data-i18n="shop.cta">Visit the shop</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-
-                <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 mt-12 text-sm text-gray-600">
-                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
-                        <i data-lucide="package" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
-                        <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
-                    </span>
-                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
-                        <i data-lucide="fingerprint" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
-                        <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
-                    </span>
-                    <span class="inline-flex items-start sm:items-center gap-2 text-left">
-                        <i data-lucide="map-pin" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
-                        <span data-i18n="shop.point3">Free local pickup in Miami</span>
-                    </span>
+                <div class="max-w-2xl mx-auto text-center mb-14">
+                    <span class="text-brand-gold font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block"
+                        data-i18n="shop.label">The Shop</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6 leading-tight"
+                        data-i18n="shop.title">Wear her light.</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="shop.body">
+                        Apparel made by Stephanie's family and friends. Every piece funds water-safety education in
+                        South Florida &mdash; and carries the message onto the water.
+                    </p>
                 </div>
 
-                <p class="text-xs text-gray-500 mt-10 max-w-lg mx-auto leading-relaxed" data-i18n="shop.note">
-                    A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
-                </p>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-14">
+                    <a href="../shop-prototype/index.html" data-shop-link class="group block">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/sunshirt-white.jpg"
+                                alt="White long-sleeve UPF 50+ sun shirt with the gold sunrise back print"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item1">Sunrise Performance Sun Shirt</p>
+                        <p class="text-sm text-gray-500">$42</p>
+                    </a>
+                    <a href="../shop-prototype/index.html" data-shop-link class="group block">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/hoodie-sand.jpg"
+                                alt="Sand-colored fleece hoodie with the embroidered gold sunrise"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item2">Light on the Water Hoodie</p>
+                        <p class="text-sm text-gray-500">$52</p>
+                    </a>
+                    <a href="../shop-prototype/index.html" data-shop-link class="group block col-span-2 lg:col-span-1">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-white mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                            <img src="resources/shop/cap-navy.jpg"
+                                alt="Navy cotton cap with the embroidered gold sunrise"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="1000" height="1000">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900" data-i18n="shop.item3">Dock Cap</p>
+                        <p class="text-sm text-gray-500">$26</p>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <a href="../shop-prototype/index.html" data-shop-link
+                        class="inline-flex items-center gap-2 px-10 py-5 bg-brand-gold text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+                        <span data-i18n="shop.cta">Visit the shop</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+
+                    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-10 text-sm text-gray-600">
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="package" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point1">Ships from Miami in 3&ndash;5 business days</span>
+                        </span>
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="fingerprint" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point2">Apple Pay, Google Pay, or card &mdash; no account needed</span>
+                        </span>
+                        <span class="inline-flex items-start sm:items-center gap-2 text-left">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-[3px] sm:mt-0 text-brand-gold shrink-0"></i>
+                            <span data-i18n="shop.point3">Free local pickup in Miami</span>
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-gray-500 mt-8 max-w-lg mx-auto leading-relaxed" data-i18n="shop.note">
+                        A purchase is not a tax-deductible donation. Donations are, and are receipted separately.
+                    </p>
+                </div>
             </div>
         </section>
 

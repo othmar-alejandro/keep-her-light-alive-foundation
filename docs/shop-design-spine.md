@@ -66,8 +66,9 @@ The full EN/ES sheet is `shop-prototype/shared/shop.js` (`STR`), ~110 keys. **Sp
 
 | Item | Requirement | Owner | PRD ref |
 |---|---|---|---|
-| Photos | ≥3 per product: front flat-lay, back, worn by a real community member. Square, ≥1200×1200, <300KB, same crop and warm light across the catalog. Alt text authored in Hygraph. | Founders + photographer | §18 |
-| Coin photos | Existing `coin-front/back-final.png` have a baked-in checkerboard; the shop masks them to a circle. Re-export with true transparency before launch. | Developer | — |
+| Photos | ≥3 per product: back print flat-lay, worn, colorway lineup. Square, ≥1200×1200, <300KB, same crop and warm light across the catalog. Alt text authored in Hygraph. | Founders + photographer | §18 |
+| **Current imagery is AI-generated placeholder** | Every product image in `shop-prototype/assets/product-*.jpg` and `website/resources/shop/*.jpg` was generated with Higgsfield (nano-banana) to show the intended product category — long-sleeve UPF 50+ performance sun shirts with a gold-sunrise back print. **These are comps, not products.** Replace with photography of the real garments before launch, and do not use them in any ad, email, or listing that implies stock on hand. | Developer → founders | — |
+| Coins | **Not sold.** The coin stays a free-request program on the main site. If it ever becomes a gift-with-purchase, that is a fulfillment rule, not a catalog entry. | Founders | — |
 | Size chart | Garment measurements in inches **and** centimeters; model height + size worn. | Supplier + founders | §18 |
 | Fabric, fit, care | One line each. | Founders | §18 |
 | Story paragraph | 2–3 sentences, why this design exists, tied to the mission. Required. | Founders | §18, §20.3 |

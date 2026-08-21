@@ -14,55 +14,58 @@
   },
   "products": [
     {
-      "slug": "khla-tee-navy",
+      "slug": "khla-sunshirt-white",
       "category": "apparel",
       "isNew": true,
       "title": {
-        "en": "Keep Her Light Alive Tee",
-        "es": "Camiseta Keep Her Light Alive"
+        "en": "Sunrise Performance Sun Shirt",
+        "es": "Camisa Solar de Rendimiento Amanecer"
       },
       "subtitle": {
-        "en": "Unisex heavyweight cotton tee · Memorial Navy",
-        "es": "Camiseta unisex de algodón grueso · Azul Memorial"
+        "en": "Long sleeve · UPF 50+ · Unisex · White",
+        "es": "Manga larga · UPF 50+ · Unisex · Blanca"
       },
-      "priceCents": 2800,
+      "priceCents": 4200,
       "images": [
         {
-          "src": "",
+          "src": "assets/product-sunshirt-white.jpg",
+          "fit": "cover",
           "alt": {
-            "en": "Front of the navy tee, flat-lay, with the gold light mark on the chest",
-            "es": "Frente de la camiseta azul marino con la marca de luz dorada en el pecho"
-          },
-          "label": "Front"
-        },
-        {
-          "src": "",
-          "alt": {
-            "en": "Back of the tee with 'Her light shines on' in small gold type",
-            "es": "Espalda de la camiseta con 'Su luz sigue brillando' en dorado"
+            "en": "Back of the white long-sleeve sun shirt showing the gold sunrise, waves and palm trees with 'Keep Her Light Alive'",
+            "es": "Espalda de la camisa solar blanca con el amanecer dorado, las olas y las palmas y 'Keep Her Light Alive'"
           },
           "label": "Back"
         },
         {
-          "src": "",
+          "src": "assets/product-sunshirt-worn.jpg",
+          "fit": "cover",
           "alt": {
-            "en": "A volunteer wearing the tee at the memorial walk",
-            "es": "Una voluntaria con la camiseta en la caminata conmemorativa"
+            "en": "A supporter wearing the sun shirt on a Miami dock at sunrise",
+            "es": "Una simpatizante con la camisa solar en un muelle de Miami al amanecer"
           },
           "label": "Worn"
+        },
+        {
+          "src": "assets/product-lineup.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "The sun shirt shown in all five colorways",
+            "es": "La camisa solar en los cinco colores"
+          },
+          "label": "Colors"
         }
       ],
       "story": {
-        "en": "The small gold mark over the heart is the sunrise over the water from Stephanie's coin. Every tee sold pays for about four life-jacket fittings at a community safety day.",
-        "es": "La pequeña marca dorada sobre el corazón es el amanecer sobre el agua de la moneda de Stephanie. Cada camiseta vendida cubre unas cuatro pruebas de chaleco salvavidas en una jornada comunitaria de seguridad."
+        "en": "Made for the people who are actually on the water. The sunrise on the back is Stephanie's — the same one on her coin. Every shirt sold pays for about six life-jacket fittings at a community safety day.",
+        "es": "Hecha para quienes de verdad están en el agua. El amanecer de la espalda es el de Stephanie, el mismo de su moneda. Cada camisa vendida cubre unas seis pruebas de chaleco salvavidas en una jornada comunitaria de seguridad."
       },
       "fabric": {
-        "en": "100% ring-spun cotton, 6.5 oz. Relaxed unisex fit; size down for a closer fit. Printed in Hialeah.",
-        "es": "100% algodón ring-spun, 6.5 oz. Corte unisex relajado; elige una talla menos para un ajuste más ceñido. Estampada en Hialeah."
+        "en": "UPF 50+ performance knit, 100% recycled polyester, 4.2 oz. Moisture-wicking and quick-dry. Relaxed unisex fit. Printed in Hialeah.",
+        "es": "Tejido técnico UPF 50+, 100% poliéster reciclado, 4.2 oz. Absorbe la humedad y seca rápido. Corte unisex relajado. Estampada en Hialeah."
       },
       "care": {
-        "en": "Machine wash cold, inside out. Tumble dry low. Do not iron the print.",
-        "es": "Lavar a máquina en frío, al revés. Secar a baja temperatura. No planchar el estampado."
+        "en": "Machine wash cold, inside out. Hang dry. Do not iron the print. No fabric softener — it reduces wicking.",
+        "es": "Lavar a máquina en frío, al revés. Secar colgada. No planchar el estampado. Sin suavizante: reduce la absorción."
       },
       "sizeChart": {
         "columns": [
@@ -124,32 +127,32 @@
       "optionName": "Size",
       "variants": [
         {
-          "sku": "KHLA-TEE-NVY-S",
+          "sku": "KHLA-SUN-WHT-S",
           "optionValue": "S",
           "available": 12
         },
         {
-          "sku": "KHLA-TEE-NVY-M",
+          "sku": "KHLA-SUN-WHT-M",
           "optionValue": "M",
           "available": 20
         },
         {
-          "sku": "KHLA-TEE-NVY-L",
+          "sku": "KHLA-SUN-WHT-L",
           "optionValue": "L",
           "available": 2
         },
         {
-          "sku": "KHLA-TEE-NVY-XL",
+          "sku": "KHLA-SUN-WHT-XL",
           "optionValue": "XL",
           "available": 9
         },
         {
-          "sku": "KHLA-TEE-NVY-2XL",
+          "sku": "KHLA-SUN-WHT-2XL",
           "optionValue": "2XL",
           "available": 0
         },
         {
-          "sku": "KHLA-TEE-NVY-3XL",
+          "sku": "KHLA-SUN-WHT-3XL",
           "optionValue": "3XL",
           "available": 4
         }
@@ -170,7 +173,8 @@
       "priceCents": 5200,
       "images": [
         {
-          "src": "",
+          "src": "assets/product-hoodie-sand.jpg",
+          "fit": "cover",
           "alt": {
             "en": "Front of the sand hoodie with the embroidered gold sunrise",
             "es": "Frente de la sudadera color arena con el amanecer dorado bordado"
@@ -300,7 +304,8 @@
       "priceCents": 2600,
       "images": [
         {
-          "src": "",
+          "src": "assets/product-cap-navy.jpg",
+          "fit": "cover",
           "alt": {
             "en": "Front of the navy cap with the small gold sunrise embroidery",
             "es": "Frente de la gorra azul marino con la pequeña amanecer dorado bordado"
@@ -342,7 +347,7 @@
         {
           "sku": "KHLA-CAP-NVY-OS",
           "optionValue": "One size",
-          "available": 0
+          "available": 18
         }
       ]
     }
