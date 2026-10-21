@@ -33,6 +33,14 @@ comments of its own — which is why these notes live here instead.
 Production deployments must stay publicly reachable. If Vercel Authentication
 is enabled on the store project, the rewrite gets a 401 and `/shop` breaks.
 
-**Until step 4 is done the rewrite points at a placeholder, so do not merge
-this to `main` — `/shop` would break.** The old static prototype is gone, so
-there is no fallback.
+## Why `website/shop/` had to be deleted
+
+Vercel checks the filesystem **before** applying rewrites. While
+`website/shop/index.html` existed, `/shop` served that old static prototype
+and the rewrite never fired — so the real store would have silently never
+appeared, with no error to notice. The prototype is deleted for that reason,
+not for tidiness. Do not restore it.
+
+**Consequence: `/shop` now depends entirely on the rewrite.** Until the real
+host replaces `SHOP_DEPLOYMENT_HOST`, do not merge this to `main` — there is
+no fallback and `/shop` will fail.

@@ -36,3 +36,4 @@ supabase/.temp/
 
 # Session working memory — internal, like docs/ and tasks/ above.
 memory/
+.vercel
