@@ -1,76 +1,147 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getStripe } from "@/lib/stripe";
+import { catalogHref, formatPrice, type Locale } from "@/lib/preview-catalog";
+import { isShopDbConfigured, select } from "@/lib/shop-db";
+import { ORDER_ID_PATTERN } from "@/lib/stripe";
 
-type ThankYouPageProps = {
-  searchParams: Promise<{ session_id?: string }>;
+// The lookup token in the URL is the buyer's only key to this page.
+export const metadata: Metadata = {
+  title: "Order status | Keep Her Light Alive Shop",
+  robots: { index: false, follow: false },
+  referrer: "no-referrer",
 };
 
-function formatAmount(amountInCents: number | null): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format((amountInCents ?? 0) / 100);
+type OrderStatus = "pending" | "paid" | "canceled" | "expired" | "payment_review";
+
+type Order = {
+  status: OrderStatus;
+  subtotal_amount: number;
+  shop_order_items: { title: string; quantity: number; unit_amount: number }[];
+};
+
+const copy = {
+  en: {
+    none: {
+      title: "Checkout is being prepared.",
+      body: "This page does not confirm a payment or an order.",
+    },
+    pending: {
+      title: "We are confirming your payment.",
+      body: "This can take a moment. Your order is not confirmed until this page says so.",
+    },
+    paid: {
+      title: "Thank you. Your order is confirmed.",
+      body: "Your payment was received.",
+    },
+    canceled: {
+      title: "This checkout was not completed.",
+      body: "No order was placed.",
+    },
+    payment_review: {
+      title: "Your payment was received.",
+      body: "This order needs a manual review by the Foundation before it is confirmed.",
+    },
+    refresh: "Check again",
+    subtotal: "Merchandise subtotal",
+    back: "Return to the shop",
+  },
+  es: {
+    none: {
+      title: "El pago está en preparación.",
+      body: "Esta página no confirma un pago ni un pedido.",
+    },
+    pending: {
+      title: "Estamos confirmando tu pago.",
+      body: "Puede tardar un momento. Tu pedido no está confirmado hasta que esta página lo indique.",
+    },
+    paid: {
+      title: "Gracias. Tu pedido está confirmado.",
+      body: "Recibimos tu pago.",
+    },
+    canceled: {
+      title: "Este pago no se completó.",
+      body: "No se realizó ningún pedido.",
+    },
+    payment_review: {
+      title: "Recibimos tu pago.",
+      body: "La Fundación debe revisar este pedido manualmente antes de confirmarlo.",
+    },
+    refresh: "Comprobar de nuevo",
+    subtotal: "Subtotal de mercancía",
+    back: "Volver a la tienda",
+  },
+} as const;
+
+async function loadOrder(token: string | undefined): Promise<Order | null> {
+  if (!token || !ORDER_ID_PATTERN.test(token) || !isShopDbConfigured()) return null;
+  try {
+    const [order] = await select<Order>(
+      "shop_orders",
+      new URLSearchParams({
+        lookup_token: `eq.${token}`,
+        select: "status,subtotal_amount,shop_order_items(title,quantity,unit_amount)",
+      }),
+    );
+    return order ?? null;
+  } catch (error) {
+    console.error("Order status unavailable:", error);
+    return null;
+  }
 }
 
-export default async function ThankYouPage({ searchParams }: ThankYouPageProps) {
-  const { session_id: sessionId } = await searchParams;
-
-  if (!sessionId) {
-    return (
-      <main className="min-h-screen bg-sand px-6 py-16 text-ink">
-        <div className="mx-auto max-w-xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold">KHLA / Shop</p>
-          <h1 className="mt-8 font-display text-5xl">No checkout session found.</h1>
-          <Link href="/" className="mt-8 inline-block text-sm underline underline-offset-4">
-            Return to the shop
-          </Link>
-        </div>
-      </main>
-    );
-  }
-
-  const stripe = getStripe();
-  const session = await stripe.checkout.sessions.retrieve(sessionId);
-  const isPaid = session.payment_status === "paid";
-  const email = session.customer_details?.email ?? session.customer_email ?? "Not provided";
+export default async function OrderStatusPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ order?: string; lang?: string }>;
+}) {
+  const { order: token, lang } = await searchParams;
+  const locale: Locale = lang === "es" ? "es" : "en";
+  const t = copy[locale];
+  const order = await loadOrder(token);
+  const state = !order ? "none" : order.status === "expired" ? "canceled" : order.status;
+  const message = t[state];
 
   return (
-    <main className="min-h-screen bg-sand px-6 py-16 text-ink sm:px-10">
+    <main className="min-h-screen bg-sand px-6 py-16 text-ink">
       <div className="mx-auto max-w-xl">
-        <p className="text-xs uppercase tracking-[0.25em] text-gold">KHLA / Thank you</p>
-        <h1 className="mt-8 font-display text-5xl leading-none">
-          {isPaid ? "The light is moving forward." : "Your checkout is underway."}
-        </h1>
-        <p className="mt-6 text-base leading-7 text-ink/65">
-          {isPaid
-            ? "Thank you for supporting Keep Her Light Alive Foundation, Inc."
-            : "Payment is still processing. We will not mark this order as successful until Stripe confirms payment."}
-        </p>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-goldInk">KHLA / Shop</p>
+        <h1 className="mt-8 font-display text-5xl">{message.title}</h1>
+        <p className="mt-6 text-base leading-7 text-ink/65">{message.body}</p>
 
-        <dl className="mt-12 divide-y divide-ink/15 border-y border-ink/15 text-sm">
-          <div className="flex justify-between gap-6 py-4">
-            <dt className="text-ink/55">Order total</dt>
-            <dd className="font-semibold">{formatAmount(session.amount_total)}</dd>
+        {order && (state === "paid" || state === "payment_review") && (
+          <div className="mt-8 rounded-2xl bg-white p-5 text-sm leading-6">
+            <ul>
+              {order.shop_order_items.map((item) => (
+                <li key={item.title} className="flex justify-between gap-4">
+                  <span>{item.quantity} × {item.title}</span>
+                  <span>{formatPrice(item.quantity * item.unit_amount, locale)}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 flex justify-between gap-4 border-t border-ink/10 pt-4 font-semibold">
+              <span>{t.subtotal}</span>
+              <span>{formatPrice(order.subtotal_amount, locale)}</span>
+            </p>
           </div>
-          <div className="flex justify-between gap-6 py-4">
-            <dt className="text-ink/55">Email</dt>
-            <dd className="max-w-[65%] break-words text-right">{email}</dd>
-          </div>
-          <div className="flex justify-between gap-6 py-4">
-            <dt className="text-ink/55">Payment status</dt>
-            <dd className="capitalize">{session.payment_status.replaceAll("_", " ")}</dd>
-          </div>
-        </dl>
+        )}
 
-        <p className="mt-10 border-l-2 border-gold pl-5 text-sm leading-6 text-ink/65">
-          Thank you for your purchase supporting Keep Her Light Alive Foundation, Inc. This
-          transaction is a purchase of merchandise, not a charitable contribution, and is not
-          tax-deductible. Keep Her Light Alive Foundation, Inc. is a 501(c)(3) tax-exempt
-          organization; our EIN is [XX-XXXXXXX].
-        </p>
+        {state === "pending" && (
+          <p className="mt-8">
+            {/* Plain link: reloads this page and re-reads the server's order state. */}
+            <a
+              href={`?order=${token}&lang=${locale}`}
+              className="inline-flex rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white"
+            >
+              {t.refresh}
+            </a>
+          </p>
+        )}
 
-        <Link href="/" className="mt-10 inline-block text-sm font-semibold underline underline-offset-4">
-          Return to the shop
+        <Link
+          href={catalogHref(locale)}
+          className="mt-8 inline-block text-sm underline underline-offset-4"
+        >
+          {t.back}
         </Link>
       </div>
     </main>

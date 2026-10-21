@@ -1,135 +1,127 @@
 import { NextResponse } from "next/server";
-import type Stripe from "stripe";
-import { tee, type CatalogProduct } from "@/lib/catalog";
-import { getStripe } from "@/lib/stripe";
+import { findSellableVariant } from "@/lib/hygraph-catalog";
+import { previewBasePath } from "@/lib/preview-catalog";
+import { isShopDbConfigured, rpc, ShopDbError } from "@/lib/shop-db";
+import { getStripe, ORDER_ID_PATTERN } from "@/lib/stripe";
 
-export const runtime = "nodejs";
+// Stripe's minimum Checkout Session lifetime is 30 minutes. The stock hold
+// outlives the session, so a payment made in its last seconds still finds it.
+const SESSION_MINUTES = 31;
+const HOLD_GRACE_MINUTES = 10;
+const MAX_QUANTITY = 10;
 
-const RATE_LIMIT = 10;
-const RATE_WINDOW_MS = 60_000;
-// TODO: Replace this process-local limiter with Upstash/Vercel KV in production.
-const requestsByIp = new Map<string, { count: number; windowStartedAt: number }>();
+type Hold = { order_id: string; lookup_token: string; expires_at: string | null };
 
-function getClientIp(request: Request, requestHeaders: Headers): string {
-  return (
-    requestHeaders.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    requestHeaders.get("x-real-ip") ||
-    "unknown"
-  );
-}
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const previous = requestsByIp.get(ip);
-
-  if (!previous || now - previous.windowStartedAt >= RATE_WINDOW_MS) {
-    requestsByIp.set(ip, { count: 1, windowStartedAt: now });
-    return false;
-  }
-
-  previous.count += 1;
-  return previous.count > RATE_LIMIT;
-}
-
-async function resolvePrice(product: CatalogProduct): Promise<Stripe.Price> {
-  const stripe = getStripe();
-  const existingPrices = await stripe.prices.list({
-    lookup_keys: [product.sku],
-    limit: 1,
-  });
-  const existingPrice = existingPrices.data[0];
-
-  if (existingPrice) {
-    if (!existingPrice.active) {
-      return stripe.prices.update(existingPrice.id, { active: true });
-    }
-    return existingPrice;
-  }
-
-  // Idempotency keys are global per account (not per endpoint): use a distinct
-  // key for the Product and the Price so a retry replays the right response.
-  const productKey = `slice-${product.sku}-product`;
-  const priceKey = `slice-${product.sku}-price`;
-  const stripeProduct = await stripe.products.create(
-    {
-      name: product.title,
-      description: product.description,
-      metadata: { sku: product.sku },
-    },
-    { idempotencyKey: productKey },
-  );
-
-  return stripe.prices.create(
-    {
-      product: stripeProduct.id,
-      unit_amount: product.unitAmount,
-      currency: product.currency,
-      lookup_key: product.sku,
-      metadata: { sku: product.sku },
-    },
-    { idempotencyKey: priceKey },
-  );
-}
-
-function getSiteUrl(): string {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_SITE_URL is not configured.");
-  }
-
-  return siteUrl;
+function fail(status: number, error: string) {
+  return NextResponse.json({ error }, { status });
 }
 
 export async function POST(request: Request) {
-  const clientIp = getClientIp(request, request.headers);
-
-  if (isRateLimited(clientIp)) {
-    return NextResponse.json(
-      { error: "Too many checkout attempts. Please try again in a minute." },
-      { status: 429 },
-    );
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!process.env.STRIPE_SECRET_KEY || !isShopDbConfigured() || !siteUrl) {
+    return fail(503, "Checkout is not available yet.");
   }
 
-  const locale = new URL(request.url).searchParams.get("lang") === "es" ? "es" : "en";
+  const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
+  const orderId = body?.orderId;
+  const sku = body?.sku;
+  const quantity = body?.quantity;
+  const locale = body?.locale === "es" ? "es" : "en";
+  if (
+    typeof orderId !== "string" || !ORDER_ID_PATTERN.test(orderId) ||
+    typeof sku !== "string" || !/^[A-Z0-9-]{1,64}$/.test(sku) ||
+    typeof quantity !== "number" || !Number.isInteger(quantity) ||
+    quantity < 1 || quantity > MAX_QUANTITY
+  ) {
+    return fail(400, "Invalid checkout request.");
+  }
+
+  // Price and title come from the published catalog, never from the browser.
+  const variant = await findSellableVariant(sku);
+  if (!variant) {
+    return fail(409, "This item is not available.");
+  }
+
+  let hold: Hold;
+  try {
+    [hold] = await rpc<Hold[]>("shop_reserve_order", {
+      p_order_id: orderId,
+      p_sku: variant.sku,
+      p_title: variant.title,
+      p_quantity: quantity,
+      p_unit_amount: variant.unitAmount,
+      p_expires_at: new Date(
+        Date.now() + (SESSION_MINUTES + HOLD_GRACE_MINUTES) * 60_000,
+      ).toISOString(),
+    });
+  } catch (error) {
+    if (error instanceof ShopDbError && (error.code === "P0001" || error.code === "P0002")) {
+      return fail(409, "This item is sold out.");
+    }
+    if (error instanceof ShopDbError && error.code === "22023") {
+      // Same order ID, different contents (for example the price changed).
+      return fail(409, "This checkout changed. Please start again.");
+    }
+    console.error("Checkout reserve failed:", error);
+    return fail(500, "Checkout could not be started.");
+  }
+  if (!hold?.expires_at) {
+    // A retry of an order whose hold was already released.
+    return fail(409, "This checkout expired. Please start again.");
+  }
+
+  const base = `${siteUrl.replace(/\/+$/, "")}${previewBasePath}`;
   const stripe = getStripe();
-  const price = await resolvePrice(tee);
-  const siteUrl = getSiteUrl();
-
-  const session = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: [{ price: price.id, quantity: 1 }],
-    expires_at: Math.floor(Date.now() / 1000) + 30 * 60,
-    allow_promotion_codes: true,
-    automatic_tax: { enabled: true },
-    shipping_address_collection: { allowed_countries: ["US"] },
-    shipping_options: [
+  let sessionId: string | undefined;
+  try {
+    // Every parameter is derived from the stored order, so a retry with the
+    // same order ID replays the same Session instead of creating a second one.
+    const session = await stripe.checkout.sessions.create(
       {
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 500, currency: "usd" },
-          display_name: "USPS",
-        },
+        mode: "payment",
+        locale,
+        client_reference_id: orderId,
+        metadata: { order_id: orderId },
+        payment_intent_data: { metadata: { order_id: orderId } },
+        line_items: [
+          {
+            quantity,
+            price_data: {
+              currency: "usd",
+              unit_amount: variant.unitAmount,
+              product_data: { name: variant.title, metadata: { sku: variant.sku } },
+            },
+          },
+        ],
+        expires_at:
+          Math.floor(new Date(hold.expires_at).getTime() / 1000) - HOLD_GRACE_MINUTES * 60,
+        success_url: `${base}/thank-you?order=${hold.lookup_token}&lang=${locale}`,
+        cancel_url: `${base}/p/${variant.slug}?lang=${locale}`,
       },
-      {
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 0, currency: "usd" },
-          display_name: "Local pickup — Miami",
-        },
-      },
-    ],
-    locale,
-    consent_collection: { promotions: "auto" },
-    submit_type: "pay",
-    success_url: `${siteUrl}/shop/thank-you?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${siteUrl}/shop?canceled=1`,
-    metadata: { sku: tee.sku, locale },
-  });
-
-  if (!session.url) {
-    return NextResponse.json({ error: "Stripe did not return a checkout URL." }, { status: 502 });
+      { idempotencyKey: `khla-checkout-${orderId}` },
+    );
+    sessionId = session.id;
+    if (!session.url) throw new Error("Stripe returned no Checkout URL.");
+    await rpc<string>("shop_attach_session", {
+      p_order_id: orderId,
+      p_session_id: session.id,
+    });
+    return NextResponse.json({ url: session.url });
+  } catch (error) {
+    console.error("Checkout session failed:", error);
+    // Give the units back and make sure nobody can pay on an orphaned Session.
+    if (sessionId) {
+      await stripe.checkout.sessions.expire(sessionId).catch(() => undefined);
+    }
+    await rpc<string>("shop_release_order", {
+      p_event_id: `local:${orderId}:session_failed`,
+      p_order_id: orderId,
+      p_session_id: sessionId ?? null,
+      p_final_status: "canceled",
+    }).catch((releaseError) => {
+      // The hold still expires on its own through shop_expire_holds.
+      console.error("Checkout release failed:", releaseError);
+    });
+    return fail(502, "Checkout could not be started.");
   }
-
-  return NextResponse.redirect(new URL(session.url), 303);
 }

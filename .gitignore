@@ -23,3 +23,6 @@ reports/
 # Internal documentation — kept OUTSIDE this public repo.
 # Location: ~/KHLA-private-docs  (PRD, design spine, SOP, archived snapshots)
 docs/
+
+# Working notes and audits — internal, kept out of this public repo.
+tasks/

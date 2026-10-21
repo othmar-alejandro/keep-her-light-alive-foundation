@@ -1,85 +1,140 @@
-import Link from "next/link";
-import { tee } from "@/lib/catalog";
+import PreviewBanner from "@/components/PreviewBanner";
+import ProductCard from "@/components/ProductCard";
+import SectionNav from "@/components/SectionNav";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import { getStorefrontCatalog } from "@/lib/hygraph-catalog";
+import {
+  buildBagIndex,
+  groupByCategory,
+  previewCopy,
+  type Locale,
+} from "@/lib/preview-catalog";
 
 type ShopPageProps = {
-  searchParams: Promise<{ canceled?: string; lang?: string }>;
+  searchParams: Promise<{ lang?: string }>;
 };
 
 export default async function ShopPage({ searchParams }: ShopPageProps) {
-  const { canceled, lang } = await searchParams;
-  const checkoutAction = `/shop/api/checkout${lang === "es" ? "?lang=es" : ""}`;
+  const { lang } = await searchParams;
+  const locale: Locale = lang === "es" ? "es" : "en";
+  const t = previewCopy[locale];
+  const { products, preview, error } = await getStorefrontCatalog();
+  const groups = groupByCategory(products);
 
   return (
-    <main className="min-h-screen bg-sand px-6 py-8 text-ink sm:px-10 sm:py-12">
-      <div className="mx-auto flex min-h-[calc(100vh-6rem)] max-w-5xl flex-col justify-between">
-        <header className="flex items-center justify-between border-b border-ink/15 pb-5 text-xs uppercase tracking-[0.2em]">
-          <Link href="/" className="font-semibold tracking-[0.25em]">
-            KHLA / Shop
-          </Link>
-          <span className="text-ink/55">One light at a time</span>
-        </header>
+    <div className="flex min-h-screen flex-col bg-white text-ink">
+      <a
+        href="#catalog"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-sand"
+      >
+        {t.skipToContent}
+      </a>
 
-        <section className="grid gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-20 md:py-24">
-          <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-ink p-8 shadow-[18px_18px_0_#D4AF37] sm:p-12">
-            <div className="absolute inset-7 border border-gold/40" />
-            <div className="relative text-center text-sand">
-              <p className="mb-5 text-[10px] uppercase tracking-[0.35em] text-gold">
-                Keep Her Light Alive
-              </p>
-              <div className="font-display text-7xl leading-[0.82] sm:text-8xl">
-                KH
-                <br />
-                LA
-              </div>
-              <p className="mt-7 text-xs uppercase tracking-[0.28em] text-sand/70">
-                Foundation tee / navy
-              </p>
-            </div>
-          </div>
+      {preview && <PreviewBanner locale={locale} />}
+      <SiteHeader locale={locale} index={buildBagIndex(products, locale)} path="/" />
 
-          <div className="max-w-md">
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              The first edition
-            </p>
-            <h1 className="font-display text-5xl leading-[0.98] sm:text-6xl">
-              Wear the light forward.
-            </h1>
-            <p className="mt-7 max-w-sm text-base leading-7 text-ink/65">
-              {tee.title}. Every purchase helps Keep Her Light Alive Foundation,
-              Inc. continue its work.
-            </p>
-            <div className="mt-9 flex items-baseline gap-4">
-              <span className="font-display text-3xl">$28.00</span>
-              <span className="text-xs uppercase tracking-[0.18em] text-ink/45">
-                {tee.sku}
-              </span>
-            </div>
+      <main className="flex-1">
+        <section className="mx-auto max-w-[1400px] px-6 pb-12 pt-14 lg:px-12 lg:pt-20">
+          <span className="block text-xs font-bold uppercase tracking-[0.2em] text-goldInk">
+            {t.heroEyebrow}
+          </span>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.1] text-ink md:text-5xl">
+            {t.heroTitle}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-inkMuted">{t.heroBody}</p>
 
-            {canceled === "1" && (
-              <p className="mt-6 border-l-2 border-gold pl-4 text-sm text-ink/70">
-                Checkout was canceled. Your tee is still here when you&apos;re ready.
-              </p>
-            )}
+          {!preview && (
+          <ul className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-sm text-inkMuted">
+            {t.trust.map((point) => (
+              <li key={point} className="flex items-center gap-2">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 20 20"
+                  className="h-4 w-4 shrink-0 text-goldInk"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {point}
+              </li>
+            ))}
+          </ul>
+          )}
 
-            <form method="post" action={checkoutAction} className="mt-9">
-              <button
-                type="submit"
-                className="w-full bg-ink px-6 py-4 text-sm font-semibold text-sand transition hover:bg-gold hover:text-ink focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-4 focus:ring-offset-sand"
-              >
-                Buy with Apple Pay / card
-              </button>
-            </form>
-            <p className="mt-4 text-center text-xs leading-5 text-ink/45">
-              Secure hosted checkout by Stripe · Apple Pay, Google Pay, Link, or card
-            </p>
-          </div>
+          <p className="mt-8 inline-flex rounded-full bg-gold px-5 py-2 text-xs font-bold uppercase tracking-[0.12em] text-black">
+            {t.freeShipping}
+          </p>
         </section>
 
-        <footer className="border-t border-ink/15 pt-5 text-xs text-ink/50">
-          <span>Keep Her Light Alive Foundation, Inc.</span>
-          <span className="float-right">{tee.unitAmount / 100} / 1 SKU</span>
-        </footer>
-      </div>
-    </main>
+        {error && (
+          <p role="alert" className="mx-auto max-w-[1400px] px-6 pb-20 text-sm lg:px-12">
+            {t.catalogError}
+          </p>
+        )}
+        {!error && products.length === 0 && (
+          <p className="mx-auto max-w-[1400px] px-6 pb-20 text-sm lg:px-12">{t.catalogReady}</p>
+        )}
+
+        {groups.length > 0 && (
+          <>
+            <SectionNav
+              label={t.h1}
+              sections={groups.map((group) => ({
+                id: group.category,
+                label: t.category[group.category],
+              }))}
+            />
+
+            {/* Sand band with white cards — the live site's own product recipe. */}
+            <div id="catalog" className="border-t border-gray-100 bg-sand">
+              <div className="mx-auto max-w-[1400px] px-6 pb-20 lg:px-12">
+                {groups.map((group, groupIndex) => (
+                  <section
+                    key={group.category}
+                    id={group.category}
+                    aria-labelledby={`${group.category}-heading`}
+                    className="scroll-mt-32 pt-14 lg:pt-20"
+                  >
+                    <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-4">
+                      <h2
+                        id={`${group.category}-heading`}
+                        className="font-display text-3xl leading-tight md:text-4xl"
+                      >
+                        {t.category[group.category]}
+                      </h2>
+                      <span className="tnum text-xs uppercase tracking-[0.1em] text-inkSoft">
+                        {(group.products.length === 1 ? t.itemCount.one : t.itemCount.other).replace(
+                          "{n}",
+                          String(group.products.length),
+                        )}
+                      </span>
+                    </div>
+                    <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:gap-x-8 lg:grid-cols-4">
+                      {group.products.map((product, index) => (
+                        <ProductCard
+                          key={product.slug}
+                          product={product}
+                          locale={locale}
+                          priority={groupIndex === 0 && index < 4}
+                        />
+                      ))}
+                    </ul>
+                  </section>
+                ))}
+
+                <p className="mt-16 max-w-2xl text-sm leading-relaxed text-inkMuted">
+                  {t.taxNote}
+                </p>
+              </div>
+            </div>
+          </>
+        )}
+      </main>
+
+      <SiteFooter locale={locale} preview={preview} />
+    </div>
   );
 }
