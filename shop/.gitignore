@@ -7,3 +7,4 @@ node_modules/
 # Never commit a copy of a secrets file, however it is suffixed.
 .env*
 !.env.example
+.vercel
