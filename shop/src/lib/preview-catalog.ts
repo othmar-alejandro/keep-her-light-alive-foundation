@@ -463,8 +463,13 @@ export function allHref(locale: Locale): string {
   return locale === "es" ? "/all?lang=es" : "/all";
 }
 
+/** A filtered view of the catalog. A real URL, so it can be linked and shared. */
 export function sectionHref(category: Category, locale: Locale): string {
-  return `${allHref(locale)}#${category}`;
+  return `/all?cat=${category}${locale === "es" ? "&lang=es" : ""}`;
+}
+
+export function isCategory(value: string | undefined): value is Category {
+  return CATEGORIES.includes(value as Category);
 }
 
 export function formatPrice(cents: number, locale: Locale): string {
@@ -546,6 +551,7 @@ export const previewCopy = {
     errorBody: "The shop had a problem loading. Try again in a moment.",
     tryAgain: "Try again",
     priceFrom: "From",
+    browseBy: "Categories",
     allProducts: "All products",
     heroTitleLead: "Wear her",
     heroTitleAccent: "light.",
@@ -642,6 +648,7 @@ export const previewCopy = {
     errorBody: "La tienda tuvo un problema al cargar. Int\u00e9ntalo de nuevo en un momento.",
     tryAgain: "Intentar de nuevo",
     priceFrom: "Desde",
+    browseBy: "Categorías",
     allProducts: "Todos los productos",
     heroTitleLead: "Lleva su",
     heroTitleAccent: "luz.",
