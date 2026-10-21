@@ -39,6 +39,12 @@ const contentSecurityPolicy = [
  * keepherlightalive.com/shop, so its deployment host answers the same pages on
  * a second address. Anything that is not the canonical domain is told not to
  * index, or the store competes with itself in search.
+ *
+ * This matches x-forwarded-host, not host. On a rewrite to an external origin
+ * Vercel sets Host to the destination, so matching Host would have been true
+ * for every request and hidden the real storefront from search as well. The
+ * visitor's own host arrives in x-forwarded-host, and a direct hit on the
+ * deployment URL either omits it or carries that URL -- noindex either way.
  */
 const CANONICAL_HOST = "www.keepherlightalive.com";
 
@@ -55,7 +61,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/:path*",
-        missing: [{ type: "host", value: CANONICAL_HOST }],
+        missing: [{ type: "header", key: "x-forwarded-host", value: CANONICAL_HOST }],
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];
