@@ -1,22 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "comment": [
-    "This project serves the static foundation site at /.",
-    "The store is a separate Next.js app (repo folder `shop/`) deployed as its own",
-    "Vercel project. The rewrite below proxies /shop/* to it so the store keeps the",
-    "address keepherlightalive.com/shop instead of moving to a subdomain.",
-    "",
-    "SETUP — once only, in the Vercel dashboard:",
-    "  1. New Project -> same repo -> Root Directory: shop",
-    "  2. Environment variables on that project:",
-    "       HYGRAPH_ENDPOINT  = https://api-us-west-2.hygraph.com/v2/cmm1zo3c701dl07wctz81kt8e/master",
-    "       HYGRAPH_TOKEN     = the READ-ONLY token (not the delete-capable one)",
-    "       NEXT_PUBLIC_SITE_URL = https://keepherlightalive.com",
-    "  3. Copy that project's production domain and replace SHOP_DEPLOYMENT_HOST below.",
-    "",
-    "Until step 3 is done this rewrite points nowhere and /shop keeps serving the old",
-    "static prototype in website/shop/."
-  ],
   "rewrites": [
     {
       "source": "/shop",
