@@ -21,7 +21,7 @@
       '    title url resourceType sourceLabel\n' +
       '  }\n' +
       '  events(\n' +
-      '    where: { startDateTime_gte: $now, isPublic: true }\n' +
+      '    where: { startDateTime_gte: $now, OR: [{ isPublic: true }, { isPublic: null }] }\n' +
       '    orderBy: startDateTime_ASC\n' +
       '    stage: PUBLISHED\n' +
       '  ) {\n' +

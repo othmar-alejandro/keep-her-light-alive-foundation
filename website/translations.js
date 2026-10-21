@@ -12,6 +12,20 @@ const translations = {
         'nav.resources': 'Resources',
         'nav.contact': 'Contact',
         'nav.donate': 'Donate',
+        'nav.shop': 'Shop',
+        'shop.label': 'The Shop',
+        'shop.title': 'Wear her light.',
+        'shop.body': 'Apparel, bags and drinkware made by Stephanie\'s family and friends. Every piece funds water-safety education in South Florida \u2014 and carries the message onto the water.',
+        'shop.point1': 'Ships from Miami in 3\u20135 business days',
+        'shop.point2': 'Apple Pay, Google Pay, or card \u2014 no account needed',
+        'shop.point3': 'Free local pickup in Miami',
+        'preview.title': 'Design preview \u2014 not a real store',
+        'preview.body': 'Products, photos, prices and checkout are placeholders. Nothing can be bought and no payment is taken.',
+        'shop.item1': 'Sweat & Sunsets Tee',
+        'shop.item2': 'Meet Me At Sunset Tee',
+        'shop.item3': 'Sunrise Tote Bag',
+        'shop.cta': 'Visit the shop',
+        'shop.note': 'A purchase is not a tax-deductible donation. Donations are, and are receipted separately.',
 
         // Hero Section
         'hero.tagline.part1': 'Keep Her',
@@ -44,13 +58,13 @@ const translations = {
         // Leadership Section
         'leadership.label': 'Leadership',
         'leadership.title': 'Meet the Founders',
-        'leadership.description': 'United by love and loss, four women came together to turn their grief into a powerful force for change.',
+        'leadership.description': 'United by love and loss, three women came together to turn their grief into a powerful force for change.',
         'leadership.cofounder': 'Co-Founder',
 
         // Founders Section
         'founders.label': 'The Founders',
         'founders.title': 'United by Love, Driven by Purpose',
-        'founders.description': 'Four women bound by friendship and loss, committed to transforming tragedy into lasting change.',
+        'founders.description': 'Three women bound by friendship and loss, committed to transforming tragedy into lasting change.',
 
         // Initiatives Section
         'initiatives.label': 'Our Impact',
@@ -165,6 +179,20 @@ const translations = {
         'nav.contact': 'Contacto',
         'nav.donate': 'Donar',
         'nav.donate': 'Donar',
+        'nav.shop': 'Tienda',
+        'shop.label': 'La Tienda',
+        'shop.title': 'Lleva su luz.',
+        'shop.body': 'Ropa, bolsos y vasos hechos por la familia y las amigas de Stephanie. Cada pieza financia educaci\u00f3n sobre seguridad en el agua en el sur de la Florida y lleva el mensaje al agua.',
+        'shop.point1': 'Se env\u00eda desde Miami en 3 a 5 d\u00edas h\u00e1biles',
+        'shop.point2': 'Apple Pay, Google Pay o tarjeta, sin crear cuenta',
+        'shop.point3': 'Recogida gratis en Miami',
+        'preview.title': 'Vista previa de dise\u00f1o \u2014 no es una tienda real',
+        'preview.body': 'Los productos, las fotos, los precios y el pago son de muestra. No se puede comprar nada y no se cobra.',
+        'shop.item1': 'Camiseta Sweat & Sunsets',
+        'shop.item2': 'Camiseta Meet Me At Sunset',
+        'shop.item3': 'Bolsa Tote Amanecer',
+        'shop.cta': 'Visitar la tienda',
+        'shop.note': 'Una compra no es una donaci\u00f3n deducible de impuestos. Las donaciones s\u00ed lo son y se reciben por separado.',
 
         // Hero Section
         'hero.tagline.part1': 'Mantén Su',
@@ -197,13 +225,13 @@ const translations = {
         // Leadership Section
         'leadership.label': 'Liderazgo',
         'leadership.title': 'Conoce a las Fundadoras',
-        'leadership.description': 'Unidas por el amor y la pérdida, cuatro mujeres se unieron para convertir su dolor en una fuerza poderosa para el cambio.',
+        'leadership.description': 'Unidas por el amor y la pérdida, tres mujeres se unieron para convertir su dolor en una fuerza poderosa para el cambio.',
         'leadership.cofounder': 'Co-Fundadora',
 
         // Founders Section
         'founders.label': 'Las Fundadoras',
         'founders.title': 'Unidas por el Amor, Impulsadas por un Propósito',
-        'founders.description': 'Cuatro mujeres unidas por la amistad y la pérdida, comprometidas a transformar la tragedia en un cambio duradero.',
+        'founders.description': 'Tres mujeres unidas por la amistad y la pérdida, comprometidas a transformar la tragedia en un cambio duradero.',
 
         // Initiatives Section
         'initiatives.label': 'Nuestro Impacto',
