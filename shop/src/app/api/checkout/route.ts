@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { findSellableVariant } from "@/lib/hygraph-catalog";
-import { previewBasePath } from "@/lib/preview-catalog";
+import { previewBasePath, SKU_PATTERN } from "@/lib/preview-catalog";
 import { isShopDbConfigured, rpc, ShopDbError } from "@/lib/shop-db";
 import { getStripe, ORDER_ID_PATTERN } from "@/lib/stripe";
 
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
   const locale = body?.locale === "es" ? "es" : "en";
   if (
     typeof orderId !== "string" || !ORDER_ID_PATTERN.test(orderId) ||
-    typeof sku !== "string" || !/^[A-Z0-9-]{1,64}$/.test(sku) ||
+    typeof sku !== "string" || !SKU_PATTERN.test(sku) ||
     typeof quantity !== "number" || !Number.isInteger(quantity) ||
     quantity < 1 || quantity > MAX_QUANTITY
   ) {

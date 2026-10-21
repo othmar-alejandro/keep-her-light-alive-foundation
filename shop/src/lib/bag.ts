@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   FLAT_SHIPPING_CENTS,
   FREE_SHIPPING_THRESHOLD_CENTS,
+  SKU_PATTERN,
 } from "@/lib/preview-catalog";
 
 const STORAGE_KEY = "khla-bag-v1";
@@ -42,7 +43,7 @@ function read(): BagLine[] {
     return parsed.flatMap((line) =>
       line && typeof line === "object" &&
       typeof (line as BagLine).sku === "string" &&
-      /^[A-Z0-9-]{1,40}$/.test((line as BagLine).sku) &&
+      SKU_PATTERN.test((line as BagLine).sku) &&
       Number.isSafeInteger((line as BagLine).qty) &&
       (line as BagLine).qty > 0
         ? [{ sku: (line as BagLine).sku, qty: Math.min((line as BagLine).qty, MAX_QTY) }]

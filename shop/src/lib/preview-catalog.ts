@@ -4,6 +4,12 @@ export type Locale = "en" | "es";
 
 type LocalizedText = Record<Locale, string>;
 
+/**
+ * The one SKU rule. The cart, the CMS reader and the checkout route all have
+ * to agree, or a SKU can be added and then silently dropped on the next read.
+ */
+export const SKU_PATTERN = /^[A-Z0-9-]{1,40}$/;
+
 /** Shipping policy. Single source of truth — the checkout route reads these too. */
 export const FREE_SHIPPING_THRESHOLD_CENTS = 3500;
 export const FLAT_SHIPPING_CENTS = 500;
@@ -36,6 +42,8 @@ export type PreviewProduct = {
   title: LocalizedText;
   description?: LocalizedText;
   priceCents: number;
+  /** True when variants are not all the same price, so priceCents is a "from". */
+  priceVaries?: boolean;
   images: PreviewImage[];
   variants: PreviewVariant[];
 };
@@ -400,6 +408,25 @@ export function groupByCategory(
   })).filter((group) => group.products.length > 0);
 }
 
+/**
+ * A featured row should look like the whole store, so take one product from
+ * each section in turn rather than the first N of the catalog.
+ */
+export function featuredProducts(products: PreviewProduct[], limit: number): PreviewProduct[] {
+  const byCategory = CATEGORIES.map((category) =>
+    products.filter((product) => product.category === category),
+  );
+  const picked: PreviewProduct[] = [];
+  for (let round = 0; picked.length < limit; round += 1) {
+    const before = picked.length;
+    for (const group of byCategory) {
+      if (group[round] && picked.length < limit) picked.push(group[round]);
+    }
+    if (picked.length === before) break;
+  }
+  return picked;
+}
+
 export function variantLabel(variant: PreviewVariant, locale: Locale): string {
   return locale === "es" && variant.optionValueEs ? variant.optionValueEs : variant.optionValue;
 }
@@ -412,7 +439,10 @@ export function variantLabel(variant: PreviewVariant, locale: Locale): string {
 const FOUNDATION_ORIGIN = (process.env.NEXT_PUBLIC_FOUNDATION_URL || "/").replace(/\/$/, "");
 
 export function foundationUrl(path = "/"): string {
-  return `${FOUNDATION_ORIGIN}${path}` || "/";
+  // A rooted path only. "//host", "https://host" and "\\host" would otherwise
+  // concatenate into a link that leaves the site, which a CMS field must never do.
+  const safe = /^\/(?![/\\])/.test(path) ? path : "/";
+  return `${FOUNDATION_ORIGIN}${safe}` || "/";
 }
 
 export function assetUrl(file: string): string {
@@ -428,9 +458,13 @@ export function productHref(slug: string, locale: Locale): string {
   return `/p/${slug}${locale === "es" ? "?lang=es" : ""}`;
 }
 
-/** Catalog sections live on one page, so a section link is an anchor. */
+/** The full grid lives on its own page; sections within it are anchors. */
+export function allHref(locale: Locale): string {
+  return locale === "es" ? "/all?lang=es" : "/all";
+}
+
 export function sectionHref(category: Category, locale: Locale): string {
-  return `${catalogHref(locale)}#${category}`;
+  return `${allHref(locale)}#${category}`;
 }
 
 export function formatPrice(cents: number, locale: Locale): string {
@@ -446,23 +480,35 @@ export function formatPrice(cents: number, locale: Locale): string {
  * never invents a price of its own.
  */
 export function buildBagIndex(products: PreviewProduct[], locale: Locale) {
-  return Object.fromEntries(
-    products.flatMap((product) =>
-      product.variants.map((variant) => [
-        variant.sku,
-        {
-          sku: variant.sku,
-          slug: product.slug,
-          title: product.title[locale],
-          optionValue: variantLabel(variant, locale),
-          unitAmount: variant.unitAmount ?? product.priceCents,
-          image: product.images[0].file,
-          alt: product.images[0].alt[locale],
-        },
-      ]),
-    ),
-  );
+  const index: Record<string, BagEntry> = {};
+  for (const product of products) {
+    for (const variant of product.variants) {
+      // First match wins, the same way the checkout route resolves a SKU. If
+      // two products ever share one, the cart and the charge agree on which.
+      if (index[variant.sku]) continue;
+      index[variant.sku] = {
+        sku: variant.sku,
+        slug: product.slug,
+        title: product.title[locale],
+        optionValue: variantLabel(variant, locale),
+        unitAmount: variant.unitAmount ?? product.priceCents,
+        image: product.images[0].file,
+        alt: product.images[0].alt[locale],
+      };
+    }
+  }
+  return index;
 }
+
+type BagEntry = {
+  sku: string;
+  slug: string;
+  title: string;
+  optionValue: string;
+  unitAmount: number;
+  image: string;
+  alt: string;
+};
 
 export const previewCopy = {
   en: {
@@ -492,17 +538,45 @@ export const previewCopy = {
     back: "Back to the shop",
     /* Reused verbatim from the live homepage's shop section so the two read as
        one voice; the Spanish is the Foundation's own, not a translation. */
+    heroImageAlt: "Friends on a boat at sunrise in South Florida, wearing the collection",
     heroEyebrow: "The Shop",
-    heroTitle: "Wear her light.",
+    notFoundTitle: "We can't find that page.",
+    notFoundBody: "The link may be old, or the product may have been taken down.",
+    errorTitle: "Something went wrong.",
+    errorBody: "The shop had a problem loading. Try again in a moment.",
+    tryAgain: "Try again",
+    priceFrom: "From",
+    allProducts: "All products",
+    heroTitleLead: "Wear her",
+    heroTitleAccent: "light.",
+    heroBodyShort:
+      "Every piece carries Stephanie's sunrise, and funds water-safety education in South Florida.",
+    heroCta: "Shop the collection",
+    heroSecondary: "Our mission",
+    shopCount: "Shop {n} \u2192",
+    /* Section headings read as sentences, the way every Shopify reference
+       theme writes them — "Glowing skin, naturally", not "Featured". */
+    featuredHeading: "Every piece starts with her sunrise.",
+    categoryHeading: "Four ways to carry it.",
+    valueHeading: "How it works",
+    values: [
+      { title: "Ships from Miami", body: "Orders go out in 3-5 business days once the store opens." },
+      { title: "Free over $35", body: "Flat $5 shipping in the United States, free above $35." },
+      { title: "Every order funds the work", body: "Proceeds support water-safety education in South Florida." },
+      { title: "Not a donation", body: "Merchandise isn't tax-deductible. Donations are, and are receipted separately." },
+    ],
+    featured: "Featured",
+    viewAll: "View all {n} products",
+    storyEyebrow: "Her story",
+    storyPortraitAlt: "Stephanie Marie Rodriguez in the water, smiling",
+    storyHeading: "Why we make these",
+    storyBody:
+      "Stephanie loved the water. The Foundation her family built teaches South Florida families how to come home from it: life jackets, swim lessons, boating safety. Every order pays for that work.",
+    storyLink: "Read her story",
     heroBody:
-      "Apparel, bags and drinkware made by Stephanie's family and friends. Every piece funds water-safety education in South Florida \u2014 and carries the message onto the water.",
+      "Apparel, bags and drinkware made by Stephanie's family and friends. Every piece funds water-safety education in South Florida, and carries the message onto the water.",
     taxNote:
       "A purchase is not a tax-deductible donation. Donations are, and are receipted separately.",
-    trust: [
-      "Ships from Miami in 3\u20135 business days",
-      "Apple Pay, Google Pay, or card \u2014 no account needed",
-      "Free local pickup in Miami",
-    ],
     foundationHome: "Foundation home",
     impact: "Every purchase funds water-safety education in South Florida.",
     cart: "Cart",
@@ -532,8 +606,8 @@ export const previewCopy = {
     shippingBody:
       "Flat $5 shipping in the United States, free on orders over $35. Orders ship from South Florida once the store opens.",
     toBeConfirmed: "Materials and sizing are confirmed by the Foundation before the store opens.",
-    footer: "Keep Her Light Alive Foundation, Inc. — preview store, not open for orders.",
-    footerOpen: "Keep Her Light Alive Foundation, Inc. — a Florida 501(c)(3) nonprofit.",
+    footer: "Keep Her Light Alive Foundation, Inc. Preview store, not open for orders.",
+    footerOpen: "Keep Her Light Alive Foundation, Inc. A Florida 501(c)(3) nonprofit.",
   },
   es: {
     skipToContent: "Saltar al catálogo",
@@ -560,17 +634,43 @@ export const previewCopy = {
     subtotal: "Subtotal",
     refresh: "Actualizar estado",
     back: "Volver a la tienda",
+    heroImageAlt: "Amigos en un bote al amanecer en el sur de la Florida, con la colecci\u00f3n",
     heroEyebrow: "La Tienda",
-    heroTitle: "Lleva su luz.",
+    notFoundTitle: "No encontramos esa p\u00e1gina.",
+    notFoundBody: "El enlace puede ser viejo, o el producto ya no est\u00e1 disponible.",
+    errorTitle: "Algo sali\u00f3 mal.",
+    errorBody: "La tienda tuvo un problema al cargar. Int\u00e9ntalo de nuevo en un momento.",
+    tryAgain: "Intentar de nuevo",
+    priceFrom: "Desde",
+    allProducts: "Todos los productos",
+    heroTitleLead: "Lleva su",
+    heroTitleAccent: "luz.",
+    heroBodyShort:
+      "Cada pieza lleva el amanecer de Stephanie y financia educaci\u00f3n sobre seguridad en el agua en el sur de la Florida.",
+    heroCta: "Ver la colecci\u00f3n",
+    heroSecondary: "Nuestra misi\u00f3n",
+    shopCount: "Ver {n} \u2192",
+    featuredHeading: "Cada pieza empieza con su amanecer.",
+    categoryHeading: "Cuatro maneras de llevarlo.",
+    valueHeading: "C\u00f3mo funciona",
+    values: [
+      { title: "Sale de Miami", body: "Los pedidos salen en 3 a 5 d\u00edas h\u00e1biles cuando abra la tienda." },
+      { title: "Gratis desde $35", body: "Env\u00edo de $5 en Estados Unidos, gratis en compras de m\u00e1s de $35." },
+      { title: "Cada pedido financia el trabajo", body: "Lo recaudado apoya la educaci\u00f3n sobre seguridad en el agua en el sur de la Florida." },
+      { title: "No es una donaci\u00f3n", body: "La mercanc\u00eda no es deducible de impuestos. Las donaciones s\u00ed lo son y se reciben por separado." },
+    ],
+    featured: "Destacados",
+    viewAll: "Ver los {n} productos",
+    storyEyebrow: "Su historia",
+    storyPortraitAlt: "Stephanie Marie Rodr\u00edguez en el agua, sonriendo",
+    storyHeading: "Por qu\u00e9 hacemos esto",
+    storyBody:
+      "A Stephanie le encantaba el agua. La Fundaci\u00f3n que cre\u00f3 su familia ense\u00f1a a las familias del sur de la Florida a volver a casa desde ella: chalecos salvavidas, clases de nataci\u00f3n, seguridad en bote. Cada pedido paga ese trabajo.",
+    storyLink: "Lee su historia",
     heroBody:
       "Ropa, bolsos y vasos hechos por la familia y las amigas de Stephanie. Cada pieza financia educaci\u00f3n sobre seguridad en el agua en el sur de la Florida y lleva el mensaje al agua.",
     taxNote:
       "Una compra no es una donaci\u00f3n deducible de impuestos. Las donaciones s\u00ed lo son y se reciben por separado.",
-    trust: [
-      "Se env\u00eda desde Miami en 3 a 5 d\u00edas h\u00e1biles",
-      "Apple Pay, Google Pay o tarjeta, sin crear cuenta",
-      "Recogida gratis en Miami",
-    ],
     foundationHome: "Inicio de la Fundación",
     impact: "Cada compra financia educación sobre seguridad en el agua en el sur de la Florida.",
     cart: "Carrito",
@@ -601,7 +701,7 @@ export const previewCopy = {
     toBeConfirmed:
       "La Fundación confirma los materiales y las tallas antes de que abra la tienda.",
     footer:
-      "Keep Her Light Alive Foundation, Inc. — tienda en vista previa, no abierta para pedidos.",
-    footerOpen: "Keep Her Light Alive Foundation, Inc. — organización 501(c)(3) de la Florida.",
+      "Keep Her Light Alive Foundation, Inc. Tienda en vista previa, no abierta para pedidos.",
+    footerOpen: "Keep Her Light Alive Foundation, Inc. Organización 501(c)(3) de la Florida.",
   },
 } as const;

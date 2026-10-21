@@ -2,7 +2,7 @@
   "settings": {
     "currency": "USD",
     "flatShippingCents": 500,
-    "freeShippingThresholdCents": 5000,
+    "freeShippingThresholdCents": 3500,
     "shipDays": "3–5",
     "pickupCity": "Miami",
     "impact": {
@@ -14,340 +14,826 @@
   },
   "products": [
     {
-      "slug": "khla-sunshirt-white",
-      "category": "apparel",
-      "isNew": true,
-      "title": {
-        "en": "Sunrise Performance Sun Shirt",
-        "es": "Camisa Solar de Rendimiento Amanecer"
-      },
-      "subtitle": {
-        "en": "Long sleeve · UPF 50+ · Unisex · White",
-        "es": "Manga larga · UPF 50+ · Unisex · Blanca"
-      },
-      "priceCents": 4200,
-      "images": [
-        {
-          "src": "assets/product-sunshirt-white.jpg",
-          "fit": "cover",
-          "alt": {
-            "en": "Back of the white long-sleeve sun shirt showing the gold sunrise, waves and palm trees with 'Keep Her Light Alive'",
-            "es": "Espalda de la camisa solar blanca con el amanecer dorado, las olas y las palmas y 'Keep Her Light Alive'"
-          },
-          "label": "Back"
-        },
-        {
-          "src": "assets/product-sunshirt-worn.jpg",
-          "fit": "cover",
-          "alt": {
-            "en": "A supporter wearing the sun shirt on a Miami dock at sunrise",
-            "es": "Una simpatizante con la camisa solar en un muelle de Miami al amanecer"
-          },
-          "label": "Worn"
-        },
-        {
-          "src": "assets/product-lineup.jpg",
-          "fit": "cover",
-          "alt": {
-            "en": "The sun shirt shown in all five colorways",
-            "es": "La camisa solar en los cinco colores"
-          },
-          "label": "Colors"
-        }
-      ],
-      "story": {
-        "en": "Made for the people who are actually on the water. The sunrise on the back is Stephanie's — the same one on her coin. Every shirt sold pays for about six life-jacket fittings at a community safety day.",
-        "es": "Hecha para quienes de verdad están en el agua. El amanecer de la espalda es el de Stephanie, el mismo de su moneda. Cada camisa vendida cubre unas seis pruebas de chaleco salvavidas en una jornada comunitaria de seguridad."
-      },
-      "fabric": {
-        "en": "UPF 50+ performance knit, 100% recycled polyester, 4.2 oz. Moisture-wicking and quick-dry. Relaxed unisex fit. Printed in Hialeah.",
-        "es": "Tejido técnico UPF 50+, 100% poliéster reciclado, 4.2 oz. Absorbe la humedad y seca rápido. Corte unisex relajado. Estampada en Hialeah."
-      },
-      "care": {
-        "en": "Machine wash cold, inside out. Hang dry. Do not iron the print. No fabric softener — it reduces wicking.",
-        "es": "Lavar a máquina en frío, al revés. Secar colgada. No planchar el estampado. Sin suavizante: reduce la absorción."
-      },
-      "sizeChart": {
-        "columns": [
-          "Size",
-          "Chest (in)",
-          "Chest (cm)",
-          "Length (in)",
-          "Length (cm)"
-        ],
-        "rows": [
-          [
-            "S",
-            "36–38",
-            "91–97",
-            "28",
-            "71"
-          ],
-          [
-            "M",
-            "39–41",
-            "99–104",
-            "29",
-            "74"
-          ],
-          [
-            "L",
-            "42–44",
-            "107–112",
-            "30",
-            "76"
-          ],
-          [
-            "XL",
-            "45–48",
-            "114–122",
-            "31",
-            "79"
-          ],
-          [
-            "2XL",
-            "49–52",
-            "124–132",
-            "32",
-            "81"
-          ],
-          [
-            "3XL",
-            "53–56",
-            "135–142",
-            "33",
-            "84"
-          ]
-        ],
-        "model": {
-          "en": "Model is 5'6\" and wears a size M.",
-          "es": "La modelo mide 1,68 m y usa talla M."
-        }
-      },
-      "optionName": "Size",
-      "variants": [
-        {
-          "sku": "KHLA-SUN-WHT-S",
-          "optionValue": "S",
-          "available": 12
-        },
-        {
-          "sku": "KHLA-SUN-WHT-M",
-          "optionValue": "M",
-          "available": 20
-        },
-        {
-          "sku": "KHLA-SUN-WHT-L",
-          "optionValue": "L",
-          "available": 2
-        },
-        {
-          "sku": "KHLA-SUN-WHT-XL",
-          "optionValue": "XL",
-          "available": 9
-        },
-        {
-          "sku": "KHLA-SUN-WHT-2XL",
-          "optionValue": "2XL",
-          "available": 0
-        },
-        {
-          "sku": "KHLA-SUN-WHT-3XL",
-          "optionValue": "3XL",
-          "available": 4
-        }
-      ]
-    },
-    {
-      "slug": "khla-hoodie-sand",
-      "category": "apparel",
+      "slug": "sweat-and-sunsets-tee",
+      "category": "tees",
       "isNew": false,
       "title": {
-        "en": "Light on the Water Hoodie",
-        "es": "Sudadera Luz sobre el Agua"
+        "en": "Sweat & Sunsets Tee",
+        "es": "Camiseta Sweat & Sunsets"
       },
       "subtitle": {
-        "en": "Midweight fleece hoodie · Sand",
-        "es": "Sudadera de felpa mediana · Arena"
+        "en": "",
+        "es": ""
       },
-      "priceCents": 5200,
+      "priceCents": 3200,
       "images": [
         {
-          "src": "assets/product-hoodie-sand.jpg",
+          "src": "assets/sweat-sunsets-front.jpg",
           "fit": "cover",
           "alt": {
-            "en": "Front of the sand hoodie with the embroidered gold sunrise",
-            "es": "Frente de la sudadera color arena con el amanecer dorado bordado"
+            "en": "Front of the sage green tee with a small gold sunrise on the left chest",
+            "es": "Frente de la camiseta verde salvia con un pequeño amanecer dorado en el pecho"
           },
           "label": "Front"
         },
         {
-          "src": "",
+          "src": "assets/sweat-sunsets-back.jpg",
+          "fit": "cover",
           "alt": {
-            "en": "Back of the hoodie with the line 'Come home safe'",
-            "es": "Espalda de la sudadera con la frase 'Vuelve a casa seguro'"
+            "en": "Back of the sage green tee with 'Sweat & Sunsets' arched above a line-art sunrise",
+            "es": "Espalda de la camiseta verde salvia con 'Sweat & Sunsets' en arco sobre un amanecer lineal"
           },
           "label": "Back"
-        },
-        {
-          "src": "",
-          "alt": {
-            "en": "Founder wearing the hoodie on the dock at sunrise",
-            "es": "Una fundadora con la sudadera en el muelle al amanecer"
-          },
-          "label": "Worn"
         }
       ],
       "story": {
-        "en": "'Come home safe' is what Stephanie's mother says to everyone heading to the water. We put it on the back so the people behind you read it too.",
-        "es": "'Vuelve a casa seguro' es lo que la mamá de Stephanie le dice a todo el que sale al agua. Lo pusimos en la espalda para que lo lean también los que van detrás de ti."
+        "en": "Sage green cotton tee. Small sunrise on the left chest, arched 'Sweat & Sunsets' sunrise on the back.",
+        "es": "Camiseta de algodón verde salvia. Amanecer pequeño en el pecho y amanecer 'Sweat & Sunsets' en arco en la espalda."
       },
       "fabric": {
-        "en": "80% cotton / 20% recycled polyester fleece, 8.5 oz. Unisex, slightly oversized.",
-        "es": "80% algodón / 20% poliéster reciclado, 8.5 oz. Unisex, ligeramente holgada."
+        "en": "",
+        "es": ""
       },
       "care": {
-        "en": "Machine wash cold. Tumble dry low. Embroidery is colorfast.",
-        "es": "Lavar a máquina en frío. Secar a baja temperatura. El bordado no destiñe."
-      },
-      "sizeChart": {
-        "columns": [
-          "Size",
-          "Chest (in)",
-          "Chest (cm)",
-          "Length (in)",
-          "Length (cm)"
-        ],
-        "rows": [
-          [
-            "S",
-            "38–40",
-            "97–102",
-            "27",
-            "69"
-          ],
-          [
-            "M",
-            "41–43",
-            "104–109",
-            "28",
-            "71"
-          ],
-          [
-            "L",
-            "44–46",
-            "112–117",
-            "29",
-            "74"
-          ],
-          [
-            "XL",
-            "47–50",
-            "119–127",
-            "30",
-            "76"
-          ],
-          [
-            "2XL",
-            "51–54",
-            "130–137",
-            "31",
-            "79"
-          ]
-        ],
-        "model": {
-          "en": "Model is 5'9\" and wears a size L.",
-          "es": "El modelo mide 1,75 m y usa talla L."
-        }
-      },
-      "optionName": "Size",
-      "variants": [
-        {
-          "sku": "KHLA-HOOD-SND-S",
-          "optionValue": "S",
-          "available": 6
-        },
-        {
-          "sku": "KHLA-HOOD-SND-M",
-          "optionValue": "M",
-          "available": 8
-        },
-        {
-          "sku": "KHLA-HOOD-SND-L",
-          "optionValue": "L",
-          "available": 7
-        },
-        {
-          "sku": "KHLA-HOOD-SND-XL",
-          "optionValue": "XL",
-          "available": 3
-        },
-        {
-          "sku": "KHLA-HOOD-SND-2XL",
-          "optionValue": "2XL",
-          "available": 5
-        }
-      ]
-    },
-    {
-      "slug": "khla-cap-navy",
-      "category": "accessory",
-      "isNew": true,
-      "title": {
-        "en": "Dock Cap",
-        "es": "Gorra del Muelle"
-      },
-      "subtitle": {
-        "en": "Unstructured cotton cap · Navy with gold sunrise",
-        "es": "Gorra de algodón sin estructura · Azul marino con amanecer dorado"
-      },
-      "priceCents": 2600,
-      "images": [
-        {
-          "src": "assets/product-cap-navy.jpg",
-          "fit": "cover",
-          "alt": {
-            "en": "Front of the navy cap with the small gold sunrise embroidery",
-            "es": "Frente de la gorra azul marino con la pequeña amanecer dorado bordado"
-          },
-          "label": "Front"
-        },
-        {
-          "src": "",
-          "alt": {
-            "en": "Side view of the cap showing the adjustable brass buckle",
-            "es": "Vista lateral de la gorra con la hebilla de latón ajustable"
-          },
-          "label": "Side"
-        },
-        {
-          "src": "",
-          "alt": {
-            "en": "Volunteer wearing the cap at a safety day",
-            "es": "Un voluntario con la gorra en una jornada de seguridad"
-          },
-          "label": "Worn"
-        }
-      ],
-      "story": {
-        "en": "Made for the people who run the dock table on Saturday mornings. One size, brass buckle, and the sunrise where the sun hits first.",
-        "es": "Hecha para quienes atienden la mesa del muelle los sábados por la mañana. Talla única, hebilla de latón y el amanecer donde primero pega el sol."
-      },
-      "fabric": {
-        "en": "100% washed cotton twill, unstructured, brass slide buckle. One size fits most.",
-        "es": "100% sarga de algodón lavado, sin estructura, hebilla deslizante de latón. Talla única."
-      },
-      "care": {
-        "en": "Spot clean. Air dry.",
-        "es": "Limpiar con paño húmedo. Secar al aire."
+        "en": "",
+        "es": ""
       },
       "sizeChart": null,
       "optionName": "Size",
       "variants": [
         {
-          "sku": "KHLA-CAP-NVY-OS",
+          "sku": "KHLA-TEE-SWS-S",
+          "optionValue": "S",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-SWS-M",
+          "optionValue": "M",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-SWS-L",
+          "optionValue": "L",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-SWS-XL",
+          "optionValue": "XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-SWS-2XL",
+          "optionValue": "2XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-SWS-3XL",
+          "optionValue": "3XL",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "meet-me-at-sunset-tee",
+      "category": "tees",
+      "isNew": false,
+      "title": {
+        "en": "Meet Me At Sunset Tee",
+        "es": "Camiseta Meet Me At Sunset"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3200,
+      "images": [
+        {
+          "src": "assets/meet-me-at-sunset-front.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Front of the sand tee with a small gold sunrise on the left chest",
+            "es": "Frente de la camiseta color arena con un pequeño amanecer dorado en el pecho"
+          },
+          "label": "Front"
+        },
+        {
+          "src": "assets/meet-me-at-sunset-back.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Back of the sand tee with 'meet me at sunset' in script above a line-art sunrise",
+            "es": "Espalda de la camiseta color arena con 'meet me at sunset' en cursiva sobre un amanecer lineal"
+          },
+          "label": "Back"
+        }
+      ],
+      "story": {
+        "en": "Sand cotton tee. Small sunrise on the left chest, script 'meet me at sunset' on the back.",
+        "es": "Camiseta de algodón color arena. Amanecer pequeño en el pecho y 'meet me at sunset' en cursiva en la espalda."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Size",
+      "variants": [
+        {
+          "sku": "KHLA-TEE-MMS-S",
+          "optionValue": "S",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-MMS-M",
+          "optionValue": "M",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-MMS-L",
+          "optionValue": "L",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-MMS-XL",
+          "optionValue": "XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-MMS-2XL",
+          "optionValue": "2XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-MMS-3XL",
+          "optionValue": "3XL",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "butterfly-soul-tee",
+      "category": "tees",
+      "isNew": false,
+      "title": {
+        "en": "Butterfly Soul Tee",
+        "es": "Camiseta Butterfly Soul"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3200,
+      "images": [
+        {
+          "src": "assets/butterfly-soul-front.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Front of the navy tee with a small gold sunrise on the left chest",
+            "es": "Frente de la camiseta azul marino con un pequeño amanecer dorado en el pecho"
+          },
+          "label": "Front"
+        },
+        {
+          "src": "assets/butterfly-soul-back.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Back of the black tee with a gold butterfly beneath the words 'Butterfly Soul'",
+            "es": "Espalda de la camiseta negra con una mariposa dorada bajo las palabras 'Butterfly Soul'"
+          },
+          "label": "Back"
+        }
+      ],
+      "story": {
+        "en": "Cotton tee with a small sunrise on the left chest and a gold 'Butterfly Soul' butterfly on the back.",
+        "es": "Camiseta de algodón con un amanecer pequeño en el pecho y una mariposa dorada 'Butterfly Soul' en la espalda."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Size",
+      "variants": [
+        {
+          "sku": "KHLA-TEE-BFS-S",
+          "optionValue": "S",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-BFS-M",
+          "optionValue": "M",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-BFS-L",
+          "optionValue": "L",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-BFS-XL",
+          "optionValue": "XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-BFS-2XL",
+          "optionValue": "2XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-BFS-3XL",
+          "optionValue": "3XL",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "do-it-for-her-tee",
+      "category": "tees",
+      "isNew": false,
+      "title": {
+        "en": "Do It For Her Tee",
+        "es": "Camiseta Do It For Her"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3000,
+      "images": [
+        {
+          "src": "assets/do-it-for-her-front.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "White tee with 'Do it for HER' in script and a small gold sunrise",
+            "es": "Camiseta blanca con 'Do it for HER' en cursiva y un pequeño amanecer dorado"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "White cotton tee with 'Do it for HER' across the chest and a small gold sunrise.",
+        "es": "Camiseta de algodón blanca con 'Do it for HER' en el pecho y un pequeño amanecer dorado."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Size",
+      "variants": [
+        {
+          "sku": "KHLA-TEE-DIFH-S",
+          "optionValue": "S",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-DIFH-M",
+          "optionValue": "M",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-DIFH-L",
+          "optionValue": "L",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-DIFH-XL",
+          "optionValue": "XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-DIFH-2XL",
+          "optionValue": "2XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-TEE-DIFH-3XL",
+          "optionValue": "3XL",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "sunrise-performance-sun-shirt",
+      "category": "fishing",
+      "isNew": false,
+      "title": {
+        "en": "Sunrise Performance Sun Shirt",
+        "es": "Camisa Solar de Rendimiento Amanecer"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 4500,
+      "images": [
+        {
+          "src": "assets/sun-shirt-back.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Back of the white long-sleeve sun shirt with the sunrise, tarpon and dive-flag print",
+            "es": "Espalda de la camisa solar blanca de manga larga con el amanecer, el sábalo y la bandera de buceo"
+          },
+          "label": "Front"
+        },
+        {
+          "src": "assets/sun-shirt-colorways.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "The sun shirt shown in ten colourways",
+            "es": "La camisa solar en diez colores"
+          },
+          "label": "Back"
+        }
+      ],
+      "story": {
+        "en": "Long-sleeve performance sun shirt with the full-colour sunrise and tarpon back print. Ten colourways; stocked colours to be confirmed.",
+        "es": "Camisa solar de manga larga con el estampado a todo color del amanecer y el sábalo en la espalda. Diez colores; los colores en inventario están por confirmar."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Size",
+      "variants": [
+        {
+          "sku": "KHLA-SUN-S",
+          "optionValue": "S",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-SUN-M",
+          "optionValue": "M",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-SUN-L",
+          "optionValue": "L",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-SUN-XL",
+          "optionValue": "XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-SUN-2XL",
+          "optionValue": "2XL",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-SUN-3XL",
+          "optionValue": "3XL",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "sunrise-tote-bag",
+      "category": "bags",
+      "isNew": false,
+      "title": {
+        "en": "Sunrise Tote Bag",
+        "es": "Bolsa Tote Amanecer"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 2800,
+      "images": [
+        {
+          "src": "assets/tote-bag.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Black canvas tote bag with a gold sunrise printed low on the front",
+            "es": "Bolsa tote de lona negra con un amanecer dorado estampado abajo al frente"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Black canvas tote with the gold line-art sunrise.",
+        "es": "Bolsa tote de lona negra con el amanecer dorado en línea."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-BAG-TOTE-OS",
           "optionValue": "One size",
-          "available": 18
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "pocket-tote",
+      "category": "bags",
+      "isNew": false,
+      "title": {
+        "en": "Pocket Tote",
+        "es": "Tote con Bolsillos"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3200,
+      "images": [
+        {
+          "src": "assets/pocket-tote.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Black canvas tote with divided front pockets and a gold sunrise",
+            "es": "Tote de lona negra con bolsillos frontales divididos y un amanecer dorado"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Black canvas tote with front pockets and the gold sunrise.",
+        "es": "Tote de lona negra con bolsillos frontales y el amanecer dorado."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-BAG-PKT-OS",
+          "optionValue": "One size",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "crossbody-bag",
+      "category": "bags",
+      "isNew": false,
+      "title": {
+        "en": "Crossbody Bag",
+        "es": "Bolso Cruzado"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 2600,
+      "images": [
+        {
+          "src": "assets/crossbody-bag.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Black canvas crossbody bag with a rope strap and a gold sunrise",
+            "es": "Bolso cruzado de lona negra con correa de cuerda y un amanecer dorado"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Small zip crossbody in black canvas with a rope strap and the gold sunrise.",
+        "es": "Bolso cruzado pequeño con cremallera, de lona negra con correa de cuerda y el amanecer dorado."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-BAG-XBODY-OS",
+          "optionValue": "One size",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "zip-pouch",
+      "category": "bags",
+      "isNew": false,
+      "title": {
+        "en": "Zip Pouch",
+        "es": "Estuche con Cremallera"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 1800,
+      "images": [
+        {
+          "src": "assets/zip-pouch.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Canvas zip pouches with wrist straps, shown in black and natural",
+            "es": "Estuches de lona con cremallera y asa de muñeca, en negro y natural"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Canvas wristlet pouch with the gold sunrise. Black or natural.",
+        "es": "Estuche de lona con asa de muñeca y el amanecer dorado. Negro o natural."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-BAG-POUCH-BLK",
+          "optionValue": "Black",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-BAG-POUCH-NAT",
+          "optionValue": "Natural",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "stemless-tumbler",
+      "category": "drinkware",
+      "isNew": false,
+      "title": {
+        "en": "Stemless Tumbler",
+        "es": "Vaso sin Tallo"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 2400,
+      "images": [
+        {
+          "src": "assets/stemless-tumbler-black.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Black insulated stemless tumbler with a gold sunrise",
+            "es": "Vaso térmico sin tallo negro con un amanecer dorado"
+          },
+          "label": "Front"
+        },
+        {
+          "src": "assets/stemless-tumbler-white.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "White insulated stemless tumbler with a yellow sunrise",
+            "es": "Vaso térmico sin tallo blanco con un amanecer amarillo"
+          },
+          "label": "Back"
+        }
+      ],
+      "story": {
+        "en": "Insulated stemless tumbler with a sliding lid and the sunrise mark. Black or white.",
+        "es": "Vaso térmico sin tallo con tapa deslizante y la marca del amanecer. Negro o blanco."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-CUP-STEM-BLK",
+          "optionValue": "Black",
+          "available": 10
+        },
+        {
+          "sku": "KHLA-CUP-STEM-WHT",
+          "optionValue": "White",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "glass-can",
+      "category": "drinkware",
+      "isNew": false,
+      "title": {
+        "en": "Glass Can & Straw",
+        "es": "Vaso de Vidrio con Pajilla"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 2200,
+      "images": [
+        {
+          "src": "assets/glass-can.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Clear glass can tumbler with a lid, glass straw and a yellow sunrise",
+            "es": "Vaso de vidrio transparente con tapa, pajilla de vidrio y un amanecer amarillo"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Can-shaped glass tumbler with a lid and glass straw.",
+        "es": "Vaso de vidrio en forma de lata con tapa y pajilla de vidrio."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-CUP-GLASS-OS",
+          "optionValue": "One size",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "skinny-tumbler",
+      "category": "drinkware",
+      "isNew": false,
+      "title": {
+        "en": "Skinny Tumbler",
+        "es": "Vaso Alto"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 2600,
+      "images": [
+        {
+          "src": "assets/skinny-tumbler.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Tall white insulated tumbler with a stainless straw and a yellow sunrise",
+            "es": "Vaso térmico alto blanco con pajilla de acero y un amanecer amarillo"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Tall insulated tumbler with a stainless straw.",
+        "es": "Vaso térmico alto con pajilla de acero inoxidable."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-CUP-SKINNY-OS",
+          "optionValue": "One size",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "tumbler-40oz",
+      "category": "drinkware",
+      "isNew": false,
+      "title": {
+        "en": "40 oz Handle Tumbler",
+        "es": "Vaso de 40 oz con Asa"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3800,
+      "images": [
+        {
+          "src": "assets/tumbler-40oz-pink.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Large pink insulated tumbler with a handle, straw and an orange sunrise",
+            "es": "Vaso térmico grande rosado con asa, pajilla y un amanecer naranja"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Large insulated tumbler with a handle and straw.",
+        "es": "Vaso térmico grande con asa y pajilla."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-CUP-40OZ-PNK",
+          "optionValue": "Pink",
+          "available": 10
+        }
+      ]
+    },
+    {
+      "slug": "travel-mug",
+      "category": "drinkware",
+      "isNew": false,
+      "title": {
+        "en": "Travel Mug",
+        "es": "Taza de Viaje"
+      },
+      "subtitle": {
+        "en": "",
+        "es": ""
+      },
+      "priceCents": 3200,
+      "images": [
+        {
+          "src": "assets/travel-mug-pink.jpg",
+          "fit": "cover",
+          "alt": {
+            "en": "Pink insulated travel mug with a handle, flip lid and an orange sunrise",
+            "es": "Taza de viaje térmica rosada con asa, tapa abatible y un amanecer naranja"
+          },
+          "label": "Front"
+        }
+      ],
+      "story": {
+        "en": "Insulated travel mug with a handle and flip lid.",
+        "es": "Taza de viaje térmica con asa y tapa abatible."
+      },
+      "fabric": {
+        "en": "",
+        "es": ""
+      },
+      "care": {
+        "en": "",
+        "es": ""
+      },
+      "sizeChart": null,
+      "optionName": "Option",
+      "variants": [
+        {
+          "sku": "KHLA-CUP-MUG-PNK",
+          "optionValue": "Pink",
+          "available": 10
         }
       ]
     }

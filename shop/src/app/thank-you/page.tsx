@@ -139,7 +139,7 @@ export default async function OrderStatusPage({
 
         <Link
           href={catalogHref(locale)}
-          className="mt-8 inline-block text-sm underline underline-offset-4"
+          className="mt-8 inline-block py-1.5 text-sm underline underline-offset-4"
         >
           {t.back}
         </Link>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CartDrawer from "@/components/CartDrawer";
 import LanguageLinks from "@/components/LanguageLinks";
-import { foundationUrl, previewCopy, type Locale } from "@/lib/preview-catalog";
+import { catalogHref, foundationUrl, previewCopy, type Locale } from "@/lib/preview-catalog";
 import type { BagIndex } from "@/lib/bag";
 
 type Props = {
@@ -17,7 +17,7 @@ export default function SiteHeader({ locale, index, path }: Props) {
   return (
     <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-4 px-6 lg:px-12">
-        <Link href="/" className="font-display text-lg font-semibold tracking-[0.02em]">
+        <Link href={catalogHref(locale)} className="font-display text-lg font-semibold tracking-[0.02em]">
           {t.brand}
         </Link>
 
@@ -26,7 +26,7 @@ export default function SiteHeader({ locale, index, path }: Props) {
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a
           href={foundationUrl()}
-          className="ml-2 hidden text-xs font-medium text-inkMuted underline-offset-4 hover:text-ink hover:underline sm:block"
+          className="ml-2 hidden py-2 text-xs font-medium text-inkMuted underline-offset-4 hover:text-ink hover:underline sm:block"
         >
           {t.foundationHome}
         </a>

@@ -9,6 +9,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { getStorefrontCatalog } from "@/lib/hygraph-catalog";
 import {
+  assetUrl,
   buildBagIndex,
   catalogHref,
   formatPrice,
@@ -28,18 +29,22 @@ function resolveLocale(lang: string | undefined): Locale {
 
 export async function generateMetadata({
   params,
-}: Pick<ProductPageProps, "params">): Promise<Metadata> {
+  searchParams,
+}: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const { lang } = await searchParams;
+  const locale = resolveLocale(lang);
   const { products, preview } = await getStorefrontCatalog();
   const product = products.find((entry) => entry.slug === slug);
   if (!product) return { title: "Keep Her Light Alive Shop" };
   return {
-    title: `${product.title.en} — Keep Her Light Alive Shop${preview ? " (preview)" : ""}`,
-    description: product.description?.en,
+    title: `${product.title[locale]} — Keep Her Light Alive Shop${preview ? " (preview)" : ""}`,
+    description: product.description?.[locale],
     openGraph: {
-      title: product.title.en,
-      description: product.description?.en,
-      images: [`/shop/shop/${product.images[0].file}`],
+      title: product.title[locale],
+      description: product.description?.[locale],
+      // A CMS image is already an absolute URL; assetUrl knows the difference.
+      images: [assetUrl(product.images[0].file)],
     },
   };
 }
@@ -50,9 +55,31 @@ export default async function ProductPage({ params, searchParams }: ProductPageP
   const locale = resolveLocale(lang);
   const t = previewCopy[locale];
 
-  const { products, preview } = await getStorefrontCatalog();
+  const { products, preview, error } = await getStorefrontCatalog();
   const product = products.find((entry) => entry.slug === slug);
-  if (!product) notFound();
+  // A Hygraph outage empties the catalog. Every product would 404, which reads
+  // as "this is gone for good" rather than "the shop is having a moment".
+  if (!product) {
+    if (error) {
+      return (
+        <div className="flex min-h-screen flex-col bg-sand text-ink">
+          <SiteHeader locale={locale} index={{}} path="/" />
+          <main className="flex-1">
+            {/* The message is this page's heading, or an outage leaves the
+                document with no h1 at all. */}
+            <h1
+              role="alert"
+              className="mx-auto max-w-[1400px] px-6 py-24 font-display text-2xl leading-snug lg:px-12"
+            >
+              {t.catalogError}
+            </h1>
+          </main>
+          <SiteFooter locale={locale} preview={preview} />
+        </div>
+      );
+    }
+    notFound();
+  }
 
   const related = products
     .filter((entry) => entry.category === product.category && entry.slug !== product.slug)
@@ -79,7 +106,7 @@ export default async function ProductPage({ params, searchParams }: ProductPageP
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-inkMuted">
             <li>
               <Link href={catalogHref(locale)} className="inline-block py-1.5 hover:text-ink hover:underline">
-                {t.h1}
+                {t.heroEyebrow}
               </Link>
             </li>
             <li aria-hidden="true">/</li>
@@ -111,6 +138,7 @@ export default async function ProductPage({ params, searchParams }: ProductPageP
 
             <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="tnum text-2xl font-semibold">
+                {product.priceVaries ? `${t.priceFrom} ` : ""}
                 {formatPrice(product.priceCents, locale)}
               </span>
               {preview && (

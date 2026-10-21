@@ -26,3 +26,13 @@ docs/
 
 # Working notes and audits — internal, kept out of this public repo.
 tasks/
+
+# Agent tool scratch output
+.playwright-mcp/
+.reticle/
+
+# Supabase CLI local state
+supabase/.temp/
+
+# Session working memory — internal, like docs/ and tasks/ above.
+memory/

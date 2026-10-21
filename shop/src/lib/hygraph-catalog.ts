@@ -1,6 +1,7 @@
 import {
   CATEGORIES,
   previewCatalog,
+  SKU_PATTERN,
   type Category,
   type PreviewProduct,
 } from "@/lib/preview-catalog";
@@ -20,14 +21,16 @@ type CmsProduct = {
   descriptionEs: string | null;
   category: string | null;
   sortOrder: number | null;
-  heroImage: { url: string } | null;
+  storefrontImage: { url: string } | null;
+  gallery: { url: string }[] | null;
   variants: CmsVariant[];
 };
 
 const query = `query ShopCatalog {
   shopProducts(stage: PUBLISHED, first: 100) {
     slug titleEn titleEs descriptionEn descriptionEs category sortOrder
-    heroImage { url }
+    storefrontImage { url }
+    gallery { url }
     variants { sku labelEn labelEs unitAmount }
   }
 }`;
@@ -77,24 +80,33 @@ export async function getStorefrontCatalog(): Promise<StorefrontCatalog> {
     const products = result.data.shopProducts
       .sort((a, b) => (a.sortOrder ?? 9999) - (b.sortOrder ?? 9999))
       .flatMap((item): PreviewProduct[] => {
-        // Prefer the CMS asset. While ShopProduct.heroImage is mis-typed in the
-        // schema it can never be set, so fall back to the bundled image for the
-        // same slug. Only these two sources are ever trusted.
-        const cmsImage = item.heroImage?.url;
+        // Images come from the CMS when an editor has set them, and fall back
+        // to the bundled file for the same slug otherwise, so a half-filled
+        // product still renders. Only these two sources are ever trusted.
         const local = previewCatalog.find((p) => p.slug === item.slug);
-        const image = cmsImage && isTrustedImageUrl(cmsImage) ? cmsImage : local?.images[0]?.file;
+        // An editor who also puts the storefront image in the gallery would
+        // otherwise produce two slides with the same React key.
+        const cmsImages = [...new Set(
+          [item.storefrontImage?.url, ...(item.gallery ?? []).map((g) => g.url)]
+            .filter((url): url is string => Boolean(url) && isTrustedImageUrl(url!)),
+        )];
+        const image = cmsImages[0] ?? local?.images[0]?.file;
         if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.slug || "") ||
             !item.titleEn || !image ||
             !isKnownCategory(item.category)) return [];
         const validVariants = (item.variants || [])
           .filter((variant) =>
-            typeof variant.sku === "string" && /^[A-Z0-9-]+$/.test(variant.sku) &&
+            typeof variant.sku === "string" && SKU_PATTERN.test(variant.sku) &&
             typeof variant.labelEn === "string" && variant.labelEn.trim().length > 0 &&
             Number.isSafeInteger(variant.unitAmount) &&
             variant.unitAmount > 0,
           );
         if (!validVariants.length) return [];
-        const priceCents = Math.min(...validVariants.map((variant) => variant.unitAmount));
+        const amounts = validVariants.map((variant) => variant.unitAmount);
+        const priceCents = Math.min(...amounts);
+        // A 2XL upcharge is normal. The listing has to say "From $32" rather
+        // than quote a price the shopper may not be able to buy at.
+        const priceVaries = Math.max(...amounts) !== priceCents;
         return [{
           slug: item.slug,
           category: item.category,
@@ -107,8 +119,20 @@ export async function getStorefrontCatalog(): Promise<StorefrontCatalog> {
             es: item.descriptionEs || item.descriptionEn || "",
           },
           priceCents,
-          images: cmsImage && isTrustedImageUrl(cmsImage)
-            ? [{ file: image, alt: { en: item.titleEn, es: item.titleEs || item.titleEn } }]
+          priceVaries,
+          images: cmsImages.length
+            ? cmsImages.map((file, i) => ({
+                file,
+                // Authored alt text is paired by position, so it is only safe
+                // when the CMS holds exactly the same shots in the same order.
+                // Otherwise the product name, which is never wrong.
+                alt: (cmsImages.length === local?.images.length
+                  ? local.images[i]?.alt
+                  : undefined) ?? {
+                  en: item.titleEn,
+                  es: item.titleEs || item.titleEn,
+                },
+              }))
             : (local?.images ?? [{ file: image, alt: { en: item.titleEn, es: item.titleEs || item.titleEn } }]),
           variants: validVariants.map((variant) => ({
             sku: variant.sku,

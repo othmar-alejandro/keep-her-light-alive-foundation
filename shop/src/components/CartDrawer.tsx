@@ -21,11 +21,25 @@ export default function CartDrawer({ index, locale }: Props) {
   const t = previewCopy[locale];
   const { lines, ready, setQty, remove } = useBag();
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [mounted, setMounted] = useState(false);
+
+  // Let the panel travel back out before it unmounts, instead of vanishing.
+  function dismiss() {
+    setClosing(true);
+    window.setTimeout(() => {
+      setClosing(false);
+      setOpen(false);
+      openerRef.current?.focus();
+    }, 200);
+  }
   const panelRef = useRef<HTMLDivElement>(null);
   const openerRef = useRef<HTMLButtonElement>(null);
 
   const totals = bagTotals(lines, index);
+  // A saved SKU the catalog no longer knows renders as nothing. Counting it as
+  // a line would show an empty list with a $0.00 total instead of "cart empty".
+  const known = lines.filter((line) => index[line.sku]);
 
   useEffect(() => setMounted(true), []);
 
@@ -44,8 +58,7 @@ export default function CartDrawer({ index, locale }: Props) {
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setOpen(false);
-        openerRef.current?.focus();
+        dismiss();
         return;
       }
       if (event.key !== "Tab" || !panel) return;
@@ -87,9 +100,14 @@ export default function CartDrawer({ index, locale }: Props) {
           <path d="M7.25 6V4.75a2.75 2.75 0 0 1 5.5 0V6" strokeLinecap="round" />
         </svg>
         {t.cart}
-        {/* Hidden until hydration so the server and client markup agree. */}
+        {/* Hidden until hydration so server and client markup agree. Keyed on
+            the count so React remounts it and the bubble replays, which is the
+            confirmation that the add landed. */}
         {ready && totals.count > 0 && (
-          <span className="tnum absolute -right-1.5 -top-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-navy px-1 text-[11px] font-bold text-sand">
+          <span
+            key={totals.count}
+            className="khla-bubble tnum absolute -right-1.5 -top-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-navy px-1 text-[11px] font-bold text-sand"
+          >
             {totals.count}
           </span>
         )}
@@ -99,29 +117,26 @@ export default function CartDrawer({ index, locale }: Props) {
           containing block for fixed children and would trap the drawer inside
           the 64px header bar. */}
       {open && mounted && createPortal(
-        <div className="fixed inset-0 z-50">
+        <div className={`fixed inset-0 z-50 ${closing ? "khla-closing" : ""}`}>
           <button
             type="button"
             aria-label={t.closeCart}
-            onClick={() => setOpen(false)}
-            className="absolute inset-0 h-full w-full cursor-default bg-navy/35"
+            onClick={dismiss}
+            className="khla-scrim absolute inset-0 h-full w-full cursor-default bg-navy/35"
           />
           <div
             ref={panelRef}
             role="dialog"
             aria-modal="true"
             aria-label={t.cart}
-            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-drawer"
+            className="khla-panel absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-drawer"
           >
             <div className="flex items-center justify-between border-b border-line px-5 py-4">
               <h2 className="font-display text-xl">{t.cart}</h2>
               <button
                 type="button"
                 data-autofocus
-                onClick={() => {
-                  setOpen(false);
-                  openerRef.current?.focus();
-                }}
+                onClick={dismiss}
                 aria-label={t.closeCart}
                 className="-mr-2 flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-ink/5"
               >
@@ -131,21 +146,20 @@ export default function CartDrawer({ index, locale }: Props) {
               </button>
             </div>
 
-            {lines.length === 0 ? (
+            {known.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center gap-2 px-8 text-center">
                 <p className="font-display text-lg">{t.cartEmpty}</p>
                 <p className="text-sm text-inkMuted">{t.cartEmptyHint}</p>
               </div>
             ) : (
               <ul className="flex-1 divide-y divide-line overflow-y-auto px-5">
-                {lines.map((line) => {
+                {known.map((line) => {
                   const entry = index[line.sku];
-                  if (!entry) return null;
                   return (
                     <li key={line.sku} className="flex gap-4 py-4">
                       <Link
                         href={productHref(entry.slug, locale)}
-                        onClick={() => setOpen(false)}
+                        onClick={dismiss}
                         className="h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-sand p-1.5"
                       >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -154,7 +168,7 @@ export default function CartDrawer({ index, locale }: Props) {
                       <div className="min-w-0 flex-1">
                         <Link
                           href={productHref(entry.slug, locale)}
-                          onClick={() => setOpen(false)}
+                          onClick={dismiss}
                           className="block truncate py-1 text-sm font-semibold hover:underline"
                         >
                           {entry.title}
@@ -200,7 +214,7 @@ export default function CartDrawer({ index, locale }: Props) {
             )}
 
             <div className="border-t border-line px-5 py-4">
-              {lines.length > 0 && (
+              {known.length > 0 && (
                 <>
                   <p className="rounded-xl bg-white px-4 py-2.5 text-center text-xs font-medium text-navy">
                     {totals.qualifies

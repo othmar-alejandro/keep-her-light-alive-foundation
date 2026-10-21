@@ -51,3 +51,93 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* ---- Sunrise hero -------------------------------------------------------
+   The sun clears the horizon, the rays open outward behind it, then the
+   water settles. Everything is held at its resting state for anyone who
+   asks for reduced motion (handled by the global rule above). */
+@keyframes khla-sun-rise {
+  from { transform: translateY(150px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+@keyframes khla-ray-open {
+  from { transform: scale(0.35); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+@keyframes khla-settle {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes khla-draw {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+.khla-sun {
+  animation: khla-sun-rise 1500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.khla-ray {
+  transform-origin: 600px 560px;
+  animation: khla-ray-open 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.khla-horizon {
+  transform-origin: 600px 560px;
+  animation: khla-draw 1100ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
+}
+.khla-ripple {
+  animation: khla-settle 700ms ease-out both;
+}
+.khla-rise {
+  animation: khla-settle 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ---- Motion tokens ------------------------------------------------------
+   Values read off Shopify Horizon's own stylesheet so the store moves at the
+   speed shoppers are used to. Everything here animates transform/opacity
+   only, and the reduced-motion rule above switches all of it off. */
+:root {
+  --khla-fast: 0.125s;
+  --khla-medium: 0.2s;
+  --khla-hover: 0.25s;
+  --khla-surface: 0.3s;
+  --khla-reveal: 0.55s;
+  --khla-ease-in: cubic-bezier(0.16, 1, 0.3, 1);
+  --khla-ease-hover: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --khla-ease-surface: cubic-bezier(0.32, 0.72, 0, 1);
+  --khla-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Scroll reveal. 10px of travel, matching Horizon's fadeInUp: enough to read
+   as motion, not enough to feel like the page is assembling itself. */
+@keyframes khla-fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Hidden only once the observer is live. If the script never runs, the page
+   renders exactly as it would without any of this. */
+.khla-reveal-ready [data-reveal] { opacity: 0; }
+[data-reveal].is-in {
+  animation: khla-fade-in-up var(--khla-reveal) var(--khla-ease-in) both;
+  animation-delay: var(--khla-delay, 0ms);
+}
+
+/* Cart count. Reappears on every change so the bubble replays, which is the
+   feedback that the add actually landed. */
+@keyframes khla-bubble {
+  0%   { transform: translateY(-1em) scale(0.6); opacity: 0; }
+  60%  { transform: translateY(0) scale(1.12); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.khla-bubble { animation: khla-bubble 0.42s var(--khla-ease-bounce) both; }
+
+/* Cart drawer: the panel travels, the scrim fades. */
+@keyframes khla-scrim-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes khla-panel-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+.khla-scrim { animation: khla-scrim-in var(--khla-medium) ease-out both; }
+.khla-panel { animation: khla-panel-in var(--khla-medium) var(--khla-ease-surface) both; }
+.khla-closing .khla-scrim { animation: khla-scrim-in var(--khla-fast) ease-in both reverse; }
+.khla-closing .khla-panel { animation: khla-panel-in var(--khla-medium) var(--khla-ease-surface) both reverse; }
+
+@media (prefers-reduced-motion: reduce) {
+  .khla-reveal-ready [data-reveal] { opacity: 1 !important; }
+}

@@ -33,8 +33,14 @@ export async function POST(request: Request) {
 
   const session = event.data.object;
   const orderId = session.client_reference_id;
-  if (!orderId || !ORDER_ID_PATTERN.test(orderId)) {
-    // A Session this shop did not create (e.g. another product on the account).
+  if (
+    !orderId ||
+    !ORDER_ID_PATTERN.test(orderId) ||
+    session.metadata?.order_id !== orderId
+  ) {
+    // A Session this shop did not create (e.g. another product on the account,
+    // or a Payment Link where the payer chose client_reference_id themselves).
+    // Acknowledged, so Stripe stops redelivering something we will never act on.
     return NextResponse.json({ received: true });
   }
 
