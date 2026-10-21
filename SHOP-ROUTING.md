@@ -12,6 +12,26 @@ This is Next.js's Multi Zones pattern: visitors only ever see one site.
 Vercel validates that file against a strict schema, so it cannot carry
 comments of its own — which is why these notes live here instead.
 
+## Current state
+
+The store project `khla-shop` exists and has its three production
+environment variables set. It was created with the CLI rather than the
+dashboard, because the dashboard's Root Directory picker reads the default
+branch and `shop/` does not exist on `main` yet.
+
+Two consequences:
+
+- **It is not connected to Git**, so it does not deploy on push. Connect it
+  in Settings -> Git once `shop/` exists on `main`.
+- **Its framework preset was "Other"**, which would have built the store as a
+  static site. `shop/vercel.json` pins `framework: nextjs` so the preset
+  cannot get this wrong.
+
+The rewrite points at `khla-shop.vercel.app`, the alias Vercel derives from
+the project name. **Confirm that is the real production host on the first
+successful production deploy** -- if the name was taken, Vercel assigns a
+suffixed one and the rewrite needs updating to match.
+
 ## Setting up the store project, once
 
 1. Vercel -> Add New -> Project -> the same repo.

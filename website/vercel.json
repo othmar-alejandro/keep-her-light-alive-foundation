@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/shop",
-      "destination": "https://SHOP_DEPLOYMENT_HOST/shop"
+      "destination": "https://khla-shop.vercel.app/shop"
     },
     {
       "source": "/shop/:path*",
-      "destination": "https://SHOP_DEPLOYMENT_HOST/shop/:path*"
+      "destination": "https://khla-shop.vercel.app/shop/:path*"
     }
   ]
 }
