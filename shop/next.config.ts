@@ -34,6 +34,14 @@ const contentSecurityPolicy = [
   "object-src 'none'",
 ].join("; ");
 
+/**
+ * The store is deployed as its own Vercel project and proxied to
+ * keepherlightalive.com/shop, so its deployment host answers the same pages on
+ * a second address. Anything that is not the canonical domain is told not to
+ * index, or the store competes with itself in search.
+ */
+const CANONICAL_HOST = "www.keepherlightalive.com";
+
 const nextConfig: NextConfig = {
   basePath: "/shop",
   async headers() {
@@ -44,6 +52,11 @@ const nextConfig: NextConfig = {
           process.env.NODE_ENV === "production"
             ? [...securityHeaders, { key: "Content-Security-Policy", value: contentSecurityPolicy }]
             : securityHeaders,
+      },
+      {
+        source: "/:path*",
+        missing: [{ type: "host", value: CANONICAL_HOST }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];
   },
