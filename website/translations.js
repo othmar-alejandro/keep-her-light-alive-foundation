@@ -58,13 +58,13 @@ const translations = {
         // Leadership Section
         'leadership.label': 'Leadership',
         'leadership.title': 'Meet the Founders',
-        'leadership.description': 'United by love and loss, four women came together to turn their grief into a powerful force for change.',
+        'leadership.description': 'United by love and loss, three women came together to turn their grief into a powerful force for change.',
         'leadership.cofounder': 'Co-Founder',
 
         // Founders Section
         'founders.label': 'The Founders',
         'founders.title': 'United by Love, Driven by Purpose',
-        'founders.description': 'Four women bound by friendship and loss, committed to transforming tragedy into lasting change.',
+        'founders.description': 'Three women bound by friendship and loss, committed to transforming tragedy into lasting change.',
 
         // Initiatives Section
         'initiatives.label': 'Our Impact',
@@ -225,13 +225,13 @@ const translations = {
         // Leadership Section
         'leadership.label': 'Liderazgo',
         'leadership.title': 'Conoce a las Fundadoras',
-        'leadership.description': 'Unidas por el amor y la pérdida, cuatro mujeres se unieron para convertir su dolor en una fuerza poderosa para el cambio.',
+        'leadership.description': 'Unidas por el amor y la pérdida, tres mujeres se unieron para convertir su dolor en una fuerza poderosa para el cambio.',
         'leadership.cofounder': 'Co-Fundadora',
 
         // Founders Section
         'founders.label': 'Las Fundadoras',
         'founders.title': 'Unidas por el Amor, Impulsadas por un Propósito',
-        'founders.description': 'Cuatro mujeres unidas por la amistad y la pérdida, comprometidas a transformar la tragedia en un cambio duradero.',
+        'founders.description': 'Tres mujeres unidas por la amistad y la pérdida, comprometidas a transformar la tragedia en un cambio duradero.',
 
         // Initiatives Section
         'initiatives.label': 'Nuestro Impacto',

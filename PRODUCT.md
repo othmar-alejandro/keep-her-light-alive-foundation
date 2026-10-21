@@ -1,6 +1,6 @@
 # PRODUCT.md — Keep Her Light Alive Foundation
 
-**What it is.** The website and (new) online shop of Keep Her Light Alive Foundation, Inc., a Florida 501(c)(3) founded in 2026 by four women in memory of Stephanie Marie Rodriguez (Hialeah, FL; 1996–2024). The Foundation teaches boating and water safety in South Florida's largely Cuban-American community and runs a memorial coin initiative.
+**What it is.** The website and (new) online shop of Keep Her Light Alive Foundation, Inc., a Florida 501(c)(3) founded in 2026 by three women in memory of Stephanie Marie Rodriguez (Hialeah, FL; 1996–2024). The Foundation teaches boating and water safety in South Florida's largely Cuban-American community and runs a memorial coin initiative.
 
 **Who uses it.**
 - *Maria*, supporter, mid-30s, Miami-Dade, iPhone Safari at night, came from Instagram, Apple Pay ready, may switch to Spanish. Buys a tee or coin; never creates an account.

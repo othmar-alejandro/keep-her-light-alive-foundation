@@ -77,7 +77,6 @@ website/
 
 - Magaly Bea (Co-Founder)
 - Midalys Armas (Co-Founder)
-- Vivian Martinez (Co-Founder)
 - Natalie Fitoria (Co-Founder)
 
 ## License
