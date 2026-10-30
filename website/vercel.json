@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/shop",
+      "destination": "https://khla-shop.vercel.app/shop"
+    },
+    {
+      "source": "/shop/:path*",
+      "destination": "https://khla-shop.vercel.app/shop/:path*"
+    }
+  ]
+}

@@ -71,13 +71,12 @@ website/
 - **Phone**: 786-486-8120
 - **Location**: Florida, United States
 - **Instagram**: [@keepherlightalive](https://instagram.com/keepherlightalive)
-- **Website**: https://keepherlightalive.org
+- **Website**: https://keepherlightalive.com
 
 ## Founders
 
 - Magaly Bea (Co-Founder)
 - Midalys Armas (Co-Founder)
-- Vivian Martinez (Co-Founder)
 - Natalie Fitoria (Co-Founder)
 
 ## License
